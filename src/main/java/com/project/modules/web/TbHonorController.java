@@ -39,6 +39,7 @@ public class TbHonorController extends BaseController {
 
 	@RequestMapping("/page")
 	public Map<String,Object> getHonors(Integer pageNo){
+		String adminPictureHead = ConfigUtil.getAdminUrlHead();
 		//公司荣誉
 		if (pageNo == null || pageNo <= 0){
 			pageNo = 1;
@@ -57,6 +58,11 @@ public class TbHonorController extends BaseController {
 			map.put("isThree","1");
 		}else {
 			map.put("isThree","0");
+		}
+		for (TbHonor honor1 : page.getList()){
+			if (honor1.getPicture() != null){
+				honor1.setPicture(adminPictureHead + honor1.getPicture());
+			}
 		}
 		map.put("page",page.getList());
 		return map;

@@ -4,8 +4,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <meta content="width=device-width,initial-scale=1,minimum-scale=1;maximum-scale=1,user-scalable=no" name="viewport" id="viewport"/>
+    <title>新闻详情</title>
+    <base href="http://139.129.233.104:8056/yimuyun_web/">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/public.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/erjiye2.css">
 </head>

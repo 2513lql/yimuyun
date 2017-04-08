@@ -104,6 +104,15 @@ public class ConfigUtil {
 		return null;
 	}
 
+	public static String getAdminUrlHead(){
+		String urlHead = PropertiesUtil.getInstance("traceback.properties").getText("admin.picture.url.head");
+		if (StringUtils.isNoneBlank(urlHead)) {
+			return urlHead;
+		}
+		logger.error("请求路径头部不能为空");
+		return null;
+	}
+
 	public static void main(String[] args) {
 		System.out.println(getHomePageNews());
 	}

@@ -4,8 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <meta content="width=device-width,initial-scale=1,minimum-scale=1;maximum-scale=1,user-scalable=no" name="viewport" id="viewport"/>
+    <title>追溯查询</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/public.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fangwei.css">
 </head>
@@ -38,7 +37,7 @@
             </div>
             <div class="coa">
                 <div class="xuliehao">
-                    <input type="text" id="traceNumber1" placeholder="请输入你的追溯序列号"><span id="queryBtn1">查询</span>
+                    <input type="text" id="traceNumber1" placeholder="请输入你的防伪序列号"><span id="queryBtn1">查询</span>
                 </div>
                 <%--你的产品为 <span id="traceQueryResult"></span>--%>
                 <div id="queryResult" class="result"></div>
@@ -482,7 +481,7 @@
                 </div>
             </div>
             <div class="right">
-                <div class="right-top">0620-5820820</div>
+                <div class="right-top">${phoneNumber}</div>
                 <div class="right-bottom">
                     <div><img src="${pageContext.request.contextPath}/img/index/3.png" alt=""><span>咨询热线</span></div>
                 </div>

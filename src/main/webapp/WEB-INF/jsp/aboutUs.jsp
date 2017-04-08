@@ -4,8 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <meta content="width=device-width,initial-scale=1,minimum-scale=1;maximum-scale=1,user-scalable=no" name="viewport" id="viewport"/>
+    <title>关于我们</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/public.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/women.css">
@@ -77,6 +76,7 @@
         </div>
     </div>
     <div class="main" style="display:none;">
+        <div id="companyHonors">
         <div class="I">
             <h2>公司荣誉</h2>
         </div>
@@ -91,74 +91,18 @@
             <c:if test="${status.index % 3 == 2}"></div></c:if>
         </c:forEach>
         <c:if test="${map['isThree'] == 0}"></div></c:if>
-        <%--<div class="phone-text">--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/6.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<p>为了能让老百姓吃上健康放心的好食品</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/7.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<p>伊萨耶娃说:在出口肉类产品方面</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/8.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<p>公安官兵将数桶汽油浇在非法</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-        <%--</div>--%>
-        <%--<div class="phone-text">--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/6.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<p>为了能让老百姓吃上健康放心的好食品</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/7.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<p>伊萨耶娃说:在出口肉类产品方面</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/8.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<p>公安官兵将数桶汽油浇在非法走私</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-        <%--</div>--%>
-        <%--<div class="phone-text">--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="img/index/6.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<p>为了能让老百姓吃上健康放心的好食品</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="img/index/7.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<p>伊萨耶娃说:在出口肉类产品方面</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="img/index/8.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<p>公安官兵将数桶汽油浇在非法走私</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-        <%--</div>--%>
-    </div>
-    <div class="main" style="padding-bottom: 50px">
-        <div class="page">
-            <div id="callBackPager"></div><i class="totalPage">共<c:out value="${map['totalPage']}"></c:out>页</i>
-            <!-- <a href="">
-                 <</a><a class="current">1</a><a>2</a><a>3</a><span>下一页</span><i>共3页</i>-->
         </div>
+        <div class="page">
+        <a href="">
+            <</a><a class="current">1</a><a>2</a><a>3</a><span>下一页</span><i>共3页</i></div>
+        <%--<div class="main" style="padding-bottom: 50px">--%>
+            <%--<div class="page">--%>
+                <%--<div id="callBackPager"></div><i class="totalPage">共<c:out value="${map['totalPage']}"></c:out>页</i>--%>
+            <%--</div>--%>
+        <%--</div>--%>
     </div>
+    </div>
+
     <!--底部-->
     <div class="footer">
         <div class="top">
@@ -235,7 +179,7 @@
         if(pageLength % 3 != 0){
             news += '</div>';
         }
-        $("#companyNewsContainer").html(news);
+        $("#companyHonors").html(news);
         $('body').scrollTop(0);
     }
 

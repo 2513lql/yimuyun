@@ -3,9 +3,6 @@
  */
 package com.project.modules.web;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import com.project.common.config.Global;
 import com.project.common.persistence.Page;
 import com.project.common.utils.ConfigUtil;
@@ -18,8 +15,6 @@ import com.project.modules.entity.TbNews;
 import com.project.modules.service.TbHomePageService;
 import com.project.modules.service.TbHonorService;
 import com.project.modules.service.TbNewsService;
-import com.sun.javafx.collections.MappingChange;
-import org.apache.poi.ss.formula.functions.Mode;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,7 +25,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.ArrayList;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -55,8 +51,23 @@ public class TbHomePageController extends BaseController {
 	@RequestMapping(value={"","home"})
 	public ModelAndView homePage(){
 		TbHomePage homePage = tbHomePageService.getHomePage();
+		String adminPictureHead = ConfigUtil.getAdminUrlHead();
+		if (homePage.getPicture1() != null){
+			homePage.setPicture1(adminPictureHead + homePage.getPicture1());
+		}
+		if (homePage.getPicture2() != null){
+			homePage.setPicture2(adminPictureHead + homePage.getPicture2());
+		}
+		if (homePage.getPicture3() != null){
+			homePage.setPicture3(adminPictureHead + homePage.getPicture3());
+		}
 		String homeLocation  = ConfigUtil.getHomePageNews();
 		List<TbNews> homeNews = tbNewsService.getTopThree(homeLocation);
+		for (TbNews news : homeNews){
+			if (news.getPicture() != null){
+				news.setPicture(adminPictureHead + news.getPicture());
+			}
+		}
 		Map<String,Object> map = new HashMap<>();
 		map.put("homeNews",homeNews);
 		map.put("homePage",homePage);
@@ -85,8 +96,12 @@ public class TbHomePageController extends BaseController {
 	@RequestMapping("muslim")
 	public ModelAndView muslimCulture(){
 		ModelAndView modelAndView = new ModelAndView();
+		String adminPictureHead = ConfigUtil.getAdminUrlHead();
 		String phoneNumber = tbHomePageService.getHomePage().getTelephoneNumber();
 		TbNews tbNews = tbNewsService.getMuslimCultrue();
+		if (tbNews.getPicture() != null){
+			tbNews.setPicture(adminPictureHead + tbNews.getPicture());
+		}
 		if (tbNews.getCreateTime() != null){
 			tbNews.setNewsTime(DateUtil.date2str(tbNews.getCreateTime()));
 		}
@@ -102,13 +117,23 @@ public class TbHomePageController extends BaseController {
      */
 	@RequestMapping("about")
 	public ModelAndView aboutUs(){
-
+		String adminPictureHead = ConfigUtil.getAdminUrlHead();
 		ModelAndView modelAndView = new ModelAndView();
 		//公司发展历程新闻
 		List<TbNews> companyTopNews = tbNewsService.getTopThree(ConfigUtil.getDevelopmentHistoryNewsLocation());
 		List<TbNews> companyNews = tbNewsService.getCompanyDevelopNews(); //公司发展历程
 		String phoneNumber = tbHomePageService.getHomePage().getTelephoneNumber();
 		Map<String,Object> map = new HashMap<>();
+		for (TbNews tbNews : companyNews){
+			if (tbNews.getPicture() != null){
+				tbNews.setPicture(adminPictureHead + tbNews.getPicture());
+			}
+		}
+		for (TbNews tbNews : companyTopNews){
+			if (tbNews.getPicture() != null){
+				tbNews.setPicture(adminPictureHead + tbNews.getPicture());
+			}
+		}
 		map.put("phoneNumber",phoneNumber);
 		map.put("companyTopNews",companyTopNews);
 		map.put("companyNews",companyNews);
@@ -128,6 +153,11 @@ public class TbHomePageController extends BaseController {
 			map.put("isThree","1");
 		}else {
 			map.put("isThree","0");
+		}
+		for (TbHonor honor1 : page.getList()){
+			if (honor1.getPicture() != null){
+				honor1.setPicture(adminPictureHead + honor1.getPicture());
+			}
 		}
 		map.put("page",page.getList());
 		modelAndView.addObject("map",map);

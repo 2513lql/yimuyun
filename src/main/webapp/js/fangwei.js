@@ -33,7 +33,8 @@ $(".main .main2 .left-tab ul li").click(function () {
 function renderTrace(body) {
 
     var product = " <h4>产品说明</h4>";
-    product += "<table><tr><td>产品名称: " +  body['productName'] +"</td></tr></table>";
+    product += "<table><tr><td>产品名称: " +  body['productName'] +"</td></tr>";
+    product += "<tr><td>产品品牌: 伊牧云</td></tr></table>";
     if (body['homePicture'] != ''){
         product += "<div>";
         product += "<img src='" + body['homePicture'] + "' alt=''></div>";
@@ -43,9 +44,10 @@ function renderTrace(body) {
 
     var lvli = "<tr><td>身份证号: " +  body['livestock']['idNumber'] +"</td></tr>";
     lvli += "<tr><td>出生日期: " + body['livestock']['birthday'] + "</td></tr>";
-    lvli += "<tr><td>出生重量: " + body['livestock']['birthWeight']+"</td></tr>";
+    lvli += "<tr><td>出生重量: " + body['livestock']['birthWeight']+"kg</td></tr>";
     lvli += "<tr><td>品种: " + body['livestock']['variety'] +"</td></tr>";
     lvli += "<tr><td>性别: " + body['livestock']['sex'] +"</td></tr>";
+    lvli += "<tr><td>出生地: " + body['livestock']['birthplace'] +"</td></tr>";
     $(".right .right1 table").html(lvli);
 
     var farming = "";
@@ -217,7 +219,7 @@ function renderTrace(body) {
         process += "<table>";
         process += "<tr><td>消毒时间: " + item['disinfectionTime'] + "</td></tr>";
         process += "<tr><td>消毒方法: " + item['disinfectionWay'] + "</td></tr>";
-        process += "<tr><td>药品名称: " + item['disinfectant'] + " kg</td></tr>";
+        process += "<tr><td>药品名称: " + item['disinfectant'] + " </td></tr>";
         process += "<tr><td>消毒人员: " + item['person'] + "</td></tr>";
         process += "</table>";
     }

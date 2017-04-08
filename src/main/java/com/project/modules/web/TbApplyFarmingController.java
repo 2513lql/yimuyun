@@ -72,7 +72,7 @@ public class TbApplyFarmingController extends BaseController {
 		TbApplyFarming applyFarming = new TbApplyFarming();
 		List<FileItem> viewUrlList = new ArrayList();
 		try{
-			String imageDir = ConfigUtil.getUploadImageDir();
+			String imageDir = request.getSession().getServletContext().getRealPath("/")+"/upload/";
 			if(imageDir == null){
 				imageDir = request.getSession().getServletContext().getRealPath("/")+"/HeadImg/";   //头像目录
 			}
@@ -214,7 +214,7 @@ public class TbApplyFarmingController extends BaseController {
 		TbLeaveMessage leaveMessage = new TbLeaveMessage();
 		List<FileItem> viewUrlList = new ArrayList();
 		try{
-			String imageDir = ConfigUtil.getUploadImageDir();
+			String imageDir = request.getSession().getServletContext().getRealPath("/")+"/upload/";
 			if(imageDir == null){
 				imageDir = request.getSession().getServletContext().getRealPath("/")+"/HeadImg/";   //头像目录
 			}

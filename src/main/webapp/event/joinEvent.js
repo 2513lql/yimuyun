@@ -88,6 +88,9 @@ $("#submitFarming").click(function(e){
     $("#scale").val("");
     $("#type").val("");
     $("#farmingTelephoneNumber").val("");
+    $(".photos").empty();
+    $(".dispalyNone").remove();
+
 });
 
 
@@ -112,4 +115,6 @@ $("#submitMessage").click(function(e){
     alert("添加成功");
     $("#describe").val("");
     $("#messageContact").val("");
+    $(".photos").empty();
+    $(".dispalyNone").remove();
 });
