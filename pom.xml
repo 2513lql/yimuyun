@@ -7,7 +7,7 @@
     <groupId>com.xinda</groupId>
     <artifactId>yimuyun</artifactId>
     <version>1.0.0</version>
-    <name>traceback</name>
+    <name>yimuyun</name>
     <packaging>war</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
