@@ -153,6 +153,8 @@
     font-style: normal;
     line-height: 30px;
     margin-left: 11px;
+    float: right;
+    padding-top: 22px;
 }
 
 /*.main .page .current {*/
