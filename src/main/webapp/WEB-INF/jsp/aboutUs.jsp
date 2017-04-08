@@ -145,7 +145,7 @@
     function getNewsList(pageNo) {
         $.ajax({
             async: false,
-            url:  contextPath +"/honor/page?"+pageNo,
+            url:  contextPath +"/honor/page?pageNo="+pageNo,
             type: "get",
             dataType: "json",
             success: function (data) {
