@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>新闻中心</title>
+    <base href="http://139.129.233.104:8056/yimuyun_web/">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/public.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/xinwen.css">
 </head>
