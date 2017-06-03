@@ -1,8 +1,6 @@
 package com.xinda.service;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.xinda.model.AcidDischarge;
-import com.xinda.model.AcidDischargeExample;
 import com.xinda.model.Test;
 import com.xinda.model.TestExample;
 import org.springframework.context.ApplicationContext;

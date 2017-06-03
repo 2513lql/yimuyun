@@ -1,6 +1,12 @@
 package com.xinda.controller;
 
+import com.xinda.common.ControllerException;
+import com.xinda.common.HttpOutMessage;
+import com.xinda.common.OutMessageUtils;
+import com.xinda.common.ResultEnum;
 import com.xinda.service.DemoManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +21,9 @@ import java.util.Map;
  */
 @Controller
 public class DemoController {
+
+    private static final Logger logger = LoggerFactory.getLogger(ControllerException.class);
+
     @Autowired
     private DemoManager demoManager;
 
@@ -28,7 +37,14 @@ public class DemoController {
 
     @RequestMapping("/test1")
     @ResponseBody
-    public int test1() {
-        return demoManager.test();
+    public HttpOutMessage test1() {
+        try {
+            return OutMessageUtils.buildOutMessage(ResultEnum.SUCCESS.getCode(), demoManager.test());
+        }catch (ControllerException e){
+            logger.error("参数异常",e);
+            return OutMessageUtils.buildOutMessage(ResultEnum.ERROR.getCode(),e.getMessage());
+        }catch (Exception e){
+            return OutMessageUtils.buildOutMessage(ResultEnum.ERROR.getCode(),"服务器异常");
+        }
     }
 }
