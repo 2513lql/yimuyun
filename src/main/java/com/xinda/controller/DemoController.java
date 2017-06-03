@@ -1,7 +1,6 @@
 package com.xinda.controller;
 
-import com.xinda.manager.DemoManager;
-import com.xinda.model.Test;
+import com.xinda.service.DemoManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +22,7 @@ public class DemoController {
     public ModelAndView test() {
         Map map = new HashMap<>();
         map.put("a", demoManager.test());
+        ModelAndView modelAndView = new ModelAndView();
         return new ModelAndView("a", map);
     }
 
