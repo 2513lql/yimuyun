@@ -20,7 +20,7 @@ public class DemoManager {
     private AcidDischargeService acidDischargeService;
 
 
-    public int test() {
+    public long test() {
         Test test = new Test();
         test.setTest("2222");
         return demoService.insert(test);
