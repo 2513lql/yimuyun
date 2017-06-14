@@ -8,6 +8,8 @@ import com.project.common.persistence.CrudDao;
 import com.project.common.persistence.annotation.MyBatisDao;
 import com.project.modules.entity.TbNews;
 
+import java.util.List;
+
 /**
  * 新闻DAO接口
  * @author LQL
@@ -15,5 +17,8 @@ import com.project.modules.entity.TbNews;
  */
 @MyBatisDao
 public interface TbNewsDao extends CrudDao<TbNews> {
-	
+	List<TbNews> getTopThree(String newsType, String istop); //置顶的三则新闻
+	List<TbNews> getHangYeZiXuan(String newsType); //行业资讯
+	List<TbNews> getCompanyDevelopNews(String newsType); //公司發展歷程
+	TbNews getMuslimCulture(String newsType); //清真文化
 }

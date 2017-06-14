@@ -14,6 +14,13 @@
 	
 	<sql id="tbHomePageJoins">
 	</sql>
+
+	<select id="getHomePage" resultType="TbHomePage">
+		SELECT
+		<include refid="tbHomePageColumns"/>
+		FROM home_page a
+		ORDER BY id DESC
+	</select>
     
 	<select id="get" resultType="TbHomePage">
 		SELECT 

@@ -20,6 +20,8 @@ public abstract class DataEntity<T> extends BaseEntity<T> {
 	
 	protected Date createTime;	// 创建日期
 
+	protected String phoneNumber;
+
 	public DataEntity() {
 		super();
 	}
@@ -27,7 +29,16 @@ public abstract class DataEntity<T> extends BaseEntity<T> {
 	public DataEntity(String id) {
 		super(id);
 	}
-	
+
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
 	/**
 	 * 插入之前执行方法，需要手动调用
 	 */

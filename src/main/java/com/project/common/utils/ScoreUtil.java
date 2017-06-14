@@ -8,7 +8,7 @@ public class ScoreUtil {
     public static int getWalkRecordScore(double safeScore,double streetScore,double envirScore){
 
         double score = (safeScore + streetScore + envirScore) / 3.0;
-        double res = (score - 3) * ConfigUtil.getWalkRecordScore();
+        double res = 0;
         return (int)res;
 
     }

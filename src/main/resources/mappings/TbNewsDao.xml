@@ -17,13 +17,48 @@
 	
 	<sql id="tbNewsJoins">
 	</sql>
-    
+
 	<select id="get" resultType="TbNews">
 		SELECT 
 			<include refid="tbNewsColumns"/>
 		FROM news a
 		<include refid="tbNewsJoins"/>
 		WHERE a.id = #{id}
+	</select>
+
+	<select id="getTopThree" parameterType="java.lang.String" resultType="TbNews">
+		SELECT
+		<include refid="tbNewsColumns"/>
+		FROM news a
+		WHERE show_location=#{0} AND a.istop=#{1}
+		ORDER BY update_time DESC limit 0,3
+	</select>
+
+	<!--行业资讯-->
+	<select id="getHangYeZiXuan" parameterType="java.lang.String" resultType="TbNews">
+		SELECT
+		<include refid="tbNewsColumns"/>
+		FROM news a
+		WHERE show_location=#{0}
+		ORDER BY update_time DESC limit 0,16
+	</select>
+
+	<!--公司发展历程-->
+	<select id="getCompanyDevelopNews" parameterType="java.lang.String" resultType="TbNews">
+		SELECT
+		<include refid="tbNewsColumns"/>
+		FROM news a
+		WHERE show_location=#{0}
+		ORDER BY update_time ASC
+	</select>
+
+	<!--清真文化-->
+	<select id="getMuslimCulture" parameterType="java.lang.String" resultType="TbNews">
+		SELECT
+		<include refid="tbNewsColumns"/>
+		FROM news a
+		WHERE show_location=#{0}
+		ORDER BY update_time ASC limit 0,1
 	</select>
 	
 	<select id="findList" resultType="TbNews">

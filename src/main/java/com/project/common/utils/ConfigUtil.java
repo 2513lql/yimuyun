@@ -10,14 +10,21 @@ public class ConfigUtil {
 	private static final Logger logger = LoggerFactory.getLogger(ConfigUtil.class);
 
 
-	public static String getUploadImageDir(){
-		String headImageDir = PropertiesUtil.getInstance("walkman.properties").getText("head.image.dir");
-		if (StringUtils.isNoneBlank(headImageDir)) {
-			return headImageDir;
+	/**
+	 *新闻置顶
+	 * @return
+     */
+	public static String getNewsIsTop(){
+		String istop = PropertiesUtil.getInstance("traceback.properties").getText("news.top");
+		if (StringUtils.isNoneBlank(istop)) {
+			return istop;
 		}
-		logger.error("上传文件夹配置为空");
+		logger.error("新闻置顶配置为空");
 		return null;
 	}
+
+
+
 	public static Long getMaxUploadSize(){
 		String size = PropertiesUtil.getInstance("walkman.properties").getText("web.maxUploadSize");
 		if (StringUtils.isNoneBlank(size)) {
@@ -26,67 +33,62 @@ public class ConfigUtil {
 		logger.error("上传文件夹大小配置为空");
 		return 1*1024*1024L;
 	}
-	public static Integer getDefaultNearbyDistance(){
-		String distance = PropertiesUtil.getInstance("walkman.properties").getText("default.nearby.distance");
-		if (StringUtils.isNoneBlank(distance)) {
-			return Integer.parseInt(distance);
+
+	public static String getHomePageNews(){
+		String homeNewsLocation = PropertiesUtil.getInstance("traceback.properties").getText("home.news.location");
+		if (StringUtils.isNoneBlank(homeNewsLocation)) {
+			return homeNewsLocation;
 		}
-		logger.error("默认附近距离配置为空");
-		return 5000;
+		logger.error("首页新闻为空");
+		return null;
 	}
 
-	public static Integer getRoadConditionDistance(){
-		String distance = PropertiesUtil.getInstance("walkman.properties").getText("default.road.condition.distance");
-		if (StringUtils.isNoneBlank(distance)) {
-			return Integer.parseInt(distance);
+	public static String getCompanyNewsLocation(){
+		String companyNewsLocation = PropertiesUtil.getInstance("traceback.properties").getText("company.news.location");
+		if (StringUtils.isNoneBlank(companyNewsLocation)) {
+			return companyNewsLocation;
 		}
-		logger.error("默认附近距离配置为空");
-		return 1000;
+		logger.error("公司新闻为空");
+		return null;
 	}
 
-	public static String getUploadFileUrl(){
-		String url = PropertiesUtil.getInstance("walkman.properties").getText("upload.file.url");
-		if (StringUtils.isBlank(url)) {
-			throw new ServiceException("upload.file.url配置为空");
+	public static String getIndustryNewsLocation(){
+		String industryNewsLocation = PropertiesUtil.getInstance("traceback.properties").getText("industry.news.location");
+		if (StringUtils.isNoneBlank(industryNewsLocation)) {
+			return industryNewsLocation;
 		}
-		return url;
-	}
-	public static Integer getDefaultPageSize(){
-		String pageSize = PropertiesUtil.getInstance("walkman.properties").getText("page.pageSize");
-		if (StringUtils.isNoneBlank(pageSize)) {
-			return Integer.parseInt(pageSize);
-		}
-		logger.error("默认pageSize为空");
-		return 20;
-	}
-	public static double getWalkMoneyAndScoreRadio(){
-		String radio = PropertiesUtil.getInstance("walkman.properties").getText("walk_money.to.score.radio");
-		if (StringUtils.isNoneBlank(radio)) {
-			return Double.parseDouble(radio);
-		}
-		logger.error("默认pageSize为空");
-		return 20;
-	}
-	public static String getWeaterUrl(){
-		String weatherUrl = PropertiesUtil.getInstance("walkman.properties").getText("weather.url");
-		if (StringUtils.isNoneBlank(weatherUrl)) {
-			return weatherUrl;
-		}
-		logger.error("天气预报URL配置为空");
-		throw new ServiceException("天气预报URL配置为空");
+		logger.error("行业快讯新闻为空");
+		return null;
 	}
 
-
-	public static int getWalkRecordScore(){
-		String walkRecordScore = PropertiesUtil.getInstance("walkman.properties").getText("walk.record.score");
-		if (StringUtils.isNoneBlank(walkRecordScore)) {
-			return Integer.parseInt(walkRecordScore);
+	public static String getMuslimCultureNewsLocation(){
+		String muslimCultureNewsLocation = PropertiesUtil.getInstance("traceback.properties").getText("muslim.culture.news.location");
+		if (StringUtils.isNoneBlank(muslimCultureNewsLocation)) {
+			return muslimCultureNewsLocation;
 		}
-		logger.error("步行初始分数为空");
-		throw new ServiceException("步行初始分数为空");
+		logger.error("清真文化为空");
+		return null;
+	}
+
+	public static String getDevelopmentHistoryNewsLocation(){
+		String levelopmentHistoryNewsLocation = PropertiesUtil.getInstance("traceback.properties").getText("development.history.news.location");
+		if (StringUtils.isNoneBlank(levelopmentHistoryNewsLocation)) {
+			return levelopmentHistoryNewsLocation;
+		}
+		logger.error("首页新闻为空");
+		return null;
+	}
+
+	public static String getRequestURLHead(){
+		String urlHead = PropertiesUtil.getInstance("traceback.properties").getText("request.url.head");
+		if (StringUtils.isNoneBlank(urlHead)) {
+			return urlHead;
+		}
+		logger.error("请求路径头部不能为空");
+		return null;
 	}
 
 	public static void main(String[] args) {
-		System.out.println(getUploadImageDir());
+		System.out.println(getHomePageNews());
 	}
 }

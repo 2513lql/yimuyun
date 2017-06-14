@@ -7,7 +7,9 @@ import java.util.List;
 
 import com.project.common.persistence.Page;
 import com.project.common.service.CrudService;
+import com.project.common.utils.ConfigUtil;
 import com.project.modules.entity.TbNews;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,6 +23,41 @@ import com.project.modules.dao.TbNewsDao;
 @Service
 @Transactional(readOnly = true)
 public class TbNewsService extends CrudService<TbNewsDao, TbNews> {
+
+	@Autowired
+	private TbNewsDao tbNewsDao;
+
+	public List<TbNews> getTopThree(String newsType){
+		String istop = ConfigUtil.getNewsIsTop();
+		return tbNewsDao.getTopThree(newsType,istop);
+	}
+
+	/**
+	 * 查询行业快讯
+	 * @return
+     */
+	public List<TbNews> getHangYeZiXuan(){
+		String newsType = ConfigUtil.getIndustryNewsLocation();
+		return tbNewsDao.getHangYeZiXuan(newsType);
+	}
+
+	/**
+	 * 公司发展历程
+	 * @return
+     */
+	public List<TbNews> getCompanyDevelopNews(){
+		String newsType = ConfigUtil.getDevelopmentHistoryNewsLocation();
+		return tbNewsDao.getCompanyDevelopNews(newsType);
+	}
+
+	/**
+	 * 清真文化
+	 * @return
+     */
+	public TbNews getMuslimCultrue(){
+		String newsType = ConfigUtil.getMuslimCultureNewsLocation();
+		return tbNewsDao.getMuslimCulture(newsType);
+	}
 
 	public TbNews get(String id) {
 		return super.get(id);

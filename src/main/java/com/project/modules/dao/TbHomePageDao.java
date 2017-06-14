@@ -8,6 +8,8 @@ import com.project.common.persistence.CrudDao;
 import com.project.common.persistence.annotation.MyBatisDao;
 import com.project.modules.entity.TbHomePage;
 
+import java.util.List;
+
 /**
  * 首页信息DAO接口
  * @author LQL
@@ -15,5 +17,5 @@ import com.project.modules.entity.TbHomePage;
  */
 @MyBatisDao
 public interface TbHomePageDao extends CrudDao<TbHomePage> {
-	
+    List<TbHomePage> getHomePage();
 }

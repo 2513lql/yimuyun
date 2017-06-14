@@ -24,6 +24,7 @@ public class TbNews extends DataEntity<TbNews> {
 	private String body;		// 正文
 	private String digest;		// 摘要
 	private String author;		// 作者
+	private String newsTime;    //新闻详情页显示时间
 	private Date updateTime;		// update_time
 	private Date createTime;		// create_time
 	
@@ -33,6 +34,14 @@ public class TbNews extends DataEntity<TbNews> {
 
 	public TbNews(String id){
 		super(id);
+	}
+
+	public String getNewsTime() {
+		return newsTime;
+	}
+
+	public void setNewsTime(String newsTime) {
+		this.newsTime = newsTime;
 	}
 
 	@Length(min=0, max=64, message="是否置顶长度必须介于 0 和 64 之间")

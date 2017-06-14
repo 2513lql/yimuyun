@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/index.css">
 </head>
 <body>
+
 <div class="div">
     <!--头部-->
     <div class="banner">
@@ -17,6 +18,9 @@
                 <li><img src="${pageContext.request.contextPath}/img/index/11.png" /></li>
                 <li><img src="${pageContext.request.contextPath}/img/index/2.png" /></li>
                 <li><img src="${pageContext.request.contextPath}/img/index/1.png" /></li>
+                    <%--<li><img src="${map['homePage'].picture1}" /></li>--%>
+                    <%--<li><img src="${map['homePage'].picture2}" /></li>--%>
+                    <%--<li><img src="${map['homePage'].picture3}" /></li>--%>
             </ul>
             <ul class="num">
                 <li class="on"></li>
@@ -27,16 +31,23 @@
         <div class="header">
             <div class="left"><img src="${pageContext.request.contextPath}/img/public/1.png" /></div>
             <ul class="center">
-                <li><a href="index.html" class="select">首页</a></li>
-                <li><a href="xinwen.html">新闻中心</a></li>
-                <li><a href="fangwei.html">追溯防伪查询</a></li>
-                <li><a href="wenhua.html">清真文化</a></li>
-                <li><a href="women.html">关于我们</a></li>
-                <li><a href="join.html">加入我们</a></li>
+                <li><a href="${pageContext.request.contextPath}/home" class="select">首页</a></li>
+                <li><a href="${pageContext.request.contextPath}/news/center">新闻中心</a></li>
+                <li><a href="${pageContext.request.contextPath}/trace">追溯防伪查询</a></li>
+                <li><a href="${pageContext.request.contextPath}/muslim">清真文化</a></li>
+                <li><a href="${pageContext.request.contextPath}/about">关于我们</a></li>
+                <li><a href="${pageContext.request.contextPath}/join">加入我们</a></li>
             </ul>
             <div class="right">
                 <div class="top"><img src="${pageContext.request.contextPath}/img/public/2.png" /><span>咨询热线</span></div>
-                <div class="bottom">0620-5820580</div>
+                <div class="bottom">
+                    <%--${homePage.telephoneNumber}--%>
+                    <c:out value="${map['homePage'].telephoneNumber}"></c:out>
+                    <%--<c:forEach items="${map}" var="entry">--%>
+                        <%--<c:out value="${entry.key}" />--%>
+                        <%--<c:out value="${entry.value}" />--%>
+                    <%--</c:forEach>--%>
+                </div>
             </div>
         </div>
     </div>
@@ -95,27 +106,37 @@
             公司新闻
         </div>
         <div class="phone-text">
-            <dl>
-                <dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/6.png"/></a></dt>
-                <dd>
-                    <h3>世界四大养羊牧场 中国有三个</h3>
-                    <p>为了能让老百姓吃上健康放心的好食品,对肉食品的...</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/7.png"/></a></dt>
-                <dd>
-                    <h3>哈萨克斯坦优质肉类有望上架中国</h3>
-                    <p>伊萨耶娃说:在出口肉类产品方面，我们有一定的优...</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/8.png"/></a></dt>
-                <dd>
-                    <h3>云南销毁600余吨“僵尸肉” 涉多种肉类</h3>
-                    <p>公安官兵将数桶汽油浇在非法走私入境的“僵尸肉”…</p>
-                </dd>
-            </dl>
+            <c:forEach items="${map['homeNews']}" var="homeNew">
+                <dl>
+                    <dt><a href="${pageContext.request.contextPath}/news/${homeNew.id}"><img src="${homeNew.picture}"/></a></dt>
+                    <dd>
+                        <h3>${homeNew.title}</h3>
+                        <p>${homeNew.digest}...</p>
+                    </dd>
+                </dl>
+            </c:forEach>
+
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/6.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<h3>世界四大养羊牧场 中国有三个</h3>--%>
+                    <%--<p>为了能让老百姓吃上健康放心的好食品,对肉食品的...</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/7.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<h3>哈萨克斯坦优质肉类有望上架中国</h3>--%>
+                    <%--<p>伊萨耶娃说:在出口肉类产品方面，我们有一定的优...</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/8.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<h3>云南销毁600余吨“僵尸肉” 涉多种肉类</h3>--%>
+                    <%--<p>公安官兵将数桶汽油浇在非法走私入境的“僵尸肉”…</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
         </div>
     </div>
 
@@ -130,7 +151,7 @@
                 </div>
             </div>
             <div class="right">
-                <div class="right-top">0620-5820820</div>
+                <div class="right-top"><c:out value="${map['homePage'].telephoneNumber}"></c:out></div>
                 <div class="right-bottom">
                     <div><img src="${pageContext.request.contextPath}/img/public/3.png" alt=""><span>咨询热线</span></div>
                 </div>
