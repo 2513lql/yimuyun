@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.modules.dao.TbApplyFarmingDao">
+    
+	<sql id="tbApplyFarmingColumns">
+		a.id AS "id",
+		a.name AS "name",
+		a.scale AS "scale",
+		a.type AS "type",
+		a.picture1 AS "picture1",
+		a.picture2 AS "picture2",
+		a.picture3 AS "picture3",
+		a.telephone_number AS "telephoneNumber",
+		a.update_time AS "updateTime",
+		a.create_time AS "createTime"
+	</sql>
+	
+	<sql id="tbApplyFarmingJoins">
+	</sql>
+    
+	<select id="get" resultType="TbApplyFarming">
+		SELECT 
+			<include refid="tbApplyFarmingColumns"/>
+		FROM apply_farming a
+		<include refid="tbApplyFarmingJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="TbApplyFarming">
+		SELECT 
+			<include refid="tbApplyFarmingColumns"/>
+		FROM apply_farming a
+		<include refid="tbApplyFarmingJoins"/>
+		<where>
+			
+			<if test="name != null and name != ''">
+				AND a.name LIKE 
+					<if test="dbName == 'oracle'">'%'||#{name}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{name}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{name},'%')</if>
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="TbApplyFarming">
+		SELECT 
+			<include refid="tbApplyFarmingColumns"/>
+		FROM apply_farming a
+		<include refid="tbApplyFarmingJoins"/>
+		<where>
+			
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO apply_farming(
+			id,
+			name,
+			scale,
+			type,
+			picture1,
+			picture2,
+			picture3,
+			telephone_number,
+			update_time,
+			create_time
+		) VALUES (
+			#{id},
+			#{name},
+			#{scale},
+			#{type},
+			#{picture1},
+			#{picture2},
+			#{picture3},
+			#{telephoneNumber},
+			#{updateTime},
+			#{createTime}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE apply_farming SET 	
+			name = #{name},
+			scale = #{scale},
+			type = #{type},
+			picture1 = #{picture1},
+			picture2 = #{picture2},
+			picture3 = #{picture3},
+			telephone_number = #{telephoneNumber},
+			update_time = #{updateTime},
+			create_time = #{createTime}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		DELETE FROM apply_farming
+		WHERE id = #{id}
+	</update>
+	
+</mapper>

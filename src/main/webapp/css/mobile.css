@@ -1,0 +1,242 @@
+html,
+body,
+ul,
+p,
+dl,
+dt,
+dd,
+h2,
+h3,
+input,
+tr,
+td {
+    margin: 0;
+    padding: 0
+}
+
+input {
+    font-size: 0.16rem;
+}
+
+html,
+body {
+    /*font: 12px"宋体", "Arial Narrow", HELVETICA;*/
+    font-family: "Microsoft YaHei";
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+    font-weight: normal;
+    font-size: 0.16rem;
+    width: 100%;
+    height: 100%;
+    color: color: #212121;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.header {
+    padding: 0.03rem 0;
+    padding-left: 0.06rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    background: #FFFFFF;
+    box-shadow: 0 0.01rem 0.03rem 0 rgba(0, 0, 0, 0.18);
+}
+
+.header img {
+    width: 0.4rem;
+    height: 0.4rem;
+    float: left;
+}
+
+.header div {
+    float: left;
+    line-height: 0.4rem;
+    color: #009944;
+    text-indent: 0.1rem;
+}
+
+.coa {
+    height: 1.26rem;
+    background: #FFFFFF;
+    padding: 0.16rem 0 0 0.18rem;
+}
+
+.coa .xuliehao input {
+    width: 2.4rem;
+    height: 0.38rem;
+    border: 0.01rem solid #E1E1E1;
+}
+
+.coa .xuliehao span {
+    width: 0.98rem;
+    height: 0.4rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 0.4rem;
+    background: #277037;
+}
+
+.coa .result {
+    width: 1.88rem;
+    height: 0.42rem;
+    text-align: center;
+    line-height: 0.42rem;
+    background: #EEF4EF;
+    border: 0.01rem solid #277037;
+    margin-top: 0.2rem;
+    font-size: 0.2rem;
+}
+
+.coa .result span {
+    margin-left: 0.29rem;
+}
+
+.ba {
+    height: 0.11rem;
+    background: #ccc;
+}
+
+.xinxi {
+    height: 2.67rem;
+    padding-left: 0.16rem;
+    padding-top: 0.2rem;
+    font-size: 0.14rem;
+}
+
+.xinxi img {
+    width: 3.428rem;
+    height: 1.853rem;
+    margin-top: 0.05rem;
+}
+
+.main {
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.main h2 {
+    width: 100%;
+    height: 0.53rem;
+    text-align: center;
+    line-height: 0.53rem;
+    font-size: 0.16rem;
+}
+
+.main h2.select {
+    color: #009944;
+}
+
+.main .content {
+    padding: 0.1rem 0 0.1rem 0.16rem;
+    display: none;
+}
+
+.main .content.select {
+    display: block;
+}
+
+.main .content h3 {
+    text-align: left;
+    font-size: 0.16rem;
+    color: #212121;
+}
+
+.main table {
+    font-size: 0.14rem;
+    color: #212121;
+    letter-spacing: 0;
+    line-height: 0.2rem;
+}
+
+.main table img {
+    width: 3.426rem;
+    height: 1.844rem;
+}
+
+.main .main1 {
+    width: 100%;
+    /*height: 1.93rem;*/
+    background: #FFFFFF;
+}
+
+.main .main1 .content {
+    /*height: 1.2rem;*/
+}
+
+.fenxiang {
+    width: 100%;
+    height: 1.44rem;
+}
+
+.fenxiang .top,
+.fenxiang .bottom {
+    width: 100%;
+    height: 0.71rem;
+}
+
+.fenxiang .top {
+    border-bottom: 0.01rem solid #E1E1E1;
+}
+
+.fenxiang .top .left,
+.fenxiang .bottom .left {
+    width: 1.35rem;
+}
+
+.fenxiang .top div,
+.fenxiang .bottom div {
+    padding-top: 0.26rem;
+    padding-bottom: 0.19rem;
+    padding: 0.26rem 0 0.19rem 0.52rem;
+    height: 0.26rem;
+    margin: 0 auto;
+    float: left;
+}
+
+.fenxiang .top .left {
+    background: url(../img/mobile/1.png) no-repeat;
+    background-size: 0.26rem 0.26rem;
+    background-position: 0.52rem center;
+    border-right: 0.01rem solid #E1E1E1;
+    text-indent: 0.35rem;
+}
+
+.fenxiang .top .right {
+    background: url(../img/mobile/2.png) no-repeat;
+    background-size: 0.26rem 0.26rem;
+    background-position: 0.52rem center;
+    text-indent: 0.35rem;
+}
+
+.fenxiang .bottom .left {
+    background: url(../img/mobile/3.png) no-repeat;
+    background-size: 0.26rem 0.26rem;
+    background-position: 0.52rem center;
+    border-right: 0.01rem solid #E1E1E1;
+    text-indent: 0.35rem;
+}
+
+.fenxiang .bottom .right {
+    background: url(../img/mobile/4.png) no-repeat;
+    background-size: 0.26rem 0.26rem;
+    background-position: 0.52rem center;
+    text-indent: 0.35rem;
+}
+
+.join {
+    background: #ccc;
+    width: 100%;
+    height: 0.69rem;
+    padding-top: 0.2rem;
+    text-align: center;
+    font-size: 0.14rem;
+}
+
+.join div {
+    color: #277037;
+    letter-spacing: 0;
+}

@@ -1,0 +1,58 @@
+    /*主体*/
+    
+    .main {
+        padding: 0 6.5%;
+        padding-bottom: 70px;
+    }
+    
+    .main .I {
+        padding-top: 49px;
+        padding-bottom: 26px;
+    }
+    
+    .main h2 {
+        font-size: 31px;
+        line-height: 44px;
+        background-position: 0px 7px;
+        color: #009944;
+        text-align: center;
+    }
+    
+    .main .text {
+        width: 1113px;
+        text-align: center;
+        padding-bottom: 10px;
+        opacity: 0.6;
+        font-size: 14px;
+        border-bottom: 1px solid #E1E1E1;
+    }
+    
+    .main .text p {
+        color: #212121;
+        font-size: 14px;
+    }
+    
+    .main .main2 {
+        width: 1113px;
+        margin: 0 auto;
+    }
+    
+    .main .main2 p {
+        text-indent: 32px;
+        padding-top: 30px;
+        color: #212121;
+        font-size: 16px;
+        line-height: 30px;
+    }
+    
+    .main .phone {
+        padding-left: 187px;
+        padding-top: 30px;
+    }
+    /*.main .phone img {
+        margin: 0 auto;
+    }*/
+    
+    .main {
+        padding-bottom: 60px;
+    }

@@ -1,0 +1,118 @@
+/*主体*/
+
+.main {
+    padding: 0 83px;
+    padding-bottom: 73px;
+}
+
+.main .I {
+    padding-top: 49px;
+}
+
+.main h2 {
+    background: url(../img/public/4.png) no-repeat;
+    text-indent: 14px;
+    font-size: 31px;
+    line-height: 44px;
+    background-position: 0px 7px;
+    color: #009944;
+    font-family: "SimSun";
+}
+
+.main .phone-text {
+    padding-top: 20px;
+    height: 260px;
+}
+
+.main .phone-text dl {
+    float: left;
+    margin-right: 25px;
+    _margin-right: 9px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.main .phone-text dl:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.main .phone-text dl dd {
+    background: #FFFFFF;
+    height: 70px;
+    text-indent: 13px;
+}
+
+.main .phone-text dl dd h3 {
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: normal;
+}
+
+.main .phone-text dl dd p {
+    font-size: 14px;
+    color: #212121;
+    opacity: 0.6;
+}
+
+.main .liebiao {
+    height: 224px;
+    padding-top: 18px;
+}
+
+.main .liebiao ul li b {
+    font-weight: normal;
+}
+
+.main .liebai {
+    float: left;
+    width: 50%;
+    border-right: 1px solid #277037;
+}
+
+.main .liebai1 {
+    float: right;
+}
+
+
+/*.main .liebai a {
+    font-family: .PingFangSC-Regular;
+    font-size: 16px;
+    color: #212121;
+    letter-spacing: 0;
+}*/
+
+.main .liebai ul {
+    width: 499px
+}
+
+.main .liebai1 ul {
+    width: 499px
+}
+
+.main .liebai ul li {
+    line-height: 28px;
+    font-size: 16px;
+    clear: both
+}
+
+.main .liebai ul li span {
+    float: right;
+    opacity: 0.5;
+}
+
+.main .liebai1 ul li {
+    line-height: 28px;
+    font-size: 16px;
+}
+
+.main .liebai1 ul li span {
+    float: right;
+    opacity: 0.5;
+}
+
+.more {
+    text-align: right;
+    padding-top: 20px;
+    font-size: 16px;
+    color: #212121;
+    letter-spacing: 0;
+}

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.modules.dao.TbHomePageDao">
+    
+	<sql id="tbHomePageColumns">
+		a.id AS "id",
+		a.picture1 AS "picture1",
+		a.picture2 AS "picture2",
+		a.picture3 AS "picture3",
+		a.telephone_number AS "telephoneNumber",
+		a.update_time AS "updateTime",
+		a.create_time AS "createTime"
+	</sql>
+	
+	<sql id="tbHomePageJoins">
+	</sql>
+    
+	<select id="get" resultType="TbHomePage">
+		SELECT 
+			<include refid="tbHomePageColumns"/>
+		FROM home_page a
+		<include refid="tbHomePageJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="TbHomePage">
+		SELECT 
+			<include refid="tbHomePageColumns"/>
+		FROM home_page a
+		<include refid="tbHomePageJoins"/>
+		<where>
+			
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="TbHomePage">
+		SELECT 
+			<include refid="tbHomePageColumns"/>
+		FROM home_page a
+		<include refid="tbHomePageJoins"/>
+		<where>
+			
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO home_page(
+			id,
+			picture1,
+			picture2,
+			picture3,
+			telephone_number,
+			update_time,
+			create_time
+		) VALUES (
+			#{id},
+			#{picture1},
+			#{picture2},
+			#{picture3},
+			#{telephoneNumber},
+			#{updateTime},
+			#{createTime}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE home_page SET 	
+			picture1 = #{picture1},
+			picture2 = #{picture2},
+			picture3 = #{picture3},
+			telephone_number = #{telephoneNumber},
+			update_time = #{updateTime},
+			create_time = #{createTime}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		DELETE FROM home_page
+		WHERE id = #{id}
+	</update>
+	
+</mapper>

@@ -1,0 +1,157 @@
+/*主体*/
+
+.select a {
+    color: #009944;
+}
+
+.nav {
+    height: 40px;
+    padding-left: 83px;
+    line-height: 40px;
+    border-bottom: 3px solid #ccc;
+    clear: both;
+}
+
+.nav li {
+    float: left;
+    padding-right: 60px;
+}
+
+.main {
+    padding: 0 83px;
+    padding-bottom: 70px;
+}
+
+.main .I {
+    padding-top: 49px;
+    padding-bottom: 14px;
+}
+
+.main h2 {
+    background: url(../img/public/4.png) no-repeat;
+    text-indent: 14px;
+    font-size: 31px;
+    line-height: 44px;
+    background-position: 0px 7px;
+    color: #009944;
+    font-family: "SimSun";
+}
+
+.main .phone {
+    text-align: center;
+    /*box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.18);*/
+}
+
+.main .main2 {
+    width: 1113px;
+    margin: 0 auto;
+}
+
+.main .main2 p {
+    text-indent: 32px;
+    padding-top: 30px;
+    color: #212121;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.main .phone1 img {
+    padding-right: 7px;
+}
+
+.main .li {
+    padding-top: 30px;
+}
+
+.main .li li {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.main .main2 {
+    width: 1113px;
+    margin: 0 auto;
+    background: #FFFFFF;
+}
+
+.main .main2 p {
+    text-indent: 32px;
+    padding-top: 30px;
+    color: #212121;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.main .phone-text {
+    padding-top: 20px;
+    height: 260px;
+}
+
+.main .phone-text dl {
+    float: left;
+    margin-right: 25px;
+    _margin-right: 9px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.main .phone-text dl:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.main .phone-text dl dd {
+    background: #FFFFFF;
+    height: 70px;
+    text-indent: 13px;
+}
+
+.main .phone-text dl dd h3 {
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: normal;
+}
+
+.main .phone-text dl dd p {
+    font-size: 14px;
+    color: #212121;
+    opacity: 0.6;
+}
+
+.main .page {
+    margin-top: 20px;
+    text-align: right;
+    border-top: 2px solid #E1E1E1;
+    padding-top: 30px;
+}
+
+.main .page a,
+.main .page span {
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    color: #A1A1A1;
+    letter-spacing: 0;
+    border: 1px solid #E1E1E1;
+    border-radius: 1px;
+    margin-left: 7px;
+}
+
+.main .page a {
+    width: 30px;
+}
+
+.main .page span {
+    width: 64px;
+}
+
+.main .page i {
+    font-style: normal;
+    line-height: 30px;
+    margin-left: 11px;
+}
+
+.main .page .current {
+    background: #009944;
+    color: #FFFFFF;
+}

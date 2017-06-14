@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.modules.dao.TbNewsDao">
+    
+	<sql id="tbNewsColumns">
+		a.id AS "id",
+		a.istop AS "istop",
+		a.show_location AS "showLocation",
+		a.picture AS "picture",
+		a.title AS "title",
+		a.body AS "body",
+		a.digest AS "digest",
+		a.author AS "author",
+		a.update_time AS "updateTime",
+		a.create_time AS "createTime"
+	</sql>
+	
+	<sql id="tbNewsJoins">
+	</sql>
+    
+	<select id="get" resultType="TbNews">
+		SELECT 
+			<include refid="tbNewsColumns"/>
+		FROM news a
+		<include refid="tbNewsJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="TbNews">
+		SELECT 
+			<include refid="tbNewsColumns"/>
+		FROM news a
+		<include refid="tbNewsJoins"/>
+		<where>
+			
+			<if test="title != null and title != ''">
+				AND a.title LIKE 
+					<if test="dbName == 'oracle'">'%'||#{title}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{title}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{title},'%')</if>
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="TbNews">
+		SELECT 
+			<include refid="tbNewsColumns"/>
+		FROM news a
+		<include refid="tbNewsJoins"/>
+		<where>
+			
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO news(
+			id,
+			istop,
+			show_location,
+			picture,
+			title,
+			body,
+			digest,
+			author,
+			update_time,
+			create_time
+		) VALUES (
+			#{id},
+			#{istop},
+			#{showLocation},
+			#{picture},
+			#{title},
+			#{body},
+			#{digest},
+			#{author},
+			#{updateTime},
+			#{createTime}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE news SET 	
+			istop = #{istop},
+			show_location = #{showLocation},
+			picture = #{picture},
+			title = #{title},
+			body = #{body},
+			digest = #{digest},
+			author = #{author},
+			update_time = #{updateTime},
+			create_time = #{createTime}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		DELETE FROM news
+		WHERE id = #{id}
+	</update>
+	
+</mapper>

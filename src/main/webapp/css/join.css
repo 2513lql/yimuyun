@@ -1,0 +1,231 @@
+.main {
+    padding: 49px 6.5% 0 6.5%;
+}
+
+.main .I {
+    clear: both;
+    padding-top: 49px;
+}
+
+.main .J {
+    padding-top: 60px;
+}
+
+.main .text p {
+    color: #212121;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.main h2 {
+    background: url(../img/public/4.png) no-repeat;
+    text-indent: 14px;
+    font-size: 31px;
+    line-height: 44px;
+    background-position: 0px 7px;
+    padding-bottom: 22px;
+    color: #009944;
+    font-family: "SimSun";
+}
+
+.main .process {
+    text-align: center;
+}
+
+.main .process img {
+    width: 804px;
+    height: 328px;
+}
+
+.main .introduction {
+    padding-top: 28px;
+    padding-bottom: 38px;
+    text-indent: 22px;
+    font-size: 16px;
+    border-bottom: 1px solid #277037;
+    line-height: 30px;
+}
+
+.main .information {
+    padding-top: 38px;
+    padding-bottom: 60px;
+}
+
+.main .information h3 {
+    color: #277037;
+    padding-bottom: 30px;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.main .information .information-main {
+    padding-bottom: 30px;
+}
+
+.main .information .information-main p {
+    color: #277037;
+    font-size: 16px;
+}
+
+.main .information .information-main label {
+    padding-top: 20px;
+    display: block;
+    clear: both;
+}
+
+.main .information .information-main label span {
+    line-height: 40px;
+}
+
+.main .information .information-main .btn {
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: #277037;
+    color: #FFFFFF;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    _margin-top: 15px;
+    _margin-bottom: 30px;
+}
+
+.main .information .information-main label input {
+    width: 348px;
+    height: 38px;
+    border: 1px solid #000;
+    float: right;
+}
+
+.main .information .information-main .left {
+    float: left;
+    padding-right: 158px;
+}
+
+.main .information .information-main .right {
+    float: left;
+}
+
+.main .liuyan>div {
+    padding-top: 18px;
+}
+
+.main .liuyan .wenti select {
+    width: 221px;
+    height: 40px;
+    line-height: 40px;
+    text-indent: 10px;
+    border: 1px solid #E1E1E1;
+    color: #A1A1A1;
+    font-size: 16px;
+}
+
+.main .liuyan .fankui textarea {
+    width: 1103px;
+    height: 113px;
+    padding: 5px 5px;
+    font-size: 16px;
+}
+
+
+/*
+.feedback-photos {
+    width: 348px;
+    float: right;
+}*/
+
+.feedback-photos .upload-photos {
+    float: left;
+    width: 120px;
+    height: 120px;
+    background: url(../img/join/3.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.feedback-photos .upload-photos input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.feedback-photos .photos {
+    float: left;
+}
+
+.feedback-photos .photos div {
+    clear: both;
+    float: left;
+    width: 192px;
+    height: 120px;
+    margin-left: 10px;
+}
+
+.feedback-photos .photos img {
+    width: 192px;
+    height: 120px;
+    margin-left: 10px;
+}
+
+.main .liuyan .lianxi {
+    clear: both;
+}
+
+.main .liuyan .lianxi input {
+    width: 221px;
+    height: 40px;
+    line-height: 40px;
+    text-indent: 10px;
+    font-size: 16px;
+    color: #A1A1A1;
+}
+
+.main .liuyan .tijiao {
+    padding-top: 33px;
+}
+
+.main .liuyan .tijiao input {
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    background: #277037;
+    border: none;
+}
+
+.farm-photos {
+    width: 348px;
+    float: right;
+}
+
+.farm-photos .upload-photos {
+    float: left;
+    width: 120px;
+    height: 40px;
+    background: url(../img/join/2.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.farm-photos .upload-photos input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.farm-photos .phohos {
+    float: left;
+}
+
+.farm-photos .photos div {
+    float: left;
+    width: 63px;
+    height: 39px;
+    margin-left: 10px;
+}
+
+.farm-photos .photos img {
+    width: 63px;
+    height: 39px;
+    margin-left: 10px;
+}

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.modules.dao.TbLeaveMessageDao">
+    
+	<sql id="tbLeaveMessageColumns">
+		a.id AS "id",
+		a.problem_type AS "problemType",
+		a.describe AS "describe",
+		a.picture1 AS "picture1",
+		a.picture2 AS "picture2",
+		a.picture3 AS "picture3",
+		a.contact AS "contact",
+		a.update_time AS "updateTime",
+		a.create_time AS "createTime"
+	</sql>
+	
+	<sql id="tbLeaveMessageJoins">
+	</sql>
+    
+	<select id="get" resultType="TbLeaveMessage">
+		SELECT 
+			<include refid="tbLeaveMessageColumns"/>
+		FROM leave_message a
+		<include refid="tbLeaveMessageJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="TbLeaveMessage">
+		SELECT 
+			<include refid="tbLeaveMessageColumns"/>
+		FROM leave_message a
+		<include refid="tbLeaveMessageJoins"/>
+		<where>
+			
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="TbLeaveMessage">
+		SELECT 
+			<include refid="tbLeaveMessageColumns"/>
+		FROM leave_message a
+		<include refid="tbLeaveMessageJoins"/>
+		<where>
+			
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO leave_message(
+			id,
+			problem_type,
+			describe,
+			picture1,
+			picture2,
+			picture3,
+			contact,
+			update_time,
+			create_time
+		) VALUES (
+			#{id},
+			#{problemType},
+			#{describe},
+			#{picture1},
+			#{picture2},
+			#{picture3},
+			#{contact},
+			#{updateTime},
+			#{createTime}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE leave_message SET 	
+			problem_type = #{problemType},
+			describe = #{describe},
+			picture1 = #{picture1},
+			picture2 = #{picture2},
+			picture3 = #{picture3},
+			contact = #{contact},
+			update_time = #{updateTime},
+			create_time = #{createTime}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		DELETE FROM leave_message
+		WHERE id = #{id}
+	</update>
+	
+</mapper>
