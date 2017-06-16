@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <html>
 <head>
     <meta charset="UTF-8">
@@ -13,6 +12,7 @@
     <title>Title</title>
 </head>
 <body>
+<input type="hidden" id="contextPath" value="${pageContext.request.contextPath}"/>
 <div class="div">
     <!--头部-->
     <div class="header">
@@ -30,7 +30,7 @@
             <div class="bottom">${phoneNumber}</div>
         </div>
     </div>
-
+    <iframe id="formiframe" name="nm_iframe" style="display:none;"></iframe>
     <!--主体-->
     <div class="main">
         <h2>合作流程示意图</h2>
@@ -44,33 +44,33 @@
                 <div class="left">
                     <p>(屠宰加工或餐饮企业申请)</p>
                     <label for=""><span>企业类型：</span>
-                        <input type="text">
+                        <input id="enterpriseType" name="enterpriseType" type="text">
                     </label>
                     <label for=""><span>企业名称：</span>
-                        <input type="text">
+                        <input id="slaughterName" name="name"  type="text">
                     </label>
                     <label for=""><span>企业地址:</span>
-                        <input type="text">
+                        <input id="address" name="address" type="text">
                     </label>
                     <label for=""><span>联系电话:</span>
-                        <input type="text">
+                        <input id="telephoneNumber" name="telephoneNumber" type="text">
                     </label>
                     <label for=""><span>联系人:</span>
-                        <input type="text">
+                        <input id="contact" name="contact" type="text">
                     </label>
-                    <input type="button" value="提交信息" class="btn">
+                    <input type="button" id="submitSlaughter" value="提交信息" class="btn">
                 </div>
                 <div class="right">
-                    <form action="">
-                        <p>(屠宰加工或餐饮企业申请)</p>
+                    <form method="post" id="farmingForm" target="nm_iframe" enctype="multipart/form-data" action="${pageContext.request.contextPath}/apply/farming">
+                        <p>(养殖单位申请)</p>
                         <label for=""><span>养殖单位名称：</span>
-                            <input type="text">
+                            <input id="farmingName" name="name" type="text">
                         </label>
                         <label for=""><span>养殖规模:</span>
-                            <input type="text">
+                            <input id="scale" name="scale" type="text">
                         </label>
                         <label for=""><span>养殖类别:</span>
-                            <input type="text">
+                            <input id="type" name="type" type="text">
                         </label>
                         <label for=""><span style="float:left;">养殖场照片:</span>
                             <div class="farm-photos">
@@ -81,9 +81,9 @@
                             </div>
                         </label>
                         <label for=""><span>联系电话:</span>
-                            <input type="text">
+                            <input id="farmingTelephoneNumber" name="telephoneNumber" type="text">
                         </label>
-                        <input type="button" value="提交信息" class="btn">
+                        <input type="button" value="提交信息" id="submitFarming" class="btn">
                     </form>
                 </div>
             </div>
@@ -100,14 +100,16 @@
             <div class="text">
                 <p>对您给予的帮助和支持，深表感谢！</p>
             </div>
+
             <div class="liuyan">
+                <form method="post" id="messageForm" target="nm_iframe" enctype="multipart/form-data" action="${pageContext.request.contextPath}/apply/message">
                 <div class="wenti">
-                    <select name="" id="">
-                        <option placeholder="问题类型">问题类型</option>
+                    <select name="problemType" id="problemType">
+                        <option selected placeholder="问题类型">问题类型</option>
                     </select>
                 </div>
                 <div class="fankui">
-                    <textarea name="yj" cols="20" rows="5" placeholder="在这里描述你遇到的问题"></textarea>
+                    <textarea name="describe" id="describe" cols="20" rows="5" placeholder="在这里描述你遇到的问题"></textarea>
                 </div>
                 <div class="feedback-photos">
                     <div class="upload-photos">
@@ -116,11 +118,12 @@
                     <div class="photos"></div>
                 </div>
                 <div class="lianxi">
-                    <input type="text" placeholder="你的联系方式">
+                    <input id="messageContact" name="contact" type="text" placeholder="你的联系方式">
                 </div>
                 <div class="tijiao">
-                    <input type="button" value="提交问题">
+                    <input type="button" id="submitMessage" value="提交问题">
                 </div>
+               </form>
             </div>
         </div>
 
@@ -148,5 +151,6 @@
 
 <script src="${pageContext.request.contextPath}/js/jquery.js"></script>
 <script src="${pageContext.request.contextPath}/js/join.js"></script>
+<script src="${pageContext.request.contextPath}/event/joinEvent.js"></script>
 </body>
 </html>

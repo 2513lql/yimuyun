@@ -63,10 +63,9 @@
 			</otherwise>
 		</choose>
 	</select>
-	
+
 	<insert id="insert">
 		INSERT INTO apply_slaughter(
-			id,
 			enterprise_type,
 			name,
 			address,
@@ -75,7 +74,6 @@
 			update_time,
 			create_time
 		) VALUES (
-			#{id},
 			#{enterpriseType},
 			#{name},
 			#{address},

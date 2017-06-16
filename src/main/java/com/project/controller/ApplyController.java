@@ -20,8 +20,8 @@ import java.util.Date;
 /**
  * Created by LQL on 2017/6/10.
  */
-@Controller
-@RequestMapping("/apply")
+//@Controller
+//@RequestMapping("/apply")
 public class ApplyController {
 
     private static final Logger logger = LoggerFactory.getLogger(ControllerException.class);

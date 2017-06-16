@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 /**
  * Created by LQL on 2017/6/10.
  */
-@Controller
+//@Controller
 public class HomeController {
 
 

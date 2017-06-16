@@ -5,7 +5,7 @@
 	<sql id="tbLeaveMessageColumns">
 		a.id AS "id",
 		a.problem_type AS "problemType",
-		a.describe AS "describe",
+		a.description AS "describe",
 		a.picture1 AS "picture1",
 		a.picture2 AS "picture2",
 		a.picture3 AS "picture3",
@@ -61,9 +61,8 @@
 	
 	<insert id="insert">
 		INSERT INTO leave_message(
-			id,
 			problem_type,
-			describe,
+			description,
 			picture1,
 			picture2,
 			picture3,
@@ -71,7 +70,6 @@
 			update_time,
 			create_time
 		) VALUES (
-			#{id},
 			#{problemType},
 			#{describe},
 			#{picture1},

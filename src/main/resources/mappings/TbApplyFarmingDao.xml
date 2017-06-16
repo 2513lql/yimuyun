@@ -68,7 +68,6 @@
 	
 	<insert id="insert">
 		INSERT INTO apply_farming(
-			id,
 			name,
 			scale,
 			type,
@@ -79,7 +78,6 @@
 			update_time,
 			create_time
 		) VALUES (
-			#{id},
 			#{name},
 			#{scale},
 			#{type},

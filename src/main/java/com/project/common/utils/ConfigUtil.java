@@ -23,10 +23,17 @@ public class ConfigUtil {
 		return null;
 	}
 
-
+	public static String getUploadImageDir(){
+		String headImageDir = PropertiesUtil.getInstance("traceback.properties").getText("img.upload.url.head");
+		if (StringUtils.isNoneBlank(headImageDir)) {
+			return headImageDir;
+		}
+		logger.error("上传文件夹配置为空");
+		return null;
+	}
 
 	public static Long getMaxUploadSize(){
-		String size = PropertiesUtil.getInstance("walkman.properties").getText("web.maxUploadSize");
+		String size = PropertiesUtil.getInstance("traceback.properties").getText("web.maxUploadSize");
 		if (StringUtils.isNoneBlank(size)) {
 			return Long.parseLong(size);
 		}
