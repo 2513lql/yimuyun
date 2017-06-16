@@ -10,6 +10,15 @@ public class ConfigUtil {
 	private static final Logger logger = LoggerFactory.getLogger(ConfigUtil.class);
 
 
+	public static Integer getDefaultPageSize(){
+		String pageSize = PropertiesUtil.getInstance("traceback.properties").getText("page.pageSize");
+		if (StringUtils.isNoneBlank(pageSize)) {
+			return Integer.parseInt(pageSize);
+		}
+		logger.error("默认pageSize为空");
+		return 20;
+	}
+
 	/**
 	 *新闻置顶
 	 * @return

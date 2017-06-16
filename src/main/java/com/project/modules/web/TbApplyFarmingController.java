@@ -3,6 +3,7 @@
  */
 package com.project.modules.web;
 
+import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -90,6 +91,7 @@ public class TbApplyFarmingController extends BaseController {
 				}else{
 					String fieldName = item.getFieldName();
 					String fieldValue = item.getString();
+					fieldValue = new String(fieldValue.getBytes("ISO8859-1"), "UTF-8");
 					if("name".equals(fieldName)){
 						applyFarming.setName(fieldValue);
 					}
@@ -207,7 +209,7 @@ public class TbApplyFarmingController extends BaseController {
 
 	@ResponseBody
 	@RequestMapping("/message")
-	public HttpOutMessage leaveMessage(HttpServletRequest request){
+	public HttpOutMessage leaveMessage(HttpServletRequest request, ServletRequest request1){
 		String imgName = null;
 		TbLeaveMessage leaveMessage = new TbLeaveMessage();
 		List<FileItem> viewUrlList = new ArrayList();
@@ -231,6 +233,7 @@ public class TbApplyFarmingController extends BaseController {
 				}else{
 					String fieldName = item.getFieldName();
 					String fieldValue = item.getString();
+					fieldValue = new String(fieldValue.getBytes("ISO8859-1"), "UTF-8");
 					if("problemType".equals(fieldName)){
 						leaveMessage.setProblemType(fieldValue);
 					}

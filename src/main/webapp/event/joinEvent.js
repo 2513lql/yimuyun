@@ -89,7 +89,7 @@ $("#submitFarming").click(function(e){
 
 
 $("#submitMessage").click(function(e){
-    e.preventDefault();
+    // e.preventDefault();
     var problemType = $("#problemType").val();
     var describe = $("#describe").val();
     var messageContact = $("#messageContact").val();

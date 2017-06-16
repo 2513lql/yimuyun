@@ -18,7 +18,7 @@
             <li><a href="${pageContext.request.contextPath}/home" >首页</a></li>
             <li><a href="${pageContext.request.contextPath}/news/center">新闻中心</a></li>
             <li><a href="${pageContext.request.contextPath}/trace">追溯防伪查询</a></li>
-            <li><a href="${pageContext.request.contextPath}/muslim" class="select">清真文化</a></li>
+            <li><a href="${pageContext.request.contextPath}/muslim" class="selected">清真文化</a></li>
             <li><a href="${pageContext.request.contextPath}/about">关于我们</a></li>
             <li><a href="${pageContext.request.contextPath}/join">加入我们</a></li>
         </ul>

@@ -19,7 +19,7 @@
             <li><a href="${pageContext.request.contextPath}/news/center">新闻中心</a></li>
             <li><a href="${pageContext.request.contextPath}/trace">追溯防伪查询</a></li>
             <li><a href="${pageContext.request.contextPath}/muslim">清真文化</a></li>
-            <li><a href="${pageContext.request.contextPath}/about" class="select">关于我们</a></li>
+            <li><a href="${pageContext.request.contextPath}/about" class="selected">关于我们</a></li>
             <li><a href="${pageContext.request.contextPath}/join">加入我们</a></li>
         </ul>
         <div class="right">
@@ -162,7 +162,7 @@
 </div>
 
 
-<script src="${pageContext.request.contextPath}/js/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/women.js"></script>
 </body>
 </html>

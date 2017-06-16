@@ -17,7 +17,7 @@
         <ul class="center">
             <li><a href="${pageContext.request.contextPath}/home" >首页</a></li>
             <li><a href="${pageContext.request.contextPath}/news/center">新闻中心</a></li>
-            <li><a href="${pageContext.request.contextPath}/trace" class="select">追溯防伪查询</a></li>
+            <li><a href="${pageContext.request.contextPath}/trace" class="selected">追溯防伪查询</a></li>
             <li><a href="${pageContext.request.contextPath}/muslim">清真文化</a></li>
             <li><a href="${pageContext.request.contextPath}/about">关于我们</a></li>
             <li><a href="${pageContext.request.contextPath}/join">加入我们</a></li>
@@ -455,7 +455,7 @@
         <div class="bootom"><span>引领科技风尚，护航农牧发展</span></div>
     </div>
 </div>
-<script src="${pageContext.request.contextPath}/js/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/fangwei.js"></script>
 </body>
 </html>

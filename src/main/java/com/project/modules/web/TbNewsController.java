@@ -12,6 +12,8 @@ import com.project.common.utils.ConfigUtil;
 import com.project.common.utils.DateUtil;
 import com.project.common.utils.StringUtils;
 import com.project.common.web.BaseController;
+import com.project.common.web.HttpOutMessage;
+import com.project.common.web.OutMessageUtils;
 import com.project.modules.entity.TbHomePage;
 import com.project.modules.entity.TbNews;
 import com.project.modules.service.TbHomePageService;
@@ -21,10 +23,7 @@ import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -91,6 +90,35 @@ public class TbNewsController extends BaseController {
 		return modelAndView;
 	}
 
+	@RequestMapping(value = "/list")
+	public ModelAndView newsList(){
+		int pageNo = 1;
+		int pageSize = ConfigUtil.getDefaultPageSize();
+		ModelAndView modelAndView = new ModelAndView();
+		TbNews tbNews = new TbNews();
+		Page<TbNews> params = new Page<TbNews>(pageNo, pageSize);
+		params.setOrderBy("createTime desc");
+		Page<TbNews> page = tbNewsService.findPage(params,tbNews);
+		modelAndView.setViewName("newsList");
+		modelAndView.addObject("page",page);
+		return modelAndView;
+	}
+
+//	@ResponseBody
+//	@RequestMapping(value = "/list")
+//	public HttpOutMessage newsList(){
+//		int pageNo = 1;
+//		int pageSize = ConfigUtil.getDefaultPageSize();
+//		ModelAndView modelAndView = new ModelAndView();
+//		TbNews tbNews = new TbNews();
+//		Page<TbNews> params = new Page<TbNews>(pageNo, pageSize);
+//		params.setOrderBy("createTime desc");
+//		Page<TbNews> page = tbNewsService.findPage(params,tbNews);
+//		modelAndView.setViewName("newsList");
+//		modelAndView.addObject("page",page);
+//		return OutMessageUtils.buildOutMessage(1,page);
+//	}
+
 	@ModelAttribute
 	public TbNews get(@RequestParam(required=false) String id) {
 		TbNews entity = null;
@@ -103,13 +131,13 @@ public class TbNewsController extends BaseController {
 		return entity;
 	}
 	
-	@RequiresPermissions("modules:tbNews:view")
-	@RequestMapping(value = {"list", ""})
-	public String list(TbNews tbNews, HttpServletRequest request, HttpServletResponse response, Model model) {
-		Page<TbNews> page = tbNewsService.findPage(new Page<TbNews>(request, response), tbNews);
-		model.addAttribute("page", page);
-		return "modules/modules/tbNewsList";
-	}
+//	@RequiresPermissions("modules:tbNews:view")
+//	@RequestMapping(value = {"list", ""})
+//	public String list(TbNews tbNews, HttpServletRequest request, HttpServletResponse response, Model model) {
+//		Page<TbNews> page = tbNewsService.findPage(new Page<TbNews>(request, response), tbNews);
+//		model.addAttribute("page", page);
+//		return "modules/modules/tbNewsList";
+//	}
 
 	@RequiresPermissions("modules:tbNews:view")
 	@RequestMapping(value = "form")

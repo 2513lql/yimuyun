@@ -31,7 +31,7 @@
         <div class="header">
             <div class="left"><img src="${pageContext.request.contextPath}/img/public/1.png" /></div>
             <ul class="center">
-                <li><a href="${pageContext.request.contextPath}/home" class="select">首页</a></li>
+                <li><a href="${pageContext.request.contextPath}/home" class="selected">首页</a></li>
                 <li><a href="${pageContext.request.contextPath}/news/center">新闻中心</a></li>
                 <li><a href="${pageContext.request.contextPath}/trace">追溯防伪查询</a></li>
                 <li><a href="${pageContext.request.contextPath}/muslim">清真文化</a></li>
@@ -161,7 +161,7 @@
     </div>
 </div>
 
-<script src="${pageContext.request.contextPath}/js/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/index.js"></script>
 </body>
 </html>

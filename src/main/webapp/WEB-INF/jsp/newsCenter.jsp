@@ -17,7 +17,7 @@
         <div class="left"><img src="${pageContext.request.contextPath}/img/public/1.png" /></div>
         <ul class="center">
             <li><a href="${pageContext.request.contextPath}/home" >首页</a></li>
-            <li><a href="${pageContext.request.contextPath}/news/center" class="select">新闻中心</a></li>
+            <li><a href="${pageContext.request.contextPath}/news/center" class="selected">新闻中心</a></li>
             <li><a href="${pageContext.request.contextPath}/trace">追溯防伪查询</a></li>
             <li><a href="${pageContext.request.contextPath}/muslim">清真文化</a></li>
             <li><a href="${pageContext.request.contextPath}/about">关于我们</a></li>
@@ -43,29 +43,29 @@
             </dd>
         </dl>
     </c:forEach>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="img/index/6.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<h3>世界四大养羊牧场 中国有三个</h3>--%>
-                    <%--<p>为了能让老百姓吃上健康放心的好食品,对肉食品的...</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="img/index/7.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<h3>哈萨克斯坦优质肉类有望上架中国</h3>--%>
-                    <%--<p>伊萨耶娃说:在出口肉类产品方面，我们有一定的优...</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="img/index/8.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<h3>云南销毁600余吨“僵尸肉” 涉多种肉类</h3>--%>
-                    <%--<p>公安官兵将数桶汽油浇在非法走私入境的“僵尸肉”…</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
+            <dl>
+                <dt><a href="erjiye1.html"><img src="img/index/6.png"/></a></dt>
+                <dd>
+                    <h3>世界四大养羊牧场 中国有三个</h3>
+                    <p>为了能让老百姓吃上健康放心的好食品,对肉食品的...</p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="erjiye1.html"><img src="img/index/7.png"/></a></dt>
+                <dd>
+                    <h3>哈萨克斯坦优质肉类有望上架中国</h3>
+                    <p>伊萨耶娃说:在出口肉类产品方面，我们有一定的优...</p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="erjiye1.html"><img src="img/index/8.png"/></a></dt>
+                <dd>
+                    <h3>云南销毁600余吨“僵尸肉” 涉多种肉类</h3>
+                    <p>公安官兵将数桶汽油浇在非法走私入境的“僵尸肉”…</p>
+                </dd>
+            </dl>
         </div>
-        <div class="more"><a href="more.html">更多></a></div>
+        <div class="more"><a href="${pageContext.request.contextPath}/news/list">更多></a></div>
         <div class="I">
             <h2>行业快讯</h2>
         </div>
