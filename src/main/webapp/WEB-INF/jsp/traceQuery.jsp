@@ -38,9 +38,10 @@
             </div>
             <div class="coa">
                 <div class="xuliehao">
-                    <input type="text" placeholder="请输入你的追溯序列号"><span>查询</span>
+                    <input type="text" id="traceNumber1" placeholder="请输入你的追溯序列号"><span id="queryBtn1">查询</span>
                 </div>
-                <div class="result">你的产品为 <span>真</span></div>
+                <%--你的产品为 <span id="traceQueryResult"></span>--%>
+                <div id="queryResult" class="result"></div>
             </div>
             <div class="J">
                 <h2>追溯查询</h2>
@@ -50,7 +51,7 @@
             </div>
             <div class="trace">
                 <div class="xuliehao">
-                    <input type="text" placeholder="请输入你的追溯序列号"><span>查询</span>
+                    <input id="traceNumber2" type="text" placeholder="请输入你的追溯序列号"><span id="queryBtn2">查询</span>
                 </div>
                 <!--<div class="xinxi">
                     <textarea name="yj" cols="20" rows="5" placeholder="牛羊追溯信息"></textarea>
@@ -64,7 +65,7 @@
             <div class="content">
                 <div class="left-tab">
                     <ul>
-                        <li class="select">履历信息</li>
+                        <li class="selected">履历信息</li>
                         <li>养殖环节</li>
                         <li>屠宰环节</li>
                         <li>加工环节</li>
@@ -72,7 +73,7 @@
                         <li>终端环节</li>
                     </ul>
                 </div>
-                <div class="right">
+                <div class="right"> <!--履历信息-->
                     <div class="right1">
                         <table>
                             <tr>
@@ -128,6 +129,25 @@
                             </tr>
                         </table>
                         <h3>诊疗记录</h3>
+                        <table>
+                            <tr>
+                                <td>装车时间： </td>
+                                <td>xxx年xx月xx日</td>
+                            </tr>
+                            <tr>
+                                <td>装车时间：</td>
+                                <td>xxx年xx月xx日</td>
+                            </tr>
+                            <tr>
+                                <td>装车时间：</td>
+                                <td>xxx年xx月xx日</td>
+                            </tr>
+                            <tr>
+                                <td>装车时间：</td>
+                                <td>xxx年xx月xx日</td>
+                            </tr>
+                        </table>
+                        <h3>免疫记录</h3>
                         <table>
                             <tr>
                                 <td>装车时间： </td>
@@ -457,5 +477,6 @@
 </div>
 <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/fangwei.js"></script>
+<script src="${pageContext.request.contextPath}/event/trace.js"></script>
 </body>
 </html>

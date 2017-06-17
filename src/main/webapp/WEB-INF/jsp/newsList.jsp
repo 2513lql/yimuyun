@@ -19,10 +19,10 @@
         <div class="left"><img src="${pageContext.request.contextPath}/img/public/1.png" /></div>
         <ul class="center">
             <li><a href="${pageContext.request.contextPath}/home" >首页</a></li>
-            <li><a href="${pageContext.request.contextPath}/news/center">新闻中心</a></li>
+            <li><a href="${pageContext.request.contextPath}/news/center" class="selected">新闻中心</a></li>
             <li><a href="${pageContext.request.contextPath}/trace">追溯防伪查询</a></li>
             <li><a href="${pageContext.request.contextPath}/muslim">清真文化</a></li>
-            <li><a href="${pageContext.request.contextPath}/about" class="selected">关于我们</a></li>
+            <li><a href="${pageContext.request.contextPath}/about" >关于我们</a></li>
             <li><a href="${pageContext.request.contextPath}/join">加入我们</a></li>
         </ul>
         <div class="right">
