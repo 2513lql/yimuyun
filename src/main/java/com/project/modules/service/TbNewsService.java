@@ -29,7 +29,11 @@ public class TbNewsService extends CrudService<TbNewsDao, TbNews> {
 
 	public List<TbNews> getTopThree(String newsType){
 		String istop = ConfigUtil.getNewsIsTop();
-		return tbNewsDao.getTopThree(newsType,istop);
+		List<TbNews> tbNews = tbNewsDao.getTopThree(newsType,istop);
+		for(TbNews news : tbNews){
+			news.setDigest(news.getDigest().substring(0,20));
+		}
+		return tbNews;
 	}
 
 	/**
