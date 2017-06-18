@@ -127,6 +127,8 @@
     border: 1px solid #D7D7D7;
     padding-left: 31px;
     padding-top: 20px;
+    min-height: 326.3px;
+    padding-bottom: 20.7px;
 }
 
 .main .main2 .content table {
@@ -155,37 +157,39 @@
 
 .main .main2 .content .right1 {
     width: 858px;
-    height: 369px;
+    display: none;
 }
 
 .main .main2 .content .right2 {
     width: 858px;
-    height: 1121px;
     display: none;
 }
 
 .main .main2 .content .right3 {
     width: 858px;
-    height: 1384px;
     display: none;
 }
 
 .main .main2 .content .right4 {
     width: 858px;
-    height: 850px;
     display: none;
 }
 
 .main .main2 .content .right5 {
     width: 858px;
-    height: 369px;
     display: none;
 }
 
 .main .main2 .content .right6 {
     width: 858px;
-    height: 369px;
     display: none;
+}
+
+.main .main2 .content .right7 h4 {
+    color: #009944;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 22px;
 }
 
 .main .main2 .content .right2 table:nth-last-child(1) {

@@ -5,14 +5,18 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <meta content="width=device-width,initial-scale=1,minimum-scale=1;maximum-scale=1,user-scalable=no" name="viewport" id="viewport"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/public.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/mobile.css">
-    <%--<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap/bootstrap.min.css">--%>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/more.css">
+
 </head>
 <head>
     <title>Title</title>
 </head>
 <body>
+<input type="hidden" value="" id="currPage"/>
+<input type="hidden" value="<c:out value="${map['totalCount']}"></c:out>" id="totalCount"/>
+<input type="hidden" value="${pageContext.request.contextPath}" id="contextPath"/>
 <div class="div">
     <!--头部-->
     <div class="header">
@@ -22,94 +26,110 @@
             <li><a href="${pageContext.request.contextPath}/news/center" class="selected">新闻中心</a></li>
             <li><a href="${pageContext.request.contextPath}/trace">追溯防伪查询</a></li>
             <li><a href="${pageContext.request.contextPath}/muslim">清真文化</a></li>
-            <li><a href="${pageContext.request.contextPath}/about" >关于我们</a></li>
+            <li><a href="${pageContext.request.contextPath}/about">关于我们</a></li>
             <li><a href="${pageContext.request.contextPath}/join">加入我们</a></li>
         </ul>
         <div class="right">
             <div class="top"><img src="${pageContext.request.contextPath}/img/public/2.png" /><span>咨询电话</span></div>
-            <div class="bottom">0620-5820580</div>
+            <div class="bottom"><c:out value="${map['phoneNumber']}"></c:out></div>
         </div>
     </div>
     <!--主体-->
-    <div class="main shadow">
+    <div id="companyNewsContainer" class="main shadow">
         <div class="I">
             <h2>公司新闻</h2>
         </div>
-        <div class="phone-text">
+        <c:forEach items="${map['page']}" var="news" varStatus="status">
+            <c:if test="${status.index % 3 == 0}"><div class="phone-text"></c:if>
             <dl>
-                <dt><a href="erjiye1.html"><img src="img/index/6.png"/></a></dt>
+                 <dt><a href="${pageContext.request.contextPath}/news/${news.id}"><img src="${pageContext.request.contextPath}/img/index/8.png"/></a></dt>
                 <dd>
-                    <h3>世界四大养羊牧场 中国有三个</h3>
-                    <p>为了能让老百姓吃上健康放心的好食品,对肉食品的...</p>
+                    <h3>${news.title}</h3>
+                    <p>${news.digest}...</p>
                 </dd>
             </dl>
-            <dl>
-                <dt><a href="erjiye1.html"><img src="img/index/7.png"/></a></dt>
-                <dd>
-                    <h3>哈萨克斯坦优质肉类有望上架中国</h3>
-                    <p>伊萨耶娃说:在出口肉类产品方面，我们有一定的优...</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt><a href="erjiye1.html"><img src="img/index/8.png"/></a></dt>
-                <dd>
-                    <h3>云南销毁600余吨“僵尸肉” 涉多种肉类</h3>
-                    <p>公安官兵将数桶汽油浇在非法走私入境的“僵尸肉”…</p>
-                </dd>
-            </dl>
-        </div>
-        <div class="phone-text">
-            <dl>
-                <dt><a href="erjiye1.html"><img src="img/index/6.png"/></a></dt>
-                <dd>
-                    <h3>世界四大养羊牧场 中国有三个</h3>
-                    <p>为了能让老百姓吃上健康放心的好食品,对肉食品的...</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt><a href="erjiye1.html"><img src="img/index/7.png"/></a></dt>
-                <dd>
-                    <h3>哈萨克斯坦优质肉类有望上架中国</h3>
-                    <p>伊萨耶娃说:在出口肉类产品方面，我们有一定的优...</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt><a href="erjiye1.html"><img src="img/index/8.png"/></a></dt>
-                <dd>
-                    <h3>云南销毁600余吨“僵尸肉” 涉多种肉类</h3>
-                    <p>公安官兵将数桶汽油浇在非法走私入境的“僵尸肉”…</p>
-                </dd>
-            </dl>
-        </div>
-        <div class="phone-text">
-            <dl>
-                <dt><a href="erjiye1.html"><img src="img/index/6.png"/></a></dt>
-                <dd>
-                    <h3>世界四大养羊牧场 中国有三个</h3>
-                    <p>为了能让老百姓吃上健康放心的好食品,对肉食品的...</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt><a href="erjiye1.html"><img src="img/index/7.png"/></a></dt>
-                <dd>
-                    <h3>哈萨克斯坦优质肉类有望上架中国</h3>
-                    <p>伊萨耶娃说:在出口肉类产品方面，我们有一定的优...</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt><a href="erjiye1.html"><img src="img/index/8.png"/></a></dt>
-                <dd>
-                    <h3>云南销毁600余吨“僵尸肉” 涉多种肉类</h3>
-                    <p>公安官兵将数桶汽油浇在非法走私入境的“僵尸肉”…</p>
-                </dd>
-            </dl>
-        </div>
-        <div class="page">
+           <c:if test="${status.index % 3 == 2}"></div></c:if>
+        </c:forEach>
+        <c:if test="${map['isThree'] == 0}"></div></c:if>
+        <%--<div class="phone-text">--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/6.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<h3>世界四大养羊牧场 中国有三个</h3>--%>
+                    <%--<p>为了能让老百姓吃上健康放心的好食品,对肉食品的...</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/7.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<h3>哈萨克斯坦优质肉类有望上架中国</h3>--%>
+                    <%--<p>伊萨耶娃说:在出口肉类产品方面，我们有一定的优...</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/8.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<h3>云南销毁600余吨“僵尸肉” 涉多种肉类</h3>--%>
+                    <%--<p>公安官兵将数桶汽油浇在非法走私入境的“僵尸肉”…</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+        <%--</div>--%>
+        <%--<div class="phone-text">--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/6.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<h3>世界四大养羊牧场 中国有三个</h3>--%>
+                    <%--<p>为了能让老百姓吃上健康放心的好食品,对肉食品的...</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/7.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<h3>哈萨克斯坦优质肉类有望上架中国</h3>--%>
+                    <%--<p>伊萨耶娃说:在出口肉类产品方面，我们有一定的优...</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/8.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<h3>云南销毁600余吨“僵尸肉” 涉多种肉类</h3>--%>
+                    <%--<p>公安官兵将数桶汽油浇在非法走私入境的“僵尸肉”…</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+        <%--</div>--%>
+        <%--<div class="phone-text">--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/6.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<h3>世界四大养羊牧场 中国有三个</h3>--%>
+                    <%--<p>为了能让老百姓吃上健康放心的好食品,对肉食品的...</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/7.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<h3>哈萨克斯坦优质肉类有望上架中国</h3>--%>
+                    <%--<p>伊萨耶娃说:在出口肉类产品方面，我们有一定的优...</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/8.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<h3>云南销毁600余吨“僵尸肉” 涉多种肉类</h3>--%>
+                    <%--<p>公安官兵将数桶汽油浇在非法走私入境的“僵尸肉”…</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+        <%--</div>--%>
 
-            <%--<a href="">--%>
-                <%--<</a><a class="current">1</a><a>2</a><a>3</a><span>下一页</span><i>共3页</i>--%>
-        </div>
+
     </div>
+<div class="main" style="padding-bottom: 50px">
+<div class="page">
+    <div id="callBackPager"></div><i class="totalPage">共<c:out value="${map['totalPage']}"></c:out>页</i>
+    <!-- <a href="">
+         <</a><a class="current">1</a><a>2</a><a>3</a><span>下一页</span><i>共3页</i>-->
+</div>
+</div>
     <!--底部-->
     <div class="footer">
         <div class="top">
@@ -121,7 +141,7 @@
                 </div>
             </div>
             <div class="right">
-                <div class="right-top">0620-5820820</div>
+                <div class="right-top"><c:out value="${map['phoneNumber']}"></c:out></div>
                 <div class="right-bottom">
                     <div><img src="${pageContext.request.contextPath}/img/index/3.png" alt=""><span>咨询热线</span></div>
                 </div>
@@ -135,24 +155,68 @@
 <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/bootstrap/bootstrap.js"></script>
 <script src="${pageContext.request.contextPath}/js/bootstrap/extendPagination.js"></script>
-<script type="text/javascript">
-
+<script type="application/javascript">
+    var totalCount = $("#totalCount").val();
+    var contextPath = $("#contextPath").val();
     var options = {
-        totalCount : 50,
+        totalCount : totalCount, //
         showCount : 3,
         limit : 9
     };
-
     function callBackPagination() {
-
         $('#callBackPager').extendPagination({
             totalCount: options.totalCount,
             showCount: options.showCount,
             limit: options.limit,
             callback: function (curr, limit, totalCount) {
+                getNewsList(curr);
             }
         });
     }
     callBackPagination();
+
+    function getNewsList(pageNo) {
+        $.ajax({
+            async: false,
+            url:  contextPath +"/news/page?"+pageNo,
+            type: "get",
+            dataType: "json",
+            success: function (data) {
+                renderNews(data['page']);
+            }
+        });
+    }
+
+
+    function  renderNews(page) {
+        var news = '<div class="I"><h2>公司新闻</h2></div>';
+        var pageLength = page.length;
+        for(var index in page){
+            var item = page[index];
+            if(index % 3 == 0){
+                news += '<div class="phone-text">';
+            }
+//            news += '<dl><dt><a href="';
+//            news += contextPath;
+//            news += '/news/';
+//            news += item.id;
+//            news += '"><img src="';
+//            news += item.picture;
+//            news += '"/></a></dt>';
+            news += '<dl><dt><a href="' +contextPath + '/news/'+ item.id + '"><img src="' + contextPath +'/img/index/6.png"/></a></dt>';
+            news += '<dd><h3>' + item.title;
+            news += '</h3><p>'+ item.digest + '...</p>';
+            news += '</dd></dl>';
+            if (index % 3 == 2){
+                news += '</div>';
+            }
+        }
+        if(pageLength % 3 != 0){
+            news += '</div>';
+        }
+        $("#companyNewsContainer").html(news);
+        $('body').scrollTop(0);
+    }
+
 </script>
 </html>

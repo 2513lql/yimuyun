@@ -15,12 +15,12 @@
     <div class="banner">
         <div class="shuffling">
             <ul class="slider">
-                <li><img src="${pageContext.request.contextPath}/img/index/11.png" /></li>
-                <li><img src="${pageContext.request.contextPath}/img/index/2.png" /></li>
-                <li><img src="${pageContext.request.contextPath}/img/index/1.png" /></li>
-                    <%--<li><img src="${map['homePage'].picture1}" /></li>--%>
-                    <%--<li><img src="${map['homePage'].picture2}" /></li>--%>
-                    <%--<li><img src="${map['homePage'].picture3}" /></li>--%>
+                <%--<li><img src="${pageContext.request.contextPath}/img/index/11.png" /></li>--%>
+                <%--<li><img src="${pageContext.request.contextPath}/img/index/2.png" /></li>--%>
+                <%--<li><img src="${pageContext.request.contextPath}/img/index/1.png" /></li>--%>
+                    <li><img src="${map['homePage'].picture1}" /></li>
+                    <li><img src="${map['homePage'].picture2}" /></li>
+                    <li><img src="${map['homePage'].picture3}" /></li>
             </ul>
             <ul class="num">
                 <li class="on"></li>

@@ -30,9 +30,9 @@ public class TbNewsService extends CrudService<TbNewsDao, TbNews> {
 	public List<TbNews> getTopThree(String newsType){
 		String istop = ConfigUtil.getNewsIsTop();
 		List<TbNews> tbNews = tbNewsDao.getTopThree(newsType,istop);
-		for(TbNews news : tbNews){
-			news.setDigest(news.getDigest().substring(0,20));
-		}
+//		for(TbNews news : tbNews){
+//			news.setDigest(news.getDigest().substring(0,20));
+//		}
 		return tbNews;
 	}
 
@@ -61,6 +61,15 @@ public class TbNewsService extends CrudService<TbNewsDao, TbNews> {
 	public TbNews getMuslimCultrue(){
 		String newsType = ConfigUtil.getMuslimCultureNewsLocation();
 		return tbNewsDao.getMuslimCulture(newsType);
+	}
+
+	/**
+	 * 查询公司新闻总数
+	 * @return
+	 */
+	public Integer getTotalCount(){
+		String newsType = ConfigUtil.getCompanyNewsLocation();
+		return tbNewsDao.getTotalCount(newsType);
 	}
 
 	public TbNews get(String id) {

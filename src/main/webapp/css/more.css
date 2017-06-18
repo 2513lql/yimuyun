@@ -19,8 +19,10 @@
 
 .main {
     padding: 0 83px;
-    padding-bottom: 70px;
+    padding-bottom: 0px;
 }
+
+
 
 .main .I {
     padding-top: 49px;
@@ -116,12 +118,14 @@
     opacity: 0.6;
 }
 
+
 .main .page {
     margin-top: 20px;
     text-align: right;
     border-top: 2px solid #E1E1E1;
     padding-top: 30px;
 }
+
 
 /*.main .page a,*/
 /*.main .page span {*/
@@ -145,11 +149,11 @@
     /*width: 64px;*/
 /*}*/
 
-/*.main .page i {*/
-    /*font-style: normal;*/
-    /*line-height: 30px;*/
-    /*margin-left: 11px;*/
-/*}*/
+.totalPage {
+    font-style: normal;
+    line-height: 30px;
+    margin-left: 11px;
+}
 
 /*.main .page .current {*/
     /*background: #009944;*/

@@ -47,13 +47,12 @@ $("#submitSlaughter").click(function(e){
                 contact:contact},
         dataType: "json",
         success: function (data) {
-            if (data.result == "error") {
-                setHiderShow("活动号创建失败");
-                setTimeoutHinderHide();
-            } else {
-                var form = document.forms["activityNumForm"];
-                form.submit();
-            }
+            alert("添加成功");
+            $("#enterpriseType").val = "";
+            $("#slaughterName").val = "";
+            $("#address").val = "";
+            $("#telephoneNumber").val = "";
+            $("#contact").val = "";
         }
     });
 });
@@ -85,6 +84,10 @@ $("#submitFarming").click(function(e){
     }
     $("#farmingForm").submit();
     alert("添加成功");
+    $("#farmingName").val = "";
+    $("#scale").val = "";
+    $("#type").val = "";
+    $("#farmingTelephoneNumber").val = "";
 });
 
 
@@ -106,4 +109,7 @@ $("#submitMessage").click(function(e){
         return;
     }
     $("#messageForm").submit();
+    alert("添加成功");
+    $("#describe").val = "";
+    $("#messageContact").val = "";
 });

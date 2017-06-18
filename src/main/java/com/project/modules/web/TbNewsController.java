@@ -18,6 +18,7 @@ import com.project.modules.entity.TbHomePage;
 import com.project.modules.entity.TbNews;
 import com.project.modules.service.TbHomePageService;
 import com.sun.javafx.collections.MappingChange;
+import org.apache.commons.collections.map.HashedMap;
 import org.apache.poi.ss.formula.functions.Mode;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,7 +57,7 @@ public class TbNewsController extends BaseController {
 	@RequestMapping("/center")
 	public ModelAndView newsCenter(){
 		ModelAndView modelAndView = new ModelAndView();
-		List<TbNews> newses = tbNewsService.getTopThree(ConfigUtil.getHomePageNews());
+		List<TbNews> newses = tbNewsService.getTopThree(ConfigUtil.getCompanyNewsLocation());
 		List<TbNews> newsList1 = tbNewsService.getHangYeZiXuan();
 		List<TbNews> newsList2 = new ArrayList<>();
 		String phoneNumber = tbHomePageService.getHomePage().getTelephoneNumber();
@@ -65,6 +66,12 @@ public class TbNewsController extends BaseController {
 			newsList1.remove(newsList2);
 		}
 		Map<String,Object> map = new HashMap<>();
+        for (TbNews news : newsList1){
+            news.setNewsTime(DateUtil.date2shortStr(news.getCreateTime()));
+        }
+        for (TbNews news : newsList2){
+            news.setNewsTime(DateUtil.date2shortStr(news.getCreateTime()));
+        }
 		map.put("zixuanList1",newsList1);
 		map.put("zixuanList2",newsList2);
 		map.put("topNews",newses);
@@ -96,13 +103,57 @@ public class TbNewsController extends BaseController {
 		int pageSize = ConfigUtil.getDefaultPageSize();
 		ModelAndView modelAndView = new ModelAndView();
 		TbNews tbNews = new TbNews();
+        tbNews.setShowLocation(ConfigUtil.getCompanyNewsLocation());
 		Page<TbNews> params = new Page<TbNews>(pageNo, pageSize);
 		params.setOrderBy("createTime desc");
 		Page<TbNews> page = tbNewsService.findPage(params,tbNews);
+        String phoneNumber = tbHomePageService.getHomePage().getTelephoneNumber();
+        int totalCount = tbNewsService.getTotalCount();
+        int totalPage =(int) Math.ceil((totalCount * 1.0) / pageSize);
+        Map<String,Object> map = new HashedMap();
+        map.put("phoneNumber",phoneNumber);
+        map.put("totalCount",totalCount);
+        map.put("totalPage",totalPage);
+        if (page.getList().size() % 3 == 0){ //如果是3的整数倍，则不加</div>
+            map.put("isThree","1");
+        }else {
+            map.put("isThree","0");
+        }
+        map.put("page",page.getList());
 		modelAndView.setViewName("newsList");
-		modelAndView.addObject("page",page);
+		modelAndView.addObject("map",map);
 		return modelAndView;
 	}
+
+    /**
+     * 分页查询新闻
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/page")
+    public Map<String,Object> getPageList(Integer pageNo){
+        if (pageNo == null || pageNo.equals("")){
+            pageNo = 1;
+        }
+        int pageSize = ConfigUtil.getDefaultPageSize();
+        TbNews tbNews = new TbNews();
+        tbNews.setShowLocation(ConfigUtil.getCompanyNewsLocation());
+        Page<TbNews> params = new Page<TbNews>(pageNo, pageSize);
+        params.setOrderBy("createTime desc");
+        Page<TbNews> page = tbNewsService.findPage(params,tbNews);
+        int totalCount = tbNewsService.getTotalCount();
+        int totalPage =(int) Math.ceil((totalCount * 1.0) / pageSize);
+        Map<String,Object> map = new HashedMap();
+        map.put("totalCount",totalCount);
+        map.put("totalPage",totalPage);
+        if (page.getList().size() % 3 == 0){ //如果是3的整数倍，则不加</div>
+            map.put("isThree","1");
+        }else {
+            map.put("isThree","0");
+        }
+        map.put("page",page.getList());
+        return map;
+    }
 
 //	@ResponseBody
 //	@RequestMapping(value = "/list")
@@ -115,8 +166,8 @@ public class TbNewsController extends BaseController {
 //		params.setOrderBy("createTime desc");
 //		Page<TbNews> page = tbNewsService.findPage(params,tbNews);
 //		modelAndView.setViewName("newsList");
-//		modelAndView.addObject("page",page);
-//		return OutMessageUtils.buildOutMessage(1,page);
+//		modelAndView.addObject("page",page.getList());
+//		return OutMessageUtils.buildOutMessage(1,page.getList());
 //	}
 
 	@ModelAttribute

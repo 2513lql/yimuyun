@@ -43,27 +43,27 @@
             </dd>
         </dl>
     </c:forEach>
-            <dl>
-                <dt><a href="erjiye1.html"><img src="img/index/6.png"/></a></dt>
-                <dd>
-                    <h3>世界四大养羊牧场 中国有三个</h3>
-                    <p>为了能让老百姓吃上健康放心的好食品,对肉食品的...</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt><a href="erjiye1.html"><img src="img/index/7.png"/></a></dt>
-                <dd>
-                    <h3>哈萨克斯坦优质肉类有望上架中国</h3>
-                    <p>伊萨耶娃说:在出口肉类产品方面，我们有一定的优...</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt><a href="erjiye1.html"><img src="img/index/8.png"/></a></dt>
-                <dd>
-                    <h3>云南销毁600余吨“僵尸肉” 涉多种肉类</h3>
-                    <p>公安官兵将数桶汽油浇在非法走私入境的“僵尸肉”…</p>
-                </dd>
-            </dl>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="img/index/6.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<h3>世界四大养羊牧场 中国有三个</h3>--%>
+                    <%--<p>为了能让老百姓吃上健康放心的好食品,对肉食品的...</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="img/index/7.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<h3>哈萨克斯坦优质肉类有望上架中国</h3>--%>
+                    <%--<p>伊萨耶娃说:在出口肉类产品方面，我们有一定的优...</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="img/index/8.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<h3>云南销毁600余吨“僵尸肉” 涉多种肉类</h3>--%>
+                    <%--<p>公安官兵将数桶汽油浇在非法走私入境的“僵尸肉”…</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
         </div>
         <div class="more"><a href="${pageContext.request.contextPath}/news/list">更多></a></div>
         <div class="I">
@@ -72,26 +72,31 @@
         <div class="liebiao">
             <div class="liebai">
                 <ul>
-                    <li><a href="erjiye1.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>
-                    <li><a href="erjiye1.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>
-                    <li><a href="erjiye1.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>
-                    <li><a href="erjiye1.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>
-                    <li><a href="erjiye1.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>
-                    <li><a href="erjiye1.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>
-                    <li><a href="erjiye1.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>
-                    <li><a href="erjiye1.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>
+                    <c:forEach items="${map['zixuanList1']}" var="news">
+                    <li><a href="${pageContext.request.contextPath}/news/${news.id}"><b>${news.title}</b><span>${news.newsTime}</span></a></li>
+                    </c:forEach>
+                    <%--<li><a href="erjiye1.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>--%>
+                    <%--<li><a href="erjiye1.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>--%>
+                    <%--<li><a href="erjiye1.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>--%>
+                    <%--<li><a href="erjiye1.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>--%>
+                    <%--<li><a href="erjiye1.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>--%>
+                    <%--<li><a href="erjiye1.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>--%>
+                    <%--<li><a href="erjiye1.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>--%>
                 </ul>
             </div>
             <div class="liebai1">
                 <ul>
-                    <li><a href="erjiye2.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>
-                    <li><a href="erjiye2.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>
-                    <li><a href="erjiye2.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>
-                    <li><a href="erjiye2.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>
-                    <li><a href="erjiye2.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>
-                    <li><a href="erjiye2.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>
-                    <li><a href="erjiye2.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>
-                    <li><a href="erjiye2.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>
+                    <c:forEach items="${map['zixuanList2']}" var="news">
+                        <li><a href="${pageContext.request.contextPath}/news/${news.id}"><b>${news.title}</b><span>${news.newsTime}</span></a></li>
+                    </c:forEach>
+                    <%--<li><a href="erjiye2.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>--%>
+                    <%--<li><a href="erjiye2.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>--%>
+                    <%--<li><a href="erjiye2.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>--%>
+                    <%--<li><a href="erjiye2.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>--%>
+                    <%--<li><a href="erjiye2.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>--%>
+                    <%--<li><a href="erjiye2.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>--%>
+                    <%--<li><a href="erjiye2.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>--%>
+                    <%--<li><a href="erjiye2.html"><b>舌尖上的美食 | 世界四大养羊牧场 中国有三个</b><span>2017年5月13日</span></a></li>--%>
                 </ul>
             </div>
         </div>

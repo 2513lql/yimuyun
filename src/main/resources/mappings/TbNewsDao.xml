@@ -34,6 +34,12 @@
 		ORDER BY update_time DESC limit 0,3
 	</select>
 
+	<select id="getTotalCount" resultType="java.lang.Integer" parameterType="java.lang.String">
+		SELECT COUNT(*)
+		FROM news a
+		WHERE show_location=#{newsType}
+	</select>
+
 	<!--行业资讯-->
 	<select id="getHangYeZiXuan" parameterType="java.lang.String" resultType="TbNews">
 		SELECT
@@ -67,7 +73,9 @@
 		FROM news a
 		<include refid="tbNewsJoins"/>
 		<where>
-			
+			<if test="showLocation != null and showLocation != ''">
+				AND a.show_location=#{showLocation}
+			</if>
 			<if test="title != null and title != ''">
 				AND a.title LIKE 
 					<if test="dbName == 'oracle'">'%'||#{title}||'%'</if>
@@ -103,7 +111,6 @@
 	
 	<insert id="insert">
 		INSERT INTO news(
-			id,
 			istop,
 			show_location,
 			picture,
@@ -114,7 +121,6 @@
 			update_time,
 			create_time
 		) VALUES (
-			#{id},
 			#{istop},
 			#{showLocation},
 			#{picture},

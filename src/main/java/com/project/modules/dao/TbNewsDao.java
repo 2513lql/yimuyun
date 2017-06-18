@@ -21,4 +21,5 @@ public interface TbNewsDao extends CrudDao<TbNews> {
 	List<TbNews> getHangYeZiXuan(String newsType); //行业资讯
 	List<TbNews> getCompanyDevelopNews(String newsType); //公司發展歷程
 	TbNews getMuslimCulture(String newsType); //清真文化
+	Integer getTotalCount(String newsType); //类型新闻数量
 }

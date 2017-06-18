@@ -451,6 +451,22 @@
                             </tr>
                         </table>
                     </div>
+                    <div class="right7">
+                        <h4>产品说明</h4>
+                        <table>
+                            <tr>
+                                <td>产品名称： </td>
+                                <td>xxx年xx月xx日</td>
+                            </tr>
+                            <tr>
+                                <td>产品品牌：</td>
+                                <td>xxx年xx月xx日</td>
+                            </tr>
+                        </table>
+                        <div>
+                            <img src="./img/index/7.png" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
