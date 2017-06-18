@@ -31,6 +31,16 @@ $(".main .main2 .left-tab ul li").click(function () {
 
 
 function renderTrace(body) {
+
+    var product = " <h4>产品说明</h4>";
+    product += "<table><tr><td>产品名称: " +  body['productName'] +"</td></tr></table>";
+    if (body['homePicture'] != ''){
+        product += "<div>";
+        product += "<img src='" + body['homePicture'] + "' alt=''></div>";
+    }
+    $(".right .right7").html(product);
+
+
     var lvli = "<tr><td>身份证号: " +  body['livestock']['idNumber'] +"</td></tr>";
     lvli += "<tr><td>出生日期: " + body['livestock']['birthday'] + "</td></tr>";
     lvli += "<tr><td>出生重量: " + body['livestock']['birthWeight']+"</td></tr>";

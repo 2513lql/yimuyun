@@ -65,7 +65,7 @@
             <div class="content">
                 <div class="left-tab">
                     <ul>
-                        <li class="selected">履历信息</li>
+                        <li>履历信息</li>
                         <li>养殖环节</li>
                         <li>屠宰环节</li>
                         <li>加工环节</li>
