@@ -15,5 +15,7 @@ import com.project.modules.entity.TbHonor;
  */
 @MyBatisDao
 public interface TbHonorDao extends CrudDao<TbHonor> {
-	
+
+    Integer getTotalCount();
+
 }

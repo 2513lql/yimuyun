@@ -21,6 +21,11 @@
 		<include refid="tbHonorJoins"/>
 		WHERE a.id = #{id}
 	</select>
+
+	<select id="getTotalCount" resultType="java.lang.Integer">
+		SELECT COUNT(*)
+		FROM honor a
+	</select>
 	
 	<select id="findList" resultType="TbHonor">
 		SELECT 

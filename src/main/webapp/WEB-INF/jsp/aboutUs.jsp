@@ -6,10 +6,14 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <meta content="width=device-width,initial-scale=1,minimum-scale=1;maximum-scale=1,user-scalable=no" name="viewport" id="viewport"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/public.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/women.css">
 </head>
 <body>
+<input type="hidden" value="" id="currPage"/>
+<input type="hidden" value="<c:out value="${map['totalCount']}"></c:out>" id="totalCount"/>
+<input type="hidden" value="${pageContext.request.contextPath}" id="contextPath"/>
 <div class="div">
     <!--头部-->
     <div class="header">
@@ -76,69 +80,84 @@
         <div class="I">
             <h2>公司荣誉</h2>
         </div>
-        <div class="phone-text">
+        <c:forEach items="${map['page']}" var="news" varStatus="status">
+            <c:if test="${status.index % 3 == 0}"><div class="phone-text"></c:if>
             <dl>
-                <dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/6.png"/></a></dt>
+                <dt><img src="${news.picture}"/></dt>
                 <dd>
-                    <p>为了能让老百姓吃上健康放心的好食品</p>
+                    <p>${news.name}</p>
                 </dd>
             </dl>
-            <dl>
-                <dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/7.png"/></a></dt>
-                <dd>
-                    <p>伊萨耶娃说:在出口肉类产品方面</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/8.png"/></a></dt>
-                <dd>
-                    <p>公安官兵将数桶汽油浇在非法</p>
-                </dd>
-            </dl>
-        </div>
-        <div class="phone-text">
-            <dl>
-                <dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/6.png"/></a></dt>
-                <dd>
-                    <p>为了能让老百姓吃上健康放心的好食品</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/7.png"/></a></dt>
-                <dd>
-                    <p>伊萨耶娃说:在出口肉类产品方面</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/8.png"/></a></dt>
-                <dd>
-                    <p>公安官兵将数桶汽油浇在非法走私</p>
-                </dd>
-            </dl>
-        </div>
-        <div class="phone-text">
-            <dl>
-                <dt><a href="erjiye1.html"><img src="img/index/6.png"/></a></dt>
-                <dd>
-                    <p>为了能让老百姓吃上健康放心的好食品</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt><a href="erjiye1.html"><img src="img/index/7.png"/></a></dt>
-                <dd>
-                    <p>伊萨耶娃说:在出口肉类产品方面</p>
-                </dd>
-            </dl>
-            <dl>
-                <dt><a href="erjiye1.html"><img src="img/index/8.png"/></a></dt>
-                <dd>
-                    <p>公安官兵将数桶汽油浇在非法走私</p>
-                </dd>
-            </dl>
-        </div>
+            <c:if test="${status.index % 3 == 2}"></div></c:if>
+        </c:forEach>
+        <c:if test="${map['isThree'] == 0}"></div></c:if>
+        <%--<div class="phone-text">--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/6.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<p>为了能让老百姓吃上健康放心的好食品</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/7.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<p>伊萨耶娃说:在出口肉类产品方面</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/8.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<p>公安官兵将数桶汽油浇在非法</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+        <%--</div>--%>
+        <%--<div class="phone-text">--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/6.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<p>为了能让老百姓吃上健康放心的好食品</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/7.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<p>伊萨耶娃说:在出口肉类产品方面</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/8.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<p>公安官兵将数桶汽油浇在非法走私</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+        <%--</div>--%>
+        <%--<div class="phone-text">--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="img/index/6.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<p>为了能让老百姓吃上健康放心的好食品</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="img/index/7.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<p>伊萨耶娃说:在出口肉类产品方面</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+            <%--<dl>--%>
+                <%--<dt><a href="erjiye1.html"><img src="img/index/8.png"/></a></dt>--%>
+                <%--<dd>--%>
+                    <%--<p>公安官兵将数桶汽油浇在非法走私</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+        <%--</div>--%>
+    </div>
+    <div class="main" style="padding-bottom: 50px">
         <div class="page">
-            <a href="">
-                <</a><a class="current">1</a><a>2</a><a>3</a><span>下一页</span><i>共3页</i></div>
+            <div id="callBackPager"></div><i class="totalPage">共<c:out value="${map['totalPage']}"></c:out>页</i>
+            <!-- <a href="">
+                 <</a><a class="current">1</a><a>2</a><a>3</a><span>下一页</span><i>共3页</i>-->
+        </div>
     </div>
     <!--底部-->
     <div class="footer">
@@ -160,9 +179,65 @@
         <div class="bootom"><span>引领科技风尚，护航农牧发展</span></div>
     </div>
 </div>
-
-
+</body>
 <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/women.js"></script>
-</body>
+<script src="${pageContext.request.contextPath}/js/bootstrap/bootstrap.js"></script>
+<script src="${pageContext.request.contextPath}/js/bootstrap/extendPagination.js"></script>
+<script type="application/javascript">
+    var totalCount = $("#totalCount").val();
+    var contextPath = $("#contextPath").val();
+    var options = {
+        totalCount : totalCount, //
+        showCount : 3,
+        limit : 9
+    };
+    function callBackPagination() {
+        $('#callBackPager').extendPagination({
+            totalCount: options.totalCount,
+            showCount: options.showCount,
+            limit: options.limit,
+            callback: function (curr, limit, totalCount) {
+                getNewsList(curr);
+            }
+        });
+    }
+    callBackPagination();
+
+    function getNewsList(pageNo) {
+        $.ajax({
+            async: false,
+            url:  contextPath +"/honor/page?"+pageNo,
+            type: "get",
+            dataType: "json",
+            success: function (data) {
+                renderNews(data['page']);
+            }
+        });
+    }
+
+
+    function  renderNews(page) {
+        var news = '<div class="I"><h2>公司荣誉</h2></div>';
+        var pageLength = page.length;
+        for(var index in page){
+            var item = page[index];
+            if(index % 3 == 0){
+                news += '<div class="phone-text">';
+            }
+            news += '<dl><dt><img src="' + contextPath +'/img/index/6.png"/></dt>';
+            news += '<dd><p>'+ item.name + '</p>';
+            news += '</dd></dl>';
+            if (index % 3 == 2){
+                news += '</div>';
+            }
+        }
+        if(pageLength % 3 != 0){
+            news += '</div>';
+        }
+        $("#companyNewsContainer").html(news);
+        $('body').scrollTop(0);
+    }
+
+</script>
 </html>

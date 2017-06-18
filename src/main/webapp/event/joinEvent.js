@@ -48,11 +48,11 @@ $("#submitSlaughter").click(function(e){
         dataType: "json",
         success: function (data) {
             alert("添加成功");
-            $("#enterpriseType").val = "";
-            $("#slaughterName").val = "";
-            $("#address").val = "";
-            $("#telephoneNumber").val = "";
-            $("#contact").val = "";
+            $("#enterpriseType").val("");
+            $("#slaughterName").val("");
+            $("#address").val("");
+            $("#telephoneNumber").val("");
+            $("#contact").val("");
         }
     });
 });
@@ -84,10 +84,10 @@ $("#submitFarming").click(function(e){
     }
     $("#farmingForm").submit();
     alert("添加成功");
-    $("#farmingName").val = "";
-    $("#scale").val = "";
-    $("#type").val = "";
-    $("#farmingTelephoneNumber").val = "";
+    $("#farmingName").val("");
+    $("#scale").val("");
+    $("#type").val("");
+    $("#farmingTelephoneNumber").val("");
 });
 
 
@@ -110,6 +110,6 @@ $("#submitMessage").click(function(e){
     }
     $("#messageForm").submit();
     alert("添加成功");
-    $("#describe").val = "";
-    $("#messageContact").val = "";
+    $("#describe").val("");
+    $("#messageContact").val("");
 });

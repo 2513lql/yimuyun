@@ -8,6 +8,7 @@ import java.util.List;
 import com.project.common.persistence.Page;
 import com.project.common.service.CrudService;
 import com.project.modules.entity.TbHonor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,6 +22,13 @@ import com.project.modules.dao.TbHonorDao;
 @Service
 @Transactional(readOnly = true)
 public class TbHonorService extends CrudService<TbHonorDao, TbHonor> {
+
+	@Autowired
+	private TbHonorDao tbHonorDao;
+
+	public Integer getTotalCount(){
+		return tbHonorDao.getTotalCount();
+	}
 
 	public TbHonor get(String id) {
 		return super.get(id);

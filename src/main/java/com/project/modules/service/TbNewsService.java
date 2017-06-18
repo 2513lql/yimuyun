@@ -67,8 +67,7 @@ public class TbNewsService extends CrudService<TbNewsDao, TbNews> {
 	 * 查询公司新闻总数
 	 * @return
 	 */
-	public Integer getTotalCount(){
-		String newsType = ConfigUtil.getCompanyNewsLocation();
+	public Integer getTotalCount(String newsType){
 		return tbNewsDao.getTotalCount(newsType);
 	}
 

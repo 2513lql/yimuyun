@@ -149,7 +149,7 @@
     </div>
 </div>
 
-<script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.js"></script>
 <script src="${pageContext.request.contextPath}/js/join.js"></script>
 <script src="${pageContext.request.contextPath}/event/joinEvent.js"></script>
 </body>

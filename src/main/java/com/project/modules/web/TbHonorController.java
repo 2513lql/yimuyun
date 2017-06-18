@@ -8,9 +8,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.project.common.config.Global;
 import com.project.common.persistence.Page;
+import com.project.common.utils.ConfigUtil;
 import com.project.common.utils.StringUtils;
 import com.project.common.web.BaseController;
 import com.project.modules.entity.TbHonor;
+import org.apache.commons.collections.map.HashedMap;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,14 +25,42 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.project.modules.service.TbHonorService;
 
+import java.util.Map;
+
 /**
  * 公司荣誉Controller
  * @author LQL
  * @version 2017-06-13
  */
 @Controller
-@RequestMapping(value = "${adminPath}/xinda/tbHonor")
+@RequestMapping(value = "/honor")
 public class TbHonorController extends BaseController {
+
+
+	@RequestMapping("/page")
+	public Map<String,Object> getHonors(Integer pageNo){
+		//公司荣誉
+		if (pageNo == null || pageNo <= 0){
+			pageNo = 1;
+		}
+		Map<String,Object> map = new HashedMap();
+		int pageSize = ConfigUtil.getDefaultPageSize();
+		TbHonor honor = new TbHonor();
+		Page<TbHonor> params = new Page<TbHonor>(pageNo, pageSize);
+		params.setOrderBy("createTime asc");
+		Page<TbHonor> page =  tbHonorService.findPage(params,honor);
+		int totalCount = tbHonorService.getTotalCount();
+		int totalPage =(int) Math.ceil((totalCount * 1.0) / pageSize);
+		map.put("totalCount",totalCount);
+		map.put("totalPage",totalPage);
+		if (page.getList().size() % 3 == 0){ //如果是3的整数倍，则不加</div>
+			map.put("isThree","1");
+		}else {
+			map.put("isThree","0");
+		}
+		map.put("page",page.getList());
+		return map;
+	}
 
 	@Autowired
 	private TbHonorService tbHonorService;

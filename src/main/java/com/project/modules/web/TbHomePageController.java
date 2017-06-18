@@ -13,8 +13,10 @@ import com.project.common.utils.DateUtil;
 import com.project.common.utils.StringUtils;
 import com.project.common.web.BaseController;
 import com.project.modules.entity.TbHomePage;
+import com.project.modules.entity.TbHonor;
 import com.project.modules.entity.TbNews;
 import com.project.modules.service.TbHomePageService;
+import com.project.modules.service.TbHonorService;
 import com.project.modules.service.TbNewsService;
 import com.sun.javafx.collections.MappingChange;
 import org.apache.poi.ss.formula.functions.Mode;
@@ -47,6 +49,8 @@ public class TbHomePageController extends BaseController {
 	private TbHomePageService tbHomePageService;
 	@Autowired
 	private TbNewsService tbNewsService;
+	@Autowired
+	private TbHonorService tbHonorService;
 
 	@RequestMapping(value={"","home"})
 	public ModelAndView homePage(){
@@ -98,6 +102,7 @@ public class TbHomePageController extends BaseController {
      */
 	@RequestMapping("about")
 	public ModelAndView aboutUs(){
+
 		ModelAndView modelAndView = new ModelAndView();
 		//公司发展历程新闻
 		List<TbNews> companyTopNews = tbNewsService.getTopThree(ConfigUtil.getDevelopmentHistoryNewsLocation());
@@ -107,10 +112,30 @@ public class TbHomePageController extends BaseController {
 		map.put("phoneNumber",phoneNumber);
 		map.put("companyTopNews",companyTopNews);
 		map.put("companyNews",companyNews);
+
+		//公司荣誉
+		int pageNo = 1;
+		int pageSize = ConfigUtil.getDefaultPageSize();
+		TbHonor honor = new TbHonor();
+		Page<TbHonor> params = new Page<TbHonor>(pageNo, pageSize);
+		params.setOrderBy("createTime asc");
+		Page<TbHonor> page =  tbHonorService.findPage(params,honor);
+		int totalCount = tbHonorService.getTotalCount();
+		int totalPage =(int) Math.ceil((totalCount * 1.0) / pageSize);
+		map.put("totalCount",totalCount);
+		map.put("totalPage",totalPage);
+		if (page.getList().size() % 3 == 0){ //如果是3的整数倍，则不加</div>
+			map.put("isThree","1");
+		}else {
+			map.put("isThree","0");
+		}
+		map.put("page",page.getList());
 		modelAndView.addObject("map",map);
 		modelAndView.setViewName("aboutUs");
+
 		return modelAndView;
 	}
+
 
 	/**
 	 *关于我们

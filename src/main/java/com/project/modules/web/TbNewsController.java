@@ -102,13 +102,14 @@ public class TbNewsController extends BaseController {
 		int pageNo = 1;
 		int pageSize = ConfigUtil.getDefaultPageSize();
 		ModelAndView modelAndView = new ModelAndView();
+		String newsType = ConfigUtil.getCompanyNewsLocation();
 		TbNews tbNews = new TbNews();
-        tbNews.setShowLocation(ConfigUtil.getCompanyNewsLocation());
+        tbNews.setShowLocation(newsType);
 		Page<TbNews> params = new Page<TbNews>(pageNo, pageSize);
 		params.setOrderBy("createTime desc");
 		Page<TbNews> page = tbNewsService.findPage(params,tbNews);
         String phoneNumber = tbHomePageService.getHomePage().getTelephoneNumber();
-        int totalCount = tbNewsService.getTotalCount();
+        int totalCount = tbNewsService.getTotalCount(newsType);
         int totalPage =(int) Math.ceil((totalCount * 1.0) / pageSize);
         Map<String,Object> map = new HashedMap();
         map.put("phoneNumber",phoneNumber);
@@ -141,10 +142,11 @@ public class TbNewsController extends BaseController {
         Page<TbNews> params = new Page<TbNews>(pageNo, pageSize);
         params.setOrderBy("createTime desc");
         Page<TbNews> page = tbNewsService.findPage(params,tbNews);
-        int totalCount = tbNewsService.getTotalCount();
+		String newsType = ConfigUtil.getCompanyNewsLocation();
+        int totalCount = tbNewsService.getTotalCount(newsType);
         int totalPage =(int) Math.ceil((totalCount * 1.0) / pageSize);
         Map<String,Object> map = new HashedMap();
-        map.put("totalCount",totalCount);
+//        map.put("totalCount",totalCount);
         map.put("totalPage",totalPage);
         if (page.getList().size() % 3 == 0){ //如果是3的整数倍，则不加</div>
             map.put("isThree","1");
