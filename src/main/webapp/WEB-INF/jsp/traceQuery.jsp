@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>追溯查询</title>
     <meta content="width=device-width,initial-scale=1,minimum-scale=1;maximum-scale=1,user-scalable=no" name="viewport" id="viewport"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/public.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fangwei.css">
@@ -482,7 +482,7 @@
                 </div>
             </div>
             <div class="right">
-                <div class="right-top">0620-5820820</div>
+                <div class="right-top">${phoneNumber}</div>
                 <div class="right-bottom">
                     <div><img src="${pageContext.request.contextPath}/img/index/3.png" alt=""><span>咨询热线</span></div>
                 </div>

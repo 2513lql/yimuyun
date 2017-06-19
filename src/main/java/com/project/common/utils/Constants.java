@@ -6,7 +6,7 @@ package com.project.common.utils;
 public class Constants {
 
 
-    public static final String prefix_upload_url = "${url}";
+    public static final String prefix_upload_url = "upload/";
     public static final String url_separator = ";";
     public static final String parse_pattern =  "yyyy-MM-dd HH:mm:ss";
 

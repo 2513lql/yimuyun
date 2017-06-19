@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>新闻中心</title>
     <meta content="width=device-width,initial-scale=1,minimum-scale=1;maximum-scale=1,user-scalable=no" name="viewport" id="viewport"/>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/public.css">
@@ -42,7 +42,7 @@
         <c:forEach items="${map['page']}" var="news" varStatus="status">
             <c:if test="${status.index % 3 == 0}"><div class="phone-text"></c:if>
             <dl>
-                 <dt><a href="${pageContext.request.contextPath}/news/${news.id}"><img src="${pageContext.request.contextPath}/img/index/8.png"/></a></dt>
+                 <dt><a href="${pageContext.request.contextPath}/news/${news.id}"><img src="${news.picture}"/></a></dt>
                 <dd>
                     <h3>${news.title}</h3>
                     <p>${news.digest}...</p>
@@ -51,75 +51,7 @@
            <c:if test="${status.index % 3 == 2}"></div></c:if>
         </c:forEach>
         <c:if test="${map['isThree'] == 0}"></div></c:if>
-        <%--<div class="phone-text">--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/6.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<h3>世界四大养羊牧场 中国有三个</h3>--%>
-                    <%--<p>为了能让老百姓吃上健康放心的好食品,对肉食品的...</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/7.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<h3>哈萨克斯坦优质肉类有望上架中国</h3>--%>
-                    <%--<p>伊萨耶娃说:在出口肉类产品方面，我们有一定的优...</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/8.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<h3>云南销毁600余吨“僵尸肉” 涉多种肉类</h3>--%>
-                    <%--<p>公安官兵将数桶汽油浇在非法走私入境的“僵尸肉”…</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-        <%--</div>--%>
-        <%--<div class="phone-text">--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/6.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<h3>世界四大养羊牧场 中国有三个</h3>--%>
-                    <%--<p>为了能让老百姓吃上健康放心的好食品,对肉食品的...</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/7.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<h3>哈萨克斯坦优质肉类有望上架中国</h3>--%>
-                    <%--<p>伊萨耶娃说:在出口肉类产品方面，我们有一定的优...</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/8.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<h3>云南销毁600余吨“僵尸肉” 涉多种肉类</h3>--%>
-                    <%--<p>公安官兵将数桶汽油浇在非法走私入境的“僵尸肉”…</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-        <%--</div>--%>
-        <%--<div class="phone-text">--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/6.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<h3>世界四大养羊牧场 中国有三个</h3>--%>
-                    <%--<p>为了能让老百姓吃上健康放心的好食品,对肉食品的...</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/7.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<h3>哈萨克斯坦优质肉类有望上架中国</h3>--%>
-                    <%--<p>伊萨耶娃说:在出口肉类产品方面，我们有一定的优...</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-            <%--<dl>--%>
-                <%--<dt><a href="erjiye1.html"><img src="${pageContext.request.contextPath}/img/index/8.png"/></a></dt>--%>
-                <%--<dd>--%>
-                    <%--<h3>云南销毁600余吨“僵尸肉” 涉多种肉类</h3>--%>
-                    <%--<p>公安官兵将数桶汽油浇在非法走私入境的“僵尸肉”…</p>--%>
-                <%--</dd>--%>
-            <%--</dl>--%>
-        <%--</div>--%>
+
 
 
     </div>
@@ -203,7 +135,7 @@
 //            news += '"><img src="';
 //            news += item.picture;
 //            news += '"/></a></dt>';
-            news += '<dl><dt><a href="' +contextPath + '/news/'+ item.id + '"><img src="' + contextPath +'/img/index/6.png"/></a></dt>';
+            news += '<dl><dt><a href="' +contextPath + '/news/'+ item.id + '"><img src="' + item.picture +'"/></a></dt>';
             news += '<dd><h3>' + item.title;
             news += '</h3><p>'+ item.digest + '...</p>';
             news += '</dd></dl>';

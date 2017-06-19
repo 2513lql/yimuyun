@@ -56,6 +56,7 @@ public class TbNewsController extends BaseController {
      */
 	@RequestMapping("/center")
 	public ModelAndView newsCenter(){
+		String adminPictureHead = ConfigUtil.getAdminUrlHead();
 		ModelAndView modelAndView = new ModelAndView();
 		List<TbNews> newses = tbNewsService.getTopThree(ConfigUtil.getCompanyNewsLocation());
 		List<TbNews> newsList1 = tbNewsService.getHangYeZiXuan();
@@ -67,11 +68,22 @@ public class TbNewsController extends BaseController {
 		}
 		Map<String,Object> map = new HashMap<>();
         for (TbNews news : newsList1){
+			if (news.getPicture() != null){
+				news.setPicture(adminPictureHead + news.getPicture());
+			}
             news.setNewsTime(DateUtil.date2shortStr(news.getCreateTime()));
         }
         for (TbNews news : newsList2){
+			if (news.getPicture() != null){
+				news.setPicture(adminPictureHead + news.getPicture());
+			}
             news.setNewsTime(DateUtil.date2shortStr(news.getCreateTime()));
         }
+		for (TbNews news : newses){
+			if (news.getPicture() != null){
+				news.setPicture(adminPictureHead + news.getPicture());
+			}
+		}
 		map.put("zixuanList1",newsList1);
 		map.put("zixuanList2",newsList2);
 		map.put("topNews",newses);
@@ -87,11 +99,15 @@ public class TbNewsController extends BaseController {
      */
 	@RequestMapping(value = "/{newsId}")
 	public ModelAndView showNews(@PathVariable(value = "newsId") String newsId){
+		String adminPictureHead = ConfigUtil.getAdminUrlHead();
 		ModelAndView modelAndView  = new ModelAndView();
 		String phoneNumber = tbHomePageService.getHomePage().getTelephoneNumber();
 		TbNews news = tbNewsService.get(newsId);
 		news.setNewsTime(DateUtil.date2str(news.getCreateTime()));
 		news.setPhoneNumber(phoneNumber);
+		if (news.getPicture() != null){
+			news.setPicture(adminPictureHead + news.getPicture());
+		}
 		modelAndView.addObject("news",news);
 		modelAndView.setViewName("newsDetail");
 		return modelAndView;
@@ -99,6 +115,7 @@ public class TbNewsController extends BaseController {
 
 	@RequestMapping(value = "/list")
 	public ModelAndView newsList(){
+		String adminPictureHead = ConfigUtil.getAdminUrlHead();
 		int pageNo = 1;
 		int pageSize = ConfigUtil.getDefaultPageSize();
 		ModelAndView modelAndView = new ModelAndView();
@@ -120,6 +137,11 @@ public class TbNewsController extends BaseController {
         }else {
             map.put("isThree","0");
         }
+		for (TbNews news : page.getList()){
+			if (news.getPicture() != null){
+				news.setPicture(adminPictureHead + news.getPicture());
+			}
+		}
         map.put("page",page.getList());
 		modelAndView.setViewName("newsList");
 		modelAndView.addObject("map",map);
@@ -133,6 +155,7 @@ public class TbNewsController extends BaseController {
     @ResponseBody
     @RequestMapping(value = "/page")
     public Map<String,Object> getPageList(Integer pageNo){
+		String adminPictureHead = ConfigUtil.getAdminUrlHead();
         if (pageNo == null || pageNo.equals("")){
             pageNo = 1;
         }
@@ -153,6 +176,11 @@ public class TbNewsController extends BaseController {
         }else {
             map.put("isThree","0");
         }
+		for (TbNews news : page.getList()){
+			if (news.getPicture() != null){
+				news.setPicture(adminPictureHead + news.getPicture());
+			}
+		}
         map.put("page",page.getList());
         return map;
     }

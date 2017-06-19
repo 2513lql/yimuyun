@@ -1,0 +1,11 @@
+{
+  "header": {
+    "title": "步行者后台API文档说明",
+    "filename": "apidoc_header.md"
+  },
+  "name": "步行者",
+  "version": "1.0.0",
+  "description": "",
+  "title": "步行者后台API文档说明",
+  "url" : "http://115.28.109.174:8282/walkman"
+}
