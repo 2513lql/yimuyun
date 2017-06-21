@@ -3,9 +3,6 @@
  */
 package com.project.modules.web;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import com.project.common.config.Global;
 import com.project.common.persistence.Page;
 import com.project.common.utils.ConfigUtil;
@@ -18,8 +15,6 @@ import com.project.modules.entity.TbNews;
 import com.project.modules.service.TbHomePageService;
 import com.project.modules.service.TbHonorService;
 import com.project.modules.service.TbNewsService;
-import com.sun.javafx.collections.MappingChange;
-import org.apache.poi.ss.formula.functions.Mode;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,7 +25,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.ArrayList;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

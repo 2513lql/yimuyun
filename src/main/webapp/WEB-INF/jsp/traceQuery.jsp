@@ -38,7 +38,7 @@
             </div>
             <div class="coa">
                 <div class="xuliehao">
-                    <input type="text" id="traceNumber1" placeholder="请输入你的追溯序列号"><span id="queryBtn1">查询</span>
+                    <input type="text" id="traceNumber1" placeholder="请输入你的防伪序列号"><span id="queryBtn1">查询</span>
                 </div>
                 <%--你的产品为 <span id="traceQueryResult"></span>--%>
                 <div id="queryResult" class="result"></div>
