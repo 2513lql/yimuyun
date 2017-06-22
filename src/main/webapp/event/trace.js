@@ -5,7 +5,7 @@
 $("#queryBtn1").click(function () {
     var  traceNumber1 = $("#traceNumber1").val();
     if(traceNumber1 == ""){
-        $("#queryResult").html("请输入追溯码");
+        $("#queryResult").html("请输入防伪码");
         return;
     }
         $.ajax({

@@ -219,7 +219,7 @@ function renderTrace(body) {
         process += "<table>";
         process += "<tr><td>消毒时间: " + item['disinfectionTime'] + "</td></tr>";
         process += "<tr><td>消毒方法: " + item['disinfectionWay'] + "</td></tr>";
-        process += "<tr><td>药品名称: " + item['disinfectant'] + " kg</td></tr>";
+        process += "<tr><td>药品名称: " + item['disinfectant'] + " </td></tr>";
         process += "<tr><td>消毒人员: " + item['person'] + "</td></tr>";
         process += "</table>";
     }
