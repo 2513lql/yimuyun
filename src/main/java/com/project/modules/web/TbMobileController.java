@@ -14,8 +14,9 @@ import org.springframework.web.servlet.ModelAndView;
 public class TbMobileController {
 
     /**
-     * 移动端追溯防伪查询
-     *
+     * @api /mobileTrace                1. 移动端追溯防伪查询
+     * @apiName mobileTrace
+     * @apiParam {String} traceCode		追溯序列号：不可空
      * @return
      */
     @RequestMapping("mobileTrace")
@@ -27,7 +28,6 @@ public class TbMobileController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println((result.get("productName")));
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("mobile");
         modelAndView.addObject("result",result);
