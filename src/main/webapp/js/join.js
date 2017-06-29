@@ -83,9 +83,9 @@ $(".farm-photos .upload").live("change", function () {
         if ($(opts.Img).find("img").length > 2 || $(opts.Img).find("div").length > 2) {
             return false;
         } else if ($(opts.Img).find("img").length == 2 || $(opts.Img).find("div").length == 2) {
-            $(".farm-photos .upload-photos").append('<input type="file" name="bannerUrl" class="upload" disabled>')
+            $(".farm-photos .upload-photos").append('<input type="file" name="bannerUrl" class="upload dispalyNone" disabled>')
         } else {
-            $(".farm-photos .upload-photos").append('<input type="file" name="bannerUrl" class="upload">')
+            $(".farm-photos .upload-photos").append('<input type="file" name="bannerUrl" class="upload dispalyNone">')
         }
         if (navigator.userAgent.indexOf("MSIE") > -1) {
             try {
@@ -123,9 +123,9 @@ $(".feedback-photos .upload").live("change", function () {
         if ($(opts.Img).find("img").length > 2 || $(opts.Img).find("div").length > 2) {
             return false;
         } else if ($(opts.Img).find("img").length == 2 || $(opts.Img).find("div").length == 2) {
-            $(".feedback-photos .upload-photos").append('<input type="file" name="bannerUrl" class="upload" disabled>')
+            $(".feedback-photos .upload-photos").append('<input type="file" name="bannerUrl" class="upload dispalyNone" disabled>')
         } else {
-            $(".feedback-photos .upload-photos").append('<input type="file" name="bannerUrl" class="upload">')
+            $(".feedback-photos .upload-photos").append('<input type="file" name="bannerUrl" class="upload dispalyNone">')
         }
         if (navigator.userAgent.indexOf("MSIE") > -1) {
             try {
