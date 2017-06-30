@@ -63,8 +63,10 @@ public class TbNewsController extends BaseController {
 		List<TbNews> newsList2 = new ArrayList<>();
 		String phoneNumber = tbHomePageService.getHomePage().getTelephoneNumber();
 		if (newsList1 != null && newsList1.size() > 8){
-			newsList2.addAll(8,newsList1);
-			newsList1.remove(newsList2);
+			for (int i = 8; i < newsList1.size();){
+				TbNews tbNews = newsList1.remove(i);
+				newsList2.add(tbNews);
+			}
 		}
 		Map<String,Object> map = new HashMap<>();
         for (TbNews news : newsList1){

@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <title>清真文化</title>
     <base href="http://139.129.233.104:8056/yimuyun_web/">
-    <meta content="width=device-width,initial-scale=1,minimum-scale=1;maximum-scale=1,user-scalable=no" name="viewport" id="viewport"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/public.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/wenhua.css">
 </head>

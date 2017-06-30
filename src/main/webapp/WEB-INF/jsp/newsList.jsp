@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>新闻中心</title>
-    <meta content="width=device-width,initial-scale=1,minimum-scale=1;maximum-scale=1,user-scalable=no" name="viewport" id="viewport"/>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/public.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/more.css">
@@ -108,9 +107,10 @@
     callBackPagination();
 
     function getNewsList(pageNo) {
+        console.log(pageNo);
         $.ajax({
             async: false,
-            url:  contextPath +"/news/page?"+pageNo,
+            url:  contextPath +"/news/page?pageNo="+pageNo,
             type: "get",
             dataType: "json",
             success: function (data) {
@@ -146,6 +146,7 @@
         if(pageLength % 3 != 0){
             news += '</div>';
         }
+        console.log(news);
         $("#companyNewsContainer").html(news);
         $('body').scrollTop(0);
     }

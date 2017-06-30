@@ -5,7 +5,6 @@
 <head>
     <meta charset="UTF-8">
     <title>关于我们</title>
-    <meta content="width=device-width,initial-scale=1,minimum-scale=1;maximum-scale=1,user-scalable=no" name="viewport" id="viewport"/>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/public.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/women.css">
@@ -93,11 +92,14 @@
         </c:forEach>
         <c:if test="${map['isThree'] == 0}"></div></c:if>
         </div>
-        <div class="main" style="padding-bottom: 50px">
-            <div class="page">
-                <div id="callBackPager"></div><i class="totalPage">共<c:out value="${map['totalPage']}"></c:out>页</i>
-            </div>s
-        </div>
+        <div class="page">
+        <a href="">
+            <</a><a class="current">1</a><a>2</a><a>3</a><span>下一页</span><i>共3页</i></div>
+        <%--<div class="main" style="padding-bottom: 50px">--%>
+            <%--<div class="page">--%>
+                <%--<div id="callBackPager"></div><i class="totalPage">共<c:out value="${map['totalPage']}"></c:out>页</i>--%>
+            <%--</div>--%>
+        <%--</div>--%>
     </div>
     </div>
 
