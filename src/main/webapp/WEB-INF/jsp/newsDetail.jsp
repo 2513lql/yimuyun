@@ -64,7 +64,7 @@
     <div class="footer">
         <div class="top">
             <div class="left">
-                <div class="left-top">中国银联 | 宁夏银行 | 杨哈吉健康食品有限公司</div>
+                <div class="left-top"><a href="http://www.boc.cn/">中国银联</a> | <a href="http://www.bankofnx.com.cn/portal/zh_CN/home/index.html">宁夏银行</a> | <a href="http://www.tianyancha.com/company/2958336768">杨哈吉健康食品有限公司</a></div>
                 <div class="left-bottom">
                     <p>Copyright@2010,All Rights Reserved　宁夏伊牧云农林牧科技开发有限公司</p>
                     <p>版权所有 京ICP备11007834号 公安备案号:11011502002638</p>
