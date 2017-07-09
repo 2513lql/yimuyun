@@ -120,23 +120,26 @@ public class TbHomePageController extends BaseController {
 		String adminPictureHead = ConfigUtil.getAdminUrlHead();
 		ModelAndView modelAndView = new ModelAndView();
 		//公司发展历程新闻
-		List<TbNews> companyTopNews = tbNewsService.getTopThree(ConfigUtil.getDevelopmentHistoryNewsLocation());
+//		List<TbNews> companyTopNews = tbNewsService.getTopThree(ConfigUtil.getDevelopmentHistoryNewsLocation());
 		List<TbNews> companyNews = tbNewsService.getCompanyDevelopNews(); //公司发展历程
 		String phoneNumber = tbHomePageService.getHomePage().getTelephoneNumber();
 		Map<String,Object> map = new HashMap<>();
-		for (TbNews tbNews : companyNews){
-			if (tbNews.getPicture() != null){
-				tbNews.setPicture(adminPictureHead + tbNews.getPicture());
-			}
-		}
-		for (TbNews tbNews : companyTopNews){
-			if (tbNews.getPicture() != null){
-				tbNews.setPicture(adminPictureHead + tbNews.getPicture());
-			}
+//		for (TbNews tbNews : companyNews){
+//			if (tbNews.getPicture() != null){
+//				tbNews.setPicture(adminPictureHead + tbNews.getPicture());
+//			}
+//		}
+//		for (TbNews tbNews : companyTopNews){
+//			if (tbNews.getPicture() != null){
+//				tbNews.setPicture(adminPictureHead + tbNews.getPicture());
+//			}
+//		}
+		if (companyNews.size() > 0){
+			map.put("companyNews",companyNews.get(0));
 		}
 		map.put("phoneNumber",phoneNumber);
-		map.put("companyTopNews",companyTopNews);
-		map.put("companyNews",companyNews);
+//		map.put("companyTopNews",companyTopNews);
+//		map.put("companyNews",companyNews);
 
 		//公司荣誉
 		int pageNo = 1;

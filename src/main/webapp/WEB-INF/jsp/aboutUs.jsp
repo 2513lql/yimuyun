@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>关于我们</title>
+    <base href="http://139.129.233.104:8056/yimuyun_web/">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/public.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/women.css">
@@ -55,25 +56,30 @@
         <div class="I">
             <h2>发展历程</h2>
         </div>
-        <div class="phone1">
-            <c:forEach items="${map['companyTopNews']}" var="companyNew">
-                <img src="${companyNew.picture}" />
-            </c:forEach>
-            <%--<img src="${pageContext.request.contextPath}/wenhuaimg/2c.png" />--%>
-            <%--<img src="${pageContext.request.contextPath}/wenhuaimg/3c.png" />--%>
-            <%--<img src="${pageContext.request.contextPath}/wenhuaimg/4c.png" />--%>
+        <div>
+            <p>
+                ${map['companyNews'].body}
+            </p>
         </div>
-        <div class="li">
-            <c:forEach items="${map['companyNews']}" var="companyNew">
-                <li>${companyNew.body}</li>
-            </c:forEach>
-            <%--<li> 2016年4月 宁夏伊牧云农林牧科技开发有限公司成立</li>--%>
-            <%--<li> 2016年4月 宁夏伊牧云农林牧科技开发有限公司成立</li>--%>
-            <%--<li> 2016年4月 宁夏伊牧云农林牧科技开发有限公司成立</li>--%>
-            <%--<li> 2016年4月 宁夏伊牧云农林牧科技开发有限公司成立</li>--%>
-            <%--<li> 2016年4月 宁夏伊牧云农林牧科技开发有限公司成立</li>--%>
-            <%--<li> 2016年4月 宁夏伊牧云农林牧科技开发有限公司成立</li>--%>
-        </div>
+        <%--<div class="phone1">--%>
+            <%--<c:forEach items="${map['companyTopNews']}" var="companyNew">--%>
+                <%--<img src="${companyNew.picture}" />--%>
+            <%--</c:forEach>--%>
+            <%--&lt;%&ndash;<img src="${pageContext.request.contextPath}/wenhuaimg/2c.png" />&ndash;%&gt;--%>
+            <%--&lt;%&ndash;<img src="${pageContext.request.contextPath}/wenhuaimg/3c.png" />&ndash;%&gt;--%>
+            <%--&lt;%&ndash;<img src="${pageContext.request.contextPath}/wenhuaimg/4c.png" />&ndash;%&gt;--%>
+        <%--</div>--%>
+        <%--<div class="li">--%>
+            <%--<c:forEach items="${map['companyNews']}" var="companyNew">--%>
+                <%--<li>${companyNew.body}</li>--%>
+            <%--</c:forEach>--%>
+            <%--&lt;%&ndash;<li> 2016年4月 宁夏伊牧云农林牧科技开发有限公司成立</li>&ndash;%&gt;--%>
+            <%--&lt;%&ndash;<li> 2016年4月 宁夏伊牧云农林牧科技开发有限公司成立</li>&ndash;%&gt;--%>
+            <%--&lt;%&ndash;<li> 2016年4月 宁夏伊牧云农林牧科技开发有限公司成立</li>&ndash;%&gt;--%>
+            <%--&lt;%&ndash;<li> 2016年4月 宁夏伊牧云农林牧科技开发有限公司成立</li>&ndash;%&gt;--%>
+            <%--&lt;%&ndash;<li> 2016年4月 宁夏伊牧云农林牧科技开发有限公司成立</li>&ndash;%&gt;--%>
+            <%--&lt;%&ndash;<li> 2016年4月 宁夏伊牧云农林牧科技开发有限公司成立</li>&ndash;%&gt;--%>
+        <%--</div>--%>
     </div>
     <div class="main" style="display:none;">
         <div id="companyHonors">
