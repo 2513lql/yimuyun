@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
  * Created by Xuan on 2017/7/11.
  */
 @Controller
-@RequestMapping(value="/logisticsReceiver")
+@RequestMapping(value = "/logisticsReceiver")
 public class LogisticsReceiverController extends BaseController {
 
     @RequestMapping(value = "signIn")
@@ -18,5 +18,10 @@ public class LogisticsReceiverController extends BaseController {
         return modelAndView;
     }
 
+    @RequestMapping(value = "noUser")
+    public ModelAndView noUser() {
+        ModelAndView modelAndView = new ModelAndView("signDeta");
+        return modelAndView;
+    }
 
 }

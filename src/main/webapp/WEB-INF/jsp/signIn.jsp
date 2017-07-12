@@ -15,7 +15,7 @@
 	<header>
 		<span></span>
 		<h1>物流签收</h1>
-		<b>验证</b>
+		<b id="verify">验证</b>
 	</header>
 	<section>
 
@@ -26,15 +26,21 @@
 		</div>
 		<div class="iphone_number">
 			<span>验证码</span>
-			<p><input type="text" placeholder="请输入验证码"></p>
+			<p><input id="code" type="text" placeholder="请输入验证码"></p>
 			<button id="getCode">获取验证码</button>
+			<button id="countDown" style="display: none"><span id="seconds">60</span>秒后重发</button>
 		</div>
 		
 	</section>
 	<!-- 遮罩 -->
-<!-- 	<div class="dialog">
-	<div>验证码错误</div>
-</div> -->
+	<div class="dialog" id="wrong" style="display: none">
+		<div>验证码错误</div>
+	</div>
+
+	<!-- 遮罩 -->
+	<div class="dialog" id="noPhone" style="display: none">
+		<div>请输入手机号</div>
+	</div>
 </body>
 <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/setfontsize_log.js"></script>
