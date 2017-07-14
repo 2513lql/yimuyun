@@ -10,8 +10,8 @@ $("#getCode").click(function () {
     }
     $.ajax({
         async: false,
-        // url: "http://115.28.109.174:8383/yimu/mobile/logisticsReceiver/v1.0.0/mobile/" + phone,
-        url: "http://localhost:8081/mobile/logisticsReceiver/v1.0.0/mobile/" + phone,
+        url: "http://115.28.109.174:8383/yimu/mobile/logisticsReceiver/v1.0.0/mobile/" + phone,
+        // url: "http://localhost:8081/mobile/logisticsReceiver/v1.0.0/mobile/" + phone,
         type: "GET",
         dataType : "jsonp",
         jsonp:"_callback",
@@ -52,8 +52,8 @@ $("#verify").click(function () {
     }
     $.ajax({
         async: false,
-        // url: "http://115.28.109.174:8383/yimu/mobile/logisticsReceiver/v1.0.0/mobile/" + phone,
-        url: "http://localhost:8081/mobile/logisticsReceiver/v1.0.0/mobile/" + phone+"/code/"+code,
+        url: "http://115.28.109.174:8383/yimu/mobile/logisticsReceiver/v1.0.0/mobile/" + phone+"/code/"+code,
+        // url: "http://localhost:8081/mobile/logisticsReceiver/v1.0.0/mobile/" + phone+"/code/"+code,
         type: "GET",
         dataType : "jsonp",
         jsonp:"_callback",
@@ -63,6 +63,7 @@ $("#verify").click(function () {
             }else {
                 var token = data['body'];
                 sessionStorage.setItem("token", token);
+                sessionStorage.setItem("phone", phone);
                 var url = window.location.href.split('#')[0];
                 window.location.href = "wxScan?url=" + url;
             }

@@ -1,6 +1,7 @@
 package com.project.modules.web;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.project.common.utils.HttpClientUtil;
 import com.project.common.utils.WXUtil;
 import com.project.common.web.BaseController;
@@ -35,10 +36,10 @@ public class LogisticsReceiverController extends BaseController {
         String APPSecret = "2d6e0c8c33f3b4784996616b1b39eee4";
         String url_token = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" + APPID + "&secret=" + APPSecret;
         String access_token = null;
-        String url_ticket = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=" + access_token + "&type=jsapi";
         String jsapi_ticket = null;
         try {
             access_token = (String) JSON.parseObject(HttpClientUtil.httpGet(url_token)).get("access_token");
+            String url_ticket = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=" + access_token + "&type=jsapi";
             jsapi_ticket = (String) JSON.parseObject(HttpClientUtil.httpGet(url_ticket)).get("ticket");
         } catch (Exception e) {
             e.printStackTrace();
@@ -53,7 +54,21 @@ public class LogisticsReceiverController extends BaseController {
 
     @RequestMapping(value = "getPackingInfo")
     public ModelAndView getPackingInfo(String qrCode) {
+        String url="http://115.28.109.174:8383/yimu/mobile/logisticsReceiver/v1.0.0/qrCode/" + qrCode;
+        JSONObject result = new JSONObject();
+        try {
+            result = JSON.parseObject(HttpClientUtil.httpGet(url)).getJSONObject("body");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         ModelAndView modelAndView = new ModelAndView("signDetail");
+        modelAndView.addObject("result", result);
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "receive")
+    public ModelAndView receive() {
+        ModelAndView modelAndView = new ModelAndView("receiveSuccess");
         return modelAndView;
     }
 }
