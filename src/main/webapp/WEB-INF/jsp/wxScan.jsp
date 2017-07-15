@@ -9,6 +9,8 @@
 <input id="timestamp" type="hidden" value="${timestamp}" />
 <input id="noncestr" type="hidden" value="${nonceStr}" />
 <input id="signature" type="hidden" value="${signature}" />
+<script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript">
         var timestamp = $("#timestamp").val();//时间戳
         var nonceStr = $("#noncestr").val();//随机串
@@ -38,7 +40,6 @@
 
 
 </body>
-<script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/setfontsize_log.js"></script>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
 </html>
