@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>清真文化</title>
-    <base href="http://139.129.233.104:8056/yimuyun_web/">
+    <base href="http://139.129.233.104/yimuyun_web/">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/public.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/wenhua.css">
 </head>
