@@ -10,7 +10,6 @@
 <input id="noncestr" type="hidden" value="${nonceStr}" />
 <input id="signature" type="hidden" value="${signature}" />
 <script type="text/javascript">
-    $(function() {
         var timestamp = $("#timestamp").val();//时间戳
         var nonceStr = $("#noncestr").val();//随机串
         var signature = $("#signature").val();//签名
@@ -35,7 +34,6 @@
                 }
             });
         });
-    });
 </script>
 
 
