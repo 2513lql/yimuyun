@@ -5,6 +5,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.project.common.utils.HttpClientUtil;
 import com.project.common.utils.WXUtil;
 import com.project.common.web.BaseController;
+import com.project.modules.service.AccessTokenService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -17,6 +19,8 @@ import java.util.Map;
 @Controller
 @RequestMapping(value = "/logisticsReceiver")
 public class LogisticsReceiverController extends BaseController {
+    @Autowired
+    AccessTokenService accessTokenService;
 
     @RequestMapping(value = "signIn")
     public ModelAndView signIn() {
@@ -37,6 +41,28 @@ public class LogisticsReceiverController extends BaseController {
         String url_token = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" + APPID + "&secret=" + APPSecret;
         String access_token = null;
         String jsapi_ticket = null;
+        //        AccessToken accessToken = new AccessToken();
+//        accessToken = accessTokenService.select();
+//        Date date = new Date();
+//        if (accessToken == null) {
+//            try {
+//                access_token = (String) JSON.parseObject(HttpClientUtil.httpGet(url_token)).get("access_token");
+//                accessToken.setUpdateTime(date);
+//                accessToken.setAccessToken(access_token);
+//                accessTokenService.insert(accessToken);
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        } else if (date.getTime() - accessToken.getUpdateTime().getTime() > 6600000) {
+//            try {
+//                access_token = (String) JSON.parseObject(HttpClientUtil.httpGet(url_token)).get("access_token");
+//                accessToken.setUpdateTime(date);
+//                accessToken.setAccessToken(access_token);
+//                accessTokenService.update(accessToken);
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
         try {
             access_token = (String) JSON.parseObject(HttpClientUtil.httpGet(url_token)).get("access_token");
             String url_ticket = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=" + access_token + "&type=jsapi";
