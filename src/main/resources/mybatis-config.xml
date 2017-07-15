@@ -48,6 +48,7 @@
 		<typeAlias alias="TbNews" type="com.project.modules.entity.TbNews" />
 		<typeAlias alias="TbHonor" type="com.project.modules.entity.TbHonor" />
 		<typeAlias alias="TbLeaveMessage" type="com.project.modules.entity.TbLeaveMessage" />
+		<typeAlias alias="AccessToken" type="com.project.modules.entity.AccessToken"/>
 	</typeAliases>
 
 	
