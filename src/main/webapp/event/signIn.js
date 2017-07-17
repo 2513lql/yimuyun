@@ -2,14 +2,23 @@
  * Created by Xuan on 2017/7/11.
  */
 
+var status = 0;
 $("#signIn").click(function () {
-    $("#noPhone").hide();
-    $("#wrong").hide();
+    // console.log(status);
+    if(status==1) {
+        $("#noPhone").hide();
+        $("#wrong").hide();
+        status = 0;
+    }
 });
-$("#getCode").click(function () {
+$("#getCode").click(function (e) {
+
     var  phone = $("#phone").val();
     if(phone == ""){
         $("#noPhone").show();
+        status = 1;
+        e.preventDefault();
+        e.stopPropagation();
         return;
     }
     $.ajax({
@@ -43,15 +52,21 @@ $("#getCode").click(function () {
     });
 });
 
-$("#verify").click(function () {
+$("#verify").click(function (e) {
     var  phone = $("#phone").val();
     var code = $("#code").val();
     if(phone==""){
         $("#noPhone").show();
+        status = 1;
+        e.preventDefault();
+        e.stopPropagation();
         return;
     }
     if(code==""){
         $("#wrong").show();
+        status = 1;
+        e.preventDefault();
+        e.stopPropagation();
         return;
     }
     // var url = window.location.href.split('#')[0];
