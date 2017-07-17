@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/signIn.css">
 </head>
-<body>
+<body id="signIn">
 	<header>
 		<span></span>
 		<h1>物流签收</h1>

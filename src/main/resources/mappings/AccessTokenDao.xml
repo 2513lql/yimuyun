@@ -5,10 +5,12 @@
     <insert id="insert">
         INSERT INTO accessToken(
         accessToken,
-        updateTime
+        updateTime,
+        jsapiTicket
         ) VALUES (
         #{accessToken},
-        #{updateTime}
+        #{updateTime},
+        #{jsapiTicket}
         )
     </insert>
 
@@ -19,7 +21,8 @@
     <update id="update">
         UPDATE accessToken SET
         accessToken=#{accessToken},
-        updateTime=#{updateTime}
+        updateTime=#{updateTime},
+        jsapiTicket=#{jsapiTicket}
         WHERE  id=1
     </update>
 </mapper>
