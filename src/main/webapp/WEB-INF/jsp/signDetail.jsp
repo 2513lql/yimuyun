@@ -16,7 +16,6 @@
 		<h1>物流签收详情</h1>
 		<b>验证</b>
 	</header>
-	<input id="logId" type="hidden" value="${result.get("logisticsId")}" />
 	<input id="packingId" type="hidden" value="${result.get("packingId")}" />
 
 	<section>

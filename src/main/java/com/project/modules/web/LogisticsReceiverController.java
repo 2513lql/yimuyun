@@ -91,6 +91,9 @@ public class LogisticsReceiverController extends BaseController {
     @RequestMapping(value = "getPackingInfo")
     public ModelAndView getPackingInfo(String qrCode) {
 //        String url="http://localhost:8081/mobile/logisticsReceiver/v1.0.0/qrCode/" + qrCode;
+        if (qrCode.contains("?")) {
+            qrCode = qrCode.split("=")[1];
+        }
         String url="http://115.28.109.174:8383/yimu/mobile/logisticsReceiver/v1.0.0/qrCode/" + qrCode;
         JSONObject result = new JSONObject();
         try {

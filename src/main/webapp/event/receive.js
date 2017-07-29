@@ -6,7 +6,7 @@ $("#receive").click(function () {
     $.ajax({
         async: false,
         url: "http://115.28.109.174:8383/yimu/mobile/logisticsReceiver/v1.0.0/receiveSuccess?mobile="
-        + phone+"&logId="+logId+"&token="+token+"&packingId="+packingId,
+        + phone+"&token="+token+"&packingId="+packingId,
         type: "POST",
         dataType : "jsonp",
         jsonp:"_callback",
