@@ -283,14 +283,14 @@
                         <td>检疫人员：</td>
                         <td>${result['slaughter']['quarantineRecord']['person']}</td>
                     </tr>
-                    <tr>
-                        <td>检疫证号码：</td>
-                        <td>${result['slaughter']['quarantineRecord']['quarantineNumber']}</td>
-                    </tr>
-                    <tr>
-                        <td>出具检疫证单位：</td>
-                        <td>${result['slaughter']['quarantineRecord']['enterprise'] }</td>
-                    </tr>
+                    <%--<tr>--%>
+                        <%--<td>检疫证号码：</td>--%>
+                        <%--<td>${result['slaughter']['quarantineRecord']['quarantineNumber']}</td>--%>
+                    <%--</tr>--%>
+                    <%--<tr>--%>
+                        <%--<td>出具检疫证单位：</td>--%>
+                        <%--<td>${result['slaughter']['quarantineRecord']['enterprise'] }</td>--%>
+                    <%--</tr>--%>
                     <tr>
                         <td>检疫方法：</td>
                         <td>${result['slaughter']['quarantineRecord']['quarantineMethod'] }</td>

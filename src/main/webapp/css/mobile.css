@@ -156,6 +156,14 @@ body {
     line-height: 0.2rem;
 }
 
+.main table tr {
+    clear: both;
+}
+
+.main table tr td {
+    float: left;
+}
+
 .main table img {
     width: 3.426rem;
     height: 1.844rem;
