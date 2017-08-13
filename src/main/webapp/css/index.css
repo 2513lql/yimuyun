@@ -94,7 +94,7 @@ p {
 }
 
 .header .center {
-    /*width: 71.6%;*/
+    width: 71.6%;
     float: left;
     /*padding-left: 27px;*/
 }
@@ -108,8 +108,8 @@ p {
 }
 
 .header .right {
-    float: right;
-    padding-right: 6.5%;
+    float: left;
+    /*padding-right: 6.5%;*/
     padding-top: 14px;
     padding-bottom: 17px;
     color: #009944;
