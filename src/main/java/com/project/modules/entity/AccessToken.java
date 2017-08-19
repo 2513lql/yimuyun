@@ -1,15 +1,22 @@
 package com.project.modules.entity;
 
-import java.util.Date;
-
 /**
  * Created by Xuan on 2017/7/15.
  */
 public class AccessToken {
     private String accessToken;
-    private Date updateTime;
+    private String updateTime;
+    private String jsapiTicket;
 
-    public Date getUpdateTime() {
+    public String getJsapiTicket() {
+        return jsapiTicket;
+    }
+
+    public void setJsapiTicket(String jsapiTicket) {
+        this.jsapiTicket = jsapiTicket;
+    }
+
+    public String getUpdateTime() {
         return updateTime;
     }
 
@@ -21,7 +28,7 @@ public class AccessToken {
         this.accessToken = accessToken;
     }
 
-    public void setUpdateTime(Date updateTime) {
+    public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
     }
 }

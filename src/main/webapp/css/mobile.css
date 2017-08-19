@@ -28,7 +28,7 @@ body {
     font-size: 0.16rem;
     width: 100%;
     height: 100%;
-    color: color: #212121;
+    color: #212121;
 }
 
 .box {
@@ -104,6 +104,10 @@ body {
     height: 2.67rem;
     padding-left: 0.16rem;
     padding-top: 0.2rem;
+    font-size: 0.16rem;
+}
+
+.xinxi td{
     font-size: 0.14rem;
 }
 
@@ -150,6 +154,14 @@ body {
     color: #212121;
     letter-spacing: 0;
     line-height: 0.2rem;
+}
+
+.main table tr {
+    clear: both;
+}
+
+.main table tr td {
+    float: left;
 }
 
 .main table img {

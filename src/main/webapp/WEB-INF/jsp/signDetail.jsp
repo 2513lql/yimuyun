@@ -16,17 +16,17 @@
 		<h1>物流签收详情</h1>
 		<b>验证</b>
 	</header>
-	<input id="logId" type="hidden" value="${result.get("logisticsId")}" />
+	<input id="packingId" type="hidden" value="${result.get("packingId")}" />
 
 	<section>
 		<ul>
 			<li>
 				<span>包装名称</span>
-				<b>${result.get("productName")}</b>
+				<b>${result.get("packingName")}</b>
 			</li>
 			<li>
 				<span>合计</span>
-				<b>${result.get("productNumber")}件</b>
+				<b>${result.get("packingNum")}件</b>
 			</li>
 		</ul>
 			
@@ -34,10 +34,13 @@
 		
 		<div class="sign_title">包装货物</div>
 		<ul>
-			<li>
-				<span>${result.get("productParts")}</span>
-				<b>${result.get("productWeight")}公斤</b>
-			</li>
+			<c:forEach var="item" items="${result['packing']}">
+				<li>
+					<span>${item.get("part")}</span>
+					<b>${item.get("weight")}公斤</b>
+				</li>
+			</c:forEach>
+
 		</ul>	
 	</section>
 	<footer id="receive">

@@ -143,8 +143,9 @@ function renderTrace(body) {
             slaughter += "<table>";
             slaughter += "<tr><td>屠宰时间: " + item['slaughterTime'] + "</td></tr>";
             slaughter += "<tr><td>屠宰阿訇: " + item['imam'] + "</td></tr>";
+            if(item['imamPhoto'] != '') {
             slaughter += "<tr><td>阿訇证照片: </td>";
-            slaughter += "<td><img src='" + item['imamPhoto'] + "' alt=''></td></tr>";
+            slaughter += "<td><img src='" + item['imamPhoto'] + "' alt=''></td></tr>";}
             slaughter += "</table>";
         }
 
@@ -154,8 +155,8 @@ function renderTrace(body) {
             slaughter += "<table>";
             slaughter += "<tr><td>检疫时间: " + item['quarantineTime'] + "</td></tr>";
             slaughter += "<tr><td>检疫人员: " + item['person'] + "</td></tr>";
-            slaughter += "<tr><td>检疫证号码: " + item['quarantineNumber'] + "</td></tr>";
-            slaughter += "<tr><td>出具检疫证单位: " + item['enterprise'] + "</td></tr>";
+            // slaughter += "<tr><td>检疫证号码: " + item['quarantineNumber'] + "</td></tr>";
+            // slaughter += "<tr><td>出具检疫证单位: " + item['enterprise'] + "</td></tr>";
             slaughter += "<tr><td>检疫方法: " + item['quarantineMethod'] + "</td></tr>";
             slaughter += "<tr><td>活体检疫结果: " + item['result'] + "</td></tr>";
             slaughter += "</table>";
