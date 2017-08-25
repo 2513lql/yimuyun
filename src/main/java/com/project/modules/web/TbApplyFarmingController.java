@@ -245,9 +245,9 @@ public class TbApplyFarmingController extends BaseController {
 					}
 				}
 			}
-			if(leaveMessage.getProblemType() == null || "".equals(leaveMessage.getProblemType())){
-				throw new ControllerException("留言类型不能为空");
-			}
+//			if(leaveMessage.getProblemType() == null || "".equals(leaveMessage.getProblemType())){
+//				throw new ControllerException("留言类型不能为空");
+//			}
 			if (leaveMessage.getDescribe() == null || "".equals(leaveMessage.getDescribe())){
 				throw new ControllerException("描述不能为空");
 			}

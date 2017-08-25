@@ -46,10 +46,18 @@
         <div class="phone">
             <img src="${pageContext.request.contextPath}/wenhuaimg/1c.png" />
         </div>
+
+        <div  class="main2">
+
+        </div>
         <div class="main2">
-            <p> 宁夏伊牧云农林牧科技开发有限公司成立于2016年4月，是一家以电子商务，软件开发服务为主营业务的现代化信息公司。公司目前拥有研发与管理为一体的年轻团队，并借助互联网的力量与物联网的发展趋势，建设伊牧云牧场项目，将传统农牧业与现代化信息技术有机结合，进行牛羊肉产品质量追溯、活畜在线交易、牛羊投资认领及相关软硬件营销业务，从而实现传统农牧业产业升级。
+            <p> 宁夏伊牧云农林牧科技开发有限公司成立于2016年，是一家集电子商务，软件开发、数字智能化平台运营服务为一体的物联网科技公司。公司本着“谋求长远合作，携手共同发展”的经营理念与畜牧行业精英企业、规模合作社建立了联盟体，并成立了产业商会和产业基金，运用物联网技术搭建的伊牧云平台，通过手机APP和PC网页两大客户端，把传统农牧业和互联网平台有机结合，开通互联网活畜交易、趣牧投个性认领、互联网金融桥，牧易购电子商务和牛羊肉质量追溯等公共服务窗口，将牛羊肉一二三产全产业链无缝融合。
             </p>
-            <p>公司自成立以来，专心于建设伊牧云牧场项目，现已完成部分平台的开发，在宁夏同心、盐池，甘肃天祝、高台，青海海北等地发展养殖企业并签订大量合作协议，对部分养殖企业也已完成相关硬件设备的安装。目前与中国银联、宁夏银行、杨哈吉健康食品有限公司、宁夏部分大型屠宰企业、餐饮企业等达成合作关系。</p>
+            <p>实现三大目标：<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;消费者吃到安全放心的高品质牛羊肉！<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牛羊供需双方足不出户便可直接交易！<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;投资者可获得清晰透明、稳定的收益！<br>
+            </p>
         </div>
     </div>
     <div class="main" style="display:none;">

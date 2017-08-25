@@ -49,7 +49,7 @@ public class TbHomePageController extends BaseController {
 	private TbHonorService tbHonorService;
 
 	@RequestMapping(value={"","home"})
-	public ModelAndView homePage(){
+	public ModelAndView homePage(HttpServletResponse response){
 		TbHomePage homePage = tbHomePageService.getHomePage();
 		String adminPictureHead = ConfigUtil.getAdminUrlHead();
 		if (homePage.getPicture1() != null){
@@ -68,6 +68,8 @@ public class TbHomePageController extends BaseController {
 				news.setPicture(adminPictureHead + news.getPicture());
 			}
 		}
+		response.setHeader("Pragma", "Pragma");
+		response.setHeader("Cache-Control", "public");
 		Map<String,Object> map = new HashMap<>();
 		map.put("homeNews",homeNews);
 		map.put("homePage",homePage);

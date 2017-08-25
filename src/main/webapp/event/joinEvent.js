@@ -96,13 +96,13 @@ $("#submitFarming").click(function(e){
 
 $("#submitMessage").click(function(e){
     // e.preventDefault();
-    var problemType = $("#problemType").val();
+    // var problemType = $("#problemType").val();
     var describe = $("#describe").val();
     var messageContact = $("#messageContact").val();
-    if(problemType == null || problemType == ""){
-        alert("问题类型不能为空");
-        return;
-    }
+    // if(problemType == null || problemType == ""){
+    //     alert("问题类型不能为空");
+    //     return;
+    // }
     if(describe == null || describe == ""){
         alert("描述问题不能为空");
         return;
