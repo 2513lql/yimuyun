@@ -83,3 +83,19 @@ section{
 	line-height: 0.4rem;
 	margin: 0 auto;
 }
+.btn{
+	width:1.75rem;
+	height: 0.75rem;
+	background: #009744;
+	border:none;
+	color:#FFF;
+	margin: 0 auto;
+	margin: 10px auto;
+	display: block;
+	outline:none;
+	border-radius:2px;
+	font-size:0.2rem;
+}
+.btn:active{
+	box-shadow: inset 0 8px 8px rgba(0,0,0,.125);
+}

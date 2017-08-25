@@ -16,6 +16,7 @@
     <div class="deta_box">
         <span class="success_info"></span>
         <p>签收成功</p>
+        <button class="btn" id="continue">继续签收</button>
     </div>
 
     <!-- 失败-->
@@ -29,6 +30,7 @@
 
 <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/setfontsize_log.js"></script>
+<script src="${pageContext.request.contextPath}/event/continueReceive.js"></script>
 
 </body>
 </html>
