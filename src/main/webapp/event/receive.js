@@ -13,7 +13,7 @@ $("#receive").click(function () {
         success: function (data) {
             console.log(data['head']['msg'])
             if(data['head']['ret']=="0"){
-                window.location.href = "receive";
+                window.location.href = "receiv";
             }
         }
     });

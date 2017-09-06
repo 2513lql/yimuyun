@@ -17,7 +17,7 @@
     </div>
     <div class="coa">
         <div class="xuliehao">
-            <input type="text" id="traceNumber1" placeholder="请输入你的防伪序列号"><span id="queryBtn1">防伪验证</span>
+            <input type="text" id="traceNumber1" placeholder="请输入防伪序列号"><span id="queryBtn1">防伪验证</span>
         </div>
         <%--<div class="result">你的产品为<span>真</span></div>--%>
         <div id="queryResult" class="result"></div>

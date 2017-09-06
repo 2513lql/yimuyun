@@ -107,7 +107,7 @@ public class LogisticsReceiverController extends BaseController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "receive")
+    @RequestMapping(value = "receiv")
     public ModelAndView receive() {
         ModelAndView modelAndView = new ModelAndView("receiveSuccess");
         return modelAndView;

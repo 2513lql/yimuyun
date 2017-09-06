@@ -17,9 +17,9 @@ $("#queryBtn1").click(function () {
             success: function (data) {
                 console.log(data['body']['result'])
                 if(data['body']['result'] == "true"){
-                    $("#queryResult").html("你的产品为 <span>真</span>");
+                    $("#queryResult").html("您的产品为 <span>真</span>");
                 }else {
-                    $("#queryResult").html("你的产品为 <span>假</span>");
+                    $("#queryResult").html("您的产品为 <span>假</span>");
                 }
             }
     });
