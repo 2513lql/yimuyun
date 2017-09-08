@@ -44,7 +44,7 @@ function renderTrace(body) {
 
     var lvli = "<tr><td>身份证号: " +  body['livestock']['idNumber'] +"</td></tr>";
     lvli += "<tr><td>出生日期: " + body['livestock']['birthday'] + "</td></tr>";
-    lvli += "<tr><td>出生重量: " + body['livestock']['birthWeight']+"kg</td></tr>";
+    lvli += "<tr><td>出生重量: " + body['livestock']['birthWeight']+"</td></tr>";
     lvli += "<tr><td>品种: " + body['livestock']['variety'] +"</td></tr>";
     lvli += "<tr><td>性别: " + body['livestock']['sex'] +"</td></tr>";
     lvli += "<tr><td>出生地: " + body['livestock']['birthplace'] +"</td></tr>";
@@ -120,6 +120,11 @@ function renderTrace(body) {
         farming += "<tr><td>温度: " + item['temperature'] + "</td></tr>";
         farming += "<tr><td>湿度: " + item['humidity'] + "</td></tr>";
         farming += "<tr><td>光照: " + item['beam'] + "</td></tr>";
+        farming += "<tr><td>甲烷浓度: " + item['ch4'] + "</td></tr>";
+        farming += "<tr><td>二氧化碳浓度: " + item['co2'] + "</td></tr>";
+        farming += "<tr><td>二氧化硫浓度: " + item['so2'] + "</td></tr>";
+        farming += "<tr><td>氮气浓度: " + item['nh3'] + "</td></tr>";
+        farming += "<tr><td>硫化氢浓度: " + item['h2s'] + "</td></tr>";
         farming += "</table>";
     }
     $(".right .right2").html(farming);

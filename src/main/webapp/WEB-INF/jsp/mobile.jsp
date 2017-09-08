@@ -60,7 +60,7 @@
                     </tr>
                     <tr>
                         <td>出生重量：</td>
-                        <td>${result.getJSONObject("livestock").get("birthWeight")}kg</td>
+                        <td>${result.getJSONObject("livestock").get("birthWeight")}</td>
                     </tr>
                     <tr>
                         <td>品种：</td>
@@ -219,6 +219,26 @@
                         <tr>
                             <td>光照：</td>
                             <td>${result['farming']['environment']['beam'] }</td>
+                        </tr>
+                        <tr>
+                            <td>二氧化碳浓度：</td>
+                            <td>${result['farming']['environment']['co2']}</td>
+                        </tr>
+                        <tr>
+                            <td>甲烷浓度：</td>
+                            <td>${result['farming']['environment']['ch4']}</td>
+                        </tr>
+                        <tr>
+                            <td>二氧化硫浓度：</td>
+                            <td>${result['farming']['environment']['so2']}</td>
+                        </tr>
+                        <tr>
+                            <td>硫化氢浓度：</td>
+                            <td>${result['farming']['environment']['h2s']}</td>
+                        </tr>
+                        <tr>
+                            <td>氮气浓度：</td>
+                            <td>${result['farming']['environment']['nh3']}</td>
                         </tr>
                     </table>
                 </c:if>
