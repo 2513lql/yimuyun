@@ -13,7 +13,7 @@
 <div class="box">
     <div class="header">
         <img src="./img/index/5.png" alt="">
-        <div>中国伊牧 云牧场牛羊肉食品追溯平台</div>
+        <div>中国伊牧 · 云牧场牛羊肉食品追溯平台</div>
     </div>
     <div class="coa">
         <div class="xuliehao">
@@ -115,68 +115,74 @@
 
                 <c:if test="${result['farming']['immuneRecord'] != ''}">
                     <h3>免疫记录：</h3>
-                    <table border="0" cellspacing="0" cellpadding="0">
-                        <tr>
-                            <td>免疫日期：</td>
-                            <td>${result['farming']['immuneRecord']['immuneTime']}</td>
-                        </tr>
-                        <tr>
-                            <td>疫苗品种：</td>
-                            <td>${result['farming']['immuneRecord']['vaccineType']}</td>
-                        </tr>
-                        <tr>
-                            <td>免疫方法：</td>
-                            <td>${result['farming']['immuneRecord']['immuneWay'] }</td>
-                        </tr>
-                        <tr>
-                            <td>免疫人员：</td>
-                            <td>${result['farming']['immuneRecord']['immunePerson']}</td>
-                        </tr>
-                    </table>
+                    <c:forEach var="item" items="${result['farming']['immuneRecord']}">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td>免疫日期：</td>
+                                <td>${item.get("immuneTime")}</td>
+                            </tr>
+                            <tr>
+                                <td>疫苗品种：</td>
+                                <td>${item.get("vaccineType")}</td>
+                            </tr>
+                            <tr>
+                                <td>免疫方法：</td>
+                                <td>${item.get("immuneWay")}</td>
+                            </tr>
+                            <tr>
+                                <td>免疫人员：</td>
+                                <td>${item.get("immunePerson")}</td>
+                            </tr>
+                        </table>
+                    </c:forEach>
                 </c:if>
 
                 <c:if test="${result['farming']['diagnosis'] != ''}">
                     <h3>诊疗记录：</h3>
-                    <table border="0" cellspacing="0" cellpadding="0">
-                        <tr>
-                            <td>诊疗日期：</td>
-                            <td>${result['farming']['diagnosis']['diagnosisTime']}</td>
-                        </tr>
-                        <tr>
-                            <td>诊疗结果：</td>
-                            <td>${result['farming']['diagnosis']['diagnosisResult']}</td>
-                        </tr>
-                        <tr>
-                            <td>治疗方案：</td>
-                            <td>${result['farming']['diagnosis']['treatmentPlan']}</td>
-                        </tr>
-                        <tr>
-                            <td>用药名称：</td>
-                            <td>${result['farming']['diagnosis']['drug']}</td>
-                        </tr>
-                        <tr>
-                            <td>治疗人员：</td>
-                            <td>${result['farming']['diagnosis']['person']}</td>
-                        </tr>
-                    </table>
+                    <c:forEach var="item" items="${result['farming']['diagnosis']}">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td>诊疗日期：</td>
+                                <td>${item.get("diagnosisTime")}</td>
+                            </tr>
+                            <tr>
+                                <td>诊疗结果：</td>
+                                <td>${item.get("diagnosisResult")}</td>
+                            </tr>
+                            <tr>
+                                <td>治疗方案：</td>
+                                <td>${item.get("treatmentPlan")}</td>
+                            </tr>
+                            <tr>
+                                <td>用药名称：</td>
+                                <td>${item.get("drug")}</td>
+                            </tr>
+                            <tr>
+                                <td>治疗人员：</td>
+                                <td>${item.get("person")}</td>
+                            </tr>
+                        </table>
+                    </c:forEach>
                 </c:if>
 
                 <c:if test="${result['farming']['feedingRecord'] != ''}">
                     <h3>喂养记录：</h3>
-                    <table border="0" cellspacing="0" cellpadding="0">
-                        <tr>
-                            <td>喂养时间：</td>
-                            <td>${result['farming']['feedingRecord'] ['feedingTime'] }</td>
-                        </tr>
-                        <tr>
-                            <td>喂养饲料：</td>
-                            <td>${result['farming']['feedingRecord'] ['feed']}</td>
-                        </tr>
-                        <tr>
-                            <td>喂养牧草：</td>
-                            <td>${result['farming']['feedingRecord'] ['grass']}</td>
-                        </tr>
-                    </table>
+                    <c:forEach var="item" items="${result['farming']['feedingRecord']}">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td>喂养时间：</td>
+                                <td>${item.get("feedingTime") }</td>
+                            </tr>
+                            <tr>
+                                <td>喂养饲料：</td>
+                                <td>${item.get("feed")}</td>
+                            </tr>
+                            <tr>
+                                <td>喂养牧草：</td>
+                                <td>${item.get("grass")}</td>
+                            </tr>
+                        </table>
+                    </c:forEach>
                 </c:if>
 
                 <c:if test="${result['farming']['disinfectionRecord'] != ''}">
@@ -396,8 +402,8 @@
                             <td>${result['process']['acidDischarge']['temperature'] }</td>
                         </tr>
                         <tr>
-                            <td>时间：</td>
-                            <td>${result['process']['acidDischarge'] ['time']}</td>
+                            <td>湿度：</td>
+                            <td>${result['process']['acidDischarge'] ['humidity']}</td>
                         </tr>
                     </table>
                 </c:if>

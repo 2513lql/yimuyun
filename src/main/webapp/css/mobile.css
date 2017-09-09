@@ -40,23 +40,24 @@ body {
 .header {
     padding: 0.03rem 0;
     padding-left: 0.06rem;
-    height: 0.4rem;
-    line-height: 0.4rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
     background: #FFFFFF;
     box-shadow: 0 0.01rem 0.03rem 0 rgba(0, 0, 0, 0.18);
 }
 
 .header img {
-    width: 0.4rem;
-    height: 0.4rem;
+    width: 0.5rem;
+    height: 0.5rem;
     float: left;
 }
 
 .header div {
     float: left;
-    line-height: 0.4rem;
+    line-height: 0.5rem;
     color: #009944;
     text-indent: 0.1rem;
+    font-size: 0.18rem;
 }
 
 .coa {

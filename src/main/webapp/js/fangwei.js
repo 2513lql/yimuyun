@@ -71,35 +71,41 @@ function renderTrace(body) {
         farming += " alt=''></td></tr></table>";
     }
     if(body['farming']['immuneRecord'] != ""){
-        var item = body['farming']['immuneRecord'];
         farming += "<h3>免疫记录</h3>";
-        farming += "<table>";
-        farming += "<tr><td>免疫时间: " + item['immuneTime'] + "</td></tr>";
-        farming += "<tr><td>疫苗品种: " + item['vaccineType'] + "</td></tr>";
-        farming += "<tr><td>免疫方法: " + item['immuneWay'] + "</td></tr>";
-        farming += "<tr><td>免疫人员: " + item['immunePerson'] + "</td></tr>";
-        farming += "</table>";
+        for(var i in body['farming']['immuneRecord']) {
+            var item = body['farming']['immuneRecord'][i];
+            farming += "<table>";
+            farming += "<tr><td>免疫时间: " + item['immuneTime'] + "</td></tr>";
+            farming += "<tr><td>疫苗品种: " + item['vaccineType'] + "</td></tr>";
+            farming += "<tr><td>免疫方法: " + item['immuneWay'] + "</td></tr>";
+            farming += "<tr><td>免疫人员: " + item['immunePerson'] + "</td></tr>";
+            farming += "</table>";
+        }
     }
     if(body['farming']['diagnosis'] != ""){
-        var item = body['farming']['diagnosis'];
         farming += "<h3>诊疗记录</h3>";
-        farming += "<table>";
-        farming += "<tr><td>诊疗时间: " + item['diagnosisTime'] + "</td></tr>";
-        farming += "<tr><td>诊疗结果: " + item['diagnosisResult'] + "</td></tr>";
-        farming += "<tr><td>诊疗方案: " + item['treatmentPlan'] + "</td></tr>";
-        farming += "<tr><td>用药名称: " + item['drug'] + "</td></tr>";
-        farming += "<tr><td>诊疗人员: " + item['person'] + "</td></tr>";
-        farming += "</table>";
+        for(var i in body['farming']['diagnosis']) {
+            var item = body['farming']['diagnosis'][i];
+            farming += "<table>";
+            farming += "<tr><td>诊疗时间: " + item['diagnosisTime'] + "</td></tr>";
+            farming += "<tr><td>诊疗结果: " + item['diagnosisResult'] + "</td></tr>";
+            farming += "<tr><td>诊疗方案: " + item['treatmentPlan'] + "</td></tr>";
+            farming += "<tr><td>用药名称: " + item['drug'] + "</td></tr>";
+            farming += "<tr><td>诊疗人员: " + item['person'] + "</td></tr>";
+            farming += "</table>";
+        }
     }
 
     if(body['farming']['feedingRecord'] != ""){
-        var item = body['farming']['feedingRecord'];
         farming += "<h3>喂养记录</h3>";
-        farming += "<table>";
-        farming += "<tr><td>喂养时间: " + item['feedingTime'] + "</td></tr>";
-        farming += "<tr><td>喂养饲料: " + item['feed'] + "</td></tr>";
-        farming += "<tr><td>喂养牧草: " + item['grass'] + "</td></tr>";
-        farming += "</table>";
+        for(var i in body['farming']['feedingRecord']) {
+            var item = body['farming']['feedingRecord'][i];
+            farming += "<table>";
+            farming += "<tr><td>喂养时间: " + item['feedingTime'] + "</td></tr>";
+            farming += "<tr><td>喂养饲料: " + item['feed'] + "</td></tr>";
+            farming += "<tr><td>喂养牧草: " + item['grass'] + "</td></tr>";
+            farming += "</table>";
+        }
     }
 
     if(body['farming']['disinfectionRecord'] != ""){
@@ -205,7 +211,7 @@ function renderTrace(body) {
         process += "<table>";
         process += "<tr><td>排酸日期: " + item['date'] + "</td></tr>";
         process += "<tr><td>温度: " + item['temperature'] + "</td></tr>";
-        process += "<tr><td>时间: " + item['time'] + "</td></tr>";
+        process += "<tr><td>湿度: " + item['humidity'] + "</td></tr>";
         process += "</table>";
     }
     if(body['process']['processRecord'] != ''){
