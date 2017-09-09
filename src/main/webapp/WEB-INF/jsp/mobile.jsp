@@ -84,7 +84,7 @@
                 <c:if test="${result['farming']['farms'] != ''}">
                     <h3>牧场信息</h3>
                     <c:forEach var="item" items="${result['farming']['farms']}">
-                        <table border="0" cellspacing="0" cellpadding="0">
+                        <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px;>
                             <tr>
                                 <td>牧场名称：</td>
                                 <td>${item.get("farmName")}</td>
@@ -105,8 +105,8 @@
                     </c:forEach>
                 </c:if>
                 <c:if test="${result['farming']['quarantinePicture'] != ''}">
-                    <h3>检疫记录：</h3>
-                    <table border="0" cellspacing="0" cellpadding="0">
+                    <h3 style=margin-top:10px>检疫记录：</h3>
+                    <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px >
                         <tr>
                             <td colspan="2"><img src="${result['farming']['quarantinePicture']}" alt=""></td>
                         </tr>
@@ -114,9 +114,9 @@
                 </c:if>
 
                 <c:if test="${result['farming']['immuneRecord'] != ''}">
-                    <h3>免疫记录：</h3>
+                    <h3 style=margin-top:10px >免疫记录：</h3>
                     <c:forEach var="item" items="${result['farming']['immuneRecord']}">
-                        <table border="0" cellspacing="0" cellpadding="0">
+                        <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px;>
                             <tr>
                                 <td>免疫日期：</td>
                                 <td>${item.get("immuneTime")}</td>
@@ -138,9 +138,9 @@
                 </c:if>
 
                 <c:if test="${result['farming']['diagnosis'] != ''}">
-                    <h3>诊疗记录：</h3>
+                    <h3 style=margin-top:10px>诊疗记录：</h3>
                     <c:forEach var="item" items="${result['farming']['diagnosis']}">
-                        <table border="0" cellspacing="0" cellpadding="0">
+                        <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
                             <tr>
                                 <td>诊疗日期：</td>
                                 <td>${item.get("diagnosisTime")}</td>
@@ -166,9 +166,9 @@
                 </c:if>
 
                 <c:if test="${result['farming']['feedingRecord'] != ''}">
-                    <h3>喂养记录：</h3>
+                    <h3 style=margin-top:10px>喂养记录：</h3>
                     <c:forEach var="item" items="${result['farming']['feedingRecord']}">
-                        <table border="0" cellspacing="0" cellpadding="0">
+                        <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
                             <tr>
                                 <td>喂养时间：</td>
                                 <td>${item.get("feedingTime") }</td>
@@ -186,8 +186,8 @@
                 </c:if>
 
                 <c:if test="${result['farming']['disinfectionRecord'] != ''}">
-                <h3>消毒记录：</h3>
-                <table border="0" cellspacing="0" cellpadding="0">
+                <h3 style=margin-top:10px>消毒记录：</h3>
+                <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
                     <tr>
                         <td>消毒日期：</td>
                         <td>${result['farming']['disinfectionRecord']['disinfectionTime']}</td>
@@ -208,8 +208,8 @@
                 </c:if>
 
                 <c:if test="${result['farming']['environment'] != ''}">
-                    <h3>环境数据记录：</h3>
-                    <table border="0" cellspacing="0" cellpadding="0">
+                    <h3 style=margin-top:10px>环境数据记录：</h3>
+                    <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
                         <tr>
                             <td>记录时间：</td>
                             <td>${result['farming']['environment']['time']}</td>
@@ -255,8 +255,8 @@
             <h2>-屠宰环节-</h2>
             <div class="content">
             <c:if test="${result['slaughter']['acquisition'] != ''}">
-                <h3>收购：</h3>
-                <table border="0" cellspacing="0" cellpadding="0">
+                <h3>收购记录：</h3>
+                <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
                     <tr>
                         <td>休药期检验：</td>
                         <td>${result['slaughter']['acquisition']['qualityCheck'] }</td>
@@ -277,8 +277,8 @@
             </c:if>
 
             <c:if test="${result['slaughter']['slaughterRecord'] != ''}">
-                <h3>屠宰记录：</h3>
-                <table border="0" cellspacing="0" cellpadding="0">
+                <h3 style=margin-top:10px>屠宰记录：</h3>
+                <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
                     <tr>
                         <td>屠宰日期：</td>
                         <td>${result['slaughter']['slaughterRecord'] ['slaughterTime']}</td>
@@ -299,8 +299,8 @@
             </c:if>
 
             <c:if test="${result['slaughter']['quarantineRecord'] != ''}">
-                <h3>屠宰检疫记录：</h3>
-                <table border="0" cellspacing="0" cellpadding="0">
+                <h3 style=margin-top:10px>屠宰检疫记录：</h3>
+                <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
                     <tr>
                         <td>检疫日期：</td>
                         <td>${result['slaughter']['quarantineRecord'] ['quarantineTime'] }</td>
@@ -329,8 +329,8 @@
             </c:if>
 
             <c:if test="${result['slaughter']['disinfection'] != ''}">
-                <h3>消毒记录：</h3>
-                <table border="0" cellspacing="0" cellpadding="0">
+                <h3 style=margin-top:10px>消毒记录：</h3>
+                <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
                     <tr>
                         <td>消毒日期：</td>
                         <td>${result['slaughter']['disinfection']['disinfectionTime']}</td>
@@ -351,8 +351,8 @@
             </c:if>
 
             <c:if test="${result['slaughter']['enterpriseInfo'] != ''}">
-                <h3>企业信息：</h3>
-                <table border="0" cellspacing="0" cellpadding="0">
+                <h3 style=margin-top:10px>企业信息：</h3>
+                <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
                     <tr>
                         <td>单位名称：</td>
                         <td>${result['slaughter']['enterpriseInfo'] ['enterpriseName']}</td>
@@ -392,7 +392,7 @@
 
                 <c:if test="${result['process']['acidDischarge'] != ''}">
                     <h3>排酸记录：</h3>
-                    <table border="0" cellspacing="0" cellpadding="0">
+                    <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
                         <tr>
                             <td>排酸日期：</td>
                             <td>${result['process']['acidDischarge'] ['date']}</td>
@@ -409,8 +409,8 @@
                 </c:if>
 
                 <c:if test="${result['process']['processRecord'] != ''}">
-                    <h3>加工记录：</h3>
-                    <table border="0" cellspacing="0" cellpadding="0">
+                    <h3 style=margin-top:10px>加工记录：</h3>
+                    <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
                         <tr>
                             <td>加工日期：</td>
                             <td>${result['process']['processRecord'] ['processTime']}</td>
@@ -431,8 +431,8 @@
                 </c:if>
 
                 <c:if test="${result['process']['disinfectionRecord'] != ''}">
-                    <h3>消毒记录：</h3>
-                    <table border="0" cellspacing="0" cellpadding="0">
+                    <h3 style=margin-top:10px>消毒记录：</h3>
+                    <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
                         <tr>
                             <td>消毒时间：</td>
                             <td>${result['process']['disinfectionRecord']['disinfectionTime']}</td>
@@ -453,8 +453,8 @@
                 </c:if>
 
                 <c:if test="${result['process']['enterpriseInfo'] != ''}">
-                    <h3>企业信息：</h3>
-                    <table border="0" cellspacing="0" cellpadding="0">
+                    <h3 style=margin-top:10px>企业信息：</h3>
+                    <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
                         <tr>
                             <td>单位名称：</td>
                             <td>${result['process']['enterpriseInfo'] ['enterpriseName'] }</td>
