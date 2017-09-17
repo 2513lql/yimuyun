@@ -13,7 +13,7 @@
 <div class="box">
     <div class="header">
         <img src="./img/index/5.png" alt="">
-        <div>中国伊牧 · 云牧场牛羊肉食品追溯平台</div>
+        <div>中国伊牧 · 云牧场公共溯源监管平台</div>
     </div>
     <div class="coa">
         <div class="xuliehao">
