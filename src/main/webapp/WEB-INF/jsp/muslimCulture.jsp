@@ -23,7 +23,7 @@
             <li><a href="${pageContext.request.contextPath}/join">加入我们</a></li>
         </ul>
         <div class="right">
-            <div class="top"><img src="${pageContext.request.contextPath}/img/public/2.png" /><span>咨询电话</span></div>
+            <div class="top"><img src="${pageContext.request.contextPath}/img/public/2.png" /><span>咨询热线</span></div>
             <div class="bottom">${news.phoneNumber}</div>
         </div>
     </div>

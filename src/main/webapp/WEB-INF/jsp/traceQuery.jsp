@@ -22,7 +22,7 @@
             <li><a href="${pageContext.request.contextPath}/join">加入我们</a></li>
         </ul>
         <div class="right">
-            <div class="top"><img src="${pageContext.request.contextPath}/img/public/2.png" /><span>咨询电话</span></div>
+            <div class="top"><img src="${pageContext.request.contextPath}/img/public/2.png" /><span>咨询热线</span></div>
             <div class="bottom">${phoneNumber}</div>
         </div>
     </div>
@@ -37,9 +37,9 @@
             </div>
             <div class="coa">
                 <div class="xuliehao">
-                    <input type="text" id="traceNumber1" placeholder="请输入你的防伪序列号"><span id="queryBtn1">查询</span>
+                    <input type="text" id="traceNumber1" placeholder="请输入您的防伪序列号"><span id="queryBtn1">查询</span>
                 </div>
-                <%--你的产品为 <span id="traceQueryResult"></span>--%>
+                <%--您的产品为 <span id="traceQueryResult"></span>--%>
                 <div id="queryResult" class="result"></div>
             </div>
             <div class="J">
@@ -50,7 +50,7 @@
             </div>
             <div class="trace">
                 <div class="xuliehao">
-                    <input id="traceNumber2" type="text" placeholder="请输入你的追溯序列号"><span id="queryBtn2">查询</span>
+                    <input id="traceNumber2" type="text" placeholder="请输入您的追溯序列号"><span id="queryBtn2">查询</span>
                 </div>
                 <!--<div class="xinxi">
                     <textarea name="yj" cols="20" rows="5" placeholder="牛羊追溯信息"></textarea>

@@ -27,7 +27,7 @@
             <li><a href="${pageContext.request.contextPath}/join">加入我们</a></li>
         </ul>
         <div class="right">
-            <div class="top"><img src="${pageContext.request.contextPath}/img/public/2.png" /><span>咨询电话</span></div>
+            <div class="top"><img src="${pageContext.request.contextPath}/img/public/2.png" /><span>咨询热线</span></div>
             <div class="bottom"><c:out value="${map['phoneNumber']}"></c:out></div>
         </div>
     </div>
@@ -51,7 +51,7 @@
 
         </div>
         <div class="main2">
-            <p> 宁夏伊牧云农林牧科技开发有限公司成立于2016年，是一家集电子商务，软件开发、数字智能化平台运营服务为一体的物联网科技公司。公司本着“谋求长远合作，携手共同发展”的经营理念与畜牧行业精英企业、规模合作社建立了联盟体，并成立了产业商会和产业基金，运用物联网技术搭建的伊牧云平台，通过手机APP和PC网页两大客户端，把传统农牧业和互联网平台有机结合，开通互联网活畜交易、趣牧投个性认领、互联网金融桥，牧易购电子商务和牛羊肉质量追溯等公共服务窗口，将牛羊肉一二三产全产业链无缝融合。
+            <p> 宁夏伊牧云农林牧科技开发有限公司成立于2016年，是一家集电子商务、软件开发、数字智能化平台运营服务为一体的物联网科技公司。公司本着“谋求长远合作，携手共同发展”的经营理念与畜牧行业精英企业、规模合作社建立了联盟体，并成立了产业商会和产业基金。运用物联网技术搭建的伊牧云平台，通过手机APP和PC网页两大客户端，把传统农牧业和互联网平台有机结合，开通牛羊肉质量追溯、互联网活畜交易、趣牧投个性认领、伊牧鲜电子商务和互联网金融桥等公共服务窗口，将牛羊肉一二三全产业链无缝融合。
             </p>
             <p>实现三大目标：<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;消费者吃到安全放心的高品质牛羊肉！<br>

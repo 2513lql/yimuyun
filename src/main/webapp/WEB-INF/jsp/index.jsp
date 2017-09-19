@@ -58,7 +58,7 @@
                 安全放心
             </div>
             <div class="main1-bottom">
-                让消费者吃到真正安全放心的清真牛羊肉！
+                让消费者吃到真正安全放心的牛羊肉！
             </div>
         </div>
         <div class="phone">
