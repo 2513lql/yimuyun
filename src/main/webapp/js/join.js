@@ -79,7 +79,6 @@ $(".farm-photos .upload").live("change", function () {
         },
         _this = $(this);
     if (this.value) {
-        _this.hide();
         if ($(opts.Img).find("img").length > 2 || $(opts.Img).find("div").length > 2) {
             return false;
         } else if ($(opts.Img).find("img").length == 2 || $(opts.Img).find("div").length == 2) {
@@ -90,16 +89,18 @@ $(".farm-photos .upload").live("change", function () {
         if (navigator.userAgent.indexOf("MSIE") > -1) {
             try {
                 $(opts.Img).append('<img src="' + getObjectURL(this.files[0]) + '" />');
+                _this.hide();
             } catch (e) {
                 var src = "";
-                _self.select();
+                _this.select();
                 if (top != self) {
                     window.parent.document.body.focus();
                 } else {
-                    _self.blur();
+                    _this.blur();
                 }
                 src = document.selection.createRange().text;
                 document.selection.empty();
+                _this.hide();
                 var img = document.createElement("div");
                 $(img).css({
                     "filter": "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + src + "\")",
@@ -109,6 +110,7 @@ $(".farm-photos .upload").live("change", function () {
                 $(opts.Img).append(img);
             }
         } else {
+            _this.hide();
             $(opts.Img).append('<img src="' + getObjectURL(this.files[0]) + '" />');
         }
     }
@@ -119,7 +121,6 @@ $(".feedback-photos .upload").live("change", function () {
         },
         _this = $(this);
     if (this.value) {
-        _this.hide();
         if ($(opts.Img).find("img").length > 2 || $(opts.Img).find("div").length > 2) {
             return false;
         } else if ($(opts.Img).find("img").length == 2 || $(opts.Img).find("div").length == 2) {
@@ -130,16 +131,18 @@ $(".feedback-photos .upload").live("change", function () {
         if (navigator.userAgent.indexOf("MSIE") > -1) {
             try {
                 $(opts.Img).append('<img src="' + getObjectURL(this.files[0]) + '" />');
+                _this.hide();
             } catch (e) {
                 var src = "";
-                _self.select();
+                _this.select();
                 if (top != self) {
                     window.parent.document.body.focus();
                 } else {
-                    _self.blur();
+                    _this.blur();
                 }
                 src = document.selection.createRange().text;
                 document.selection.empty();
+                _this.hide();
                 var img = document.createElement("div");
                 $(img).css({
                     "filter": "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + src + "\")",
@@ -149,22 +152,23 @@ $(".feedback-photos .upload").live("change", function () {
                 $(opts.Img).append(img);
             }
         } else {
+            _this.hide();
             $(opts.Img).append('<img src="' + getObjectURL(this.files[0]) + '" />');
         }
     }
 })
 var getObjectURL = function (file) {
-    var url = null;
-    if (window.createObjectURL != undefined) {
-        url = window.createObjectURL(file);
-    } else if (window.URL != undefined) {
-        url = window.URL.createObjectURL(file);
-    } else if (window.webkitURL != undefined) {
-        url = window.webkitURL.createObjectURL(file);
+        var url = null;
+        if (window.createObjectURL != undefined) {
+            url = window.createObjectURL(file);
+        } else if (window.URL != undefined) {
+            url = window.URL.createObjectURL(file);
+        } else if (window.webkitURL != undefined) {
+            url = window.webkitURL.createObjectURL(file);
+        }
+        return url;
     }
-    return url;
-}
-// $(".information-main .right .btn").on("click", saveReport);
+    // $(".information-main .right .btn").on("click", saveReport);
 
 function saveReport() {
     var file = $("input[name=file]"),
@@ -193,4 +197,3 @@ function saveReport() {
     })
     return false; // 必须返回false，否则表单会自己再做一次提交操作，并且页面跳转 
 }
-
