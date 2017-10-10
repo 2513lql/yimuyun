@@ -13,11 +13,10 @@ h3 {
 
 body {
     /*font: 12px"宋体", "Arial Narrow", HELVETICA;*/
-    font-family: "Microsoft YaHei";
+    /*font-family: "Microsoft YaHei";*/
+    font-family: ".PingFangSC-Medium";
     background: #fff;
     -webkit-text-size-adjust: 100%;
-    font-weight: normal;
-    font-size: 16px;
 }
 
 a {
@@ -56,7 +55,8 @@ p {
     /*width: 1280px;*/
     height: 100%;
     margin: 0 auto;
-    min-width: 1280px;
+    min-width: 1280px;  
+    position: relative;
 }
 
 .select {
@@ -105,11 +105,12 @@ p {
     padding-left: 8%;
     line-height: 85px;
     font-size: 18px;
+    font-weight: bold;
 }
 
 .header .right {
-    float: left;
-    /*padding-right: 6.5%;*/
+    float: right;
+    padding-right: 6.5%;
     padding-top: 14px;
     padding-bottom: 17px;
     color: #009944;
@@ -363,4 +364,24 @@ t .header .right .top img {
     font-size: 18px;
     color: #424242;
     letter-spacing: 0;
+}
+
+.totop{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 0;
+    top: 0;
+}
+
+.return_top{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    background: url(../img/public/return_top.png) no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    position: fixed;
+    bottom: 10px;
 }

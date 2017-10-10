@@ -54,12 +54,13 @@ p {
 
 .div {
     width: 1280px;
-    /*height: 100%;*/
+    height: 100%;
     margin: 0 auto;
-    min-width: 1280px;
+    min-width: 1280px;    
+    position: relative;
 }
 
-.selected {
+.select {
     color: #009944;
 }
 
@@ -204,4 +205,24 @@ t .header .right .top img {
     font-size: 18px;
     color: #424242;
     letter-spacing: 0;
+}
+
+.totop{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 0;
+    top: 0;
+}
+
+.return_top{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    background: url(../img/public/return_top.png) no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    position: fixed;
+    bottom: 10px;
 }
