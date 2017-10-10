@@ -107,11 +107,6 @@
 
             <div class="liuyan">
                 <form method="post" id="messageForm" target="nm_iframe" enctype="multipart/form-data" action="${pageContext.request.contextPath}/apply/message">
-                <%--<div class="wenti">--%>
-                    <%--<select name="problemType" id="problemType">--%>
-                        <%--<option selected placeholder="问题类型">问题类型</option>--%>
-                    <%--</select>--%>
-                <%--</div>--%>
                 <div class="fankui">
                     <textarea name="describe" id="describe" cols="20" rows="5" placeholder="在这里描述您遇到的问题"></textarea>
                 </div>

@@ -90,6 +90,8 @@ $("#submitFarming").click(function(e){
     $("#farmingTelephoneNumber").val("");
     $(".photos").empty();
     $(".dispalyNone").remove();
+    $(".farm-photos .upload").show();
+    $(".farm-photos .upload").val("");
 
 });
 
@@ -117,4 +119,6 @@ $("#submitMessage").click(function(e){
     $("#messageContact").val("");
     $(".photos").empty();
     $(".dispalyNone").remove();
+    $(".feedback-photos .upload").show();
+    $(".feedback-photos .upload").val("");
 });
