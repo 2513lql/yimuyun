@@ -123,5 +123,6 @@
     <div class="totop"><div class="return_top"></div></div>
 </div>
 
+<script src="${pageContext.request.contextPath}/js/public.js"></script>
 </body>
 </html>
