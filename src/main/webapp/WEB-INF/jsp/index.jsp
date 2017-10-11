@@ -158,9 +158,11 @@
         </div>
         <div class="bootom"><span>引领科技风尚，护航农牧发展</span></div>
     </div>
+    <div class="totop"><div class="return_top"></div></div>
 </div>
 
 <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/index.js"></script>
+<script src="${pageContext.request.contextPath}/js/public.js"></script>
 </body>
 </html>

@@ -81,12 +81,14 @@
         </div>
         <div class="bootom"><span>引领科技风尚，护航农牧发展</span></div>
     </div>
+    <div class="totop"><div class="return_top"></div></div>
 </div>
 </div>
 </body>
 <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/bootstrap/bootstrap.js"></script>
 <script src="${pageContext.request.contextPath}/js/bootstrap/extendPagination.js"></script>
+<script src="${pageContext.request.contextPath}/js/public.js"></script>
 <script type="application/javascript">
     var totalCount = $("#totalCount").val();
     var contextPath = $("#contextPath").val();

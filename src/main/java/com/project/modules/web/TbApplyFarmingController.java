@@ -66,7 +66,7 @@ public class TbApplyFarmingController extends BaseController {
 	 * @return
      */
 	@ResponseBody
-	@RequestMapping("/farming")
+	@RequestMapping(value = "/farming",produces = {"text/html;charset=UTF-8"})
 	public HttpOutMessage insertFarming(HttpServletRequest request){
 		String imgName = null;
 		TbApplyFarming applyFarming = new TbApplyFarming();
@@ -208,7 +208,7 @@ public class TbApplyFarmingController extends BaseController {
 
 
 	@ResponseBody
-	@RequestMapping("/message")
+	@RequestMapping(value = "/message", produces = {"text/html;charset=UTF-8"})
 	public HttpOutMessage leaveMessage(HttpServletRequest request, ServletRequest request1){
 		String imgName = null;
 		TbLeaveMessage leaveMessage = new TbLeaveMessage();

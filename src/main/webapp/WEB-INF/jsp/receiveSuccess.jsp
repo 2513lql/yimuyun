@@ -31,6 +31,7 @@
 <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/setfontsize_log.js"></script>
 <script src="${pageContext.request.contextPath}/event/continueReceive.js"></script>
+<script src="${pageContext.request.contextPath}/js/public.js"></script>
 
 </body>
 </html>
