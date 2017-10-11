@@ -13,7 +13,7 @@
 <div class="box">
     <div class="header">
         <img src="./img/index/5.png" alt="">
-        <div>中国伊牧 · 云牧场牛羊肉食品追溯平台</div>
+        <div>中国伊牧 · 云牧场公共溯源监管平台</div>
     </div>
     <div class="coa">
         <div class="xuliehao">
@@ -319,11 +319,20 @@
                     <%--</tr>--%>
                     <tr>
                         <td>检疫方法：</td>
-                        <td>${result['slaughter']['quarantineRecord']['quarantineMethod'] }</td>
+                            <%--<td>${result['slaughter']['quarantineRecord']['quarantineMethod'] }</td>--%>
+                        <td>全检</td>
                     </tr>
                     <tr>
                         <td>活体检疫结果：</td>
                         <td>${result['slaughter']['quarantineRecord'] ['result']}</td>
+                    </tr>
+                    <tr>
+                        <td>胴体检疫项目：</td>
+                        <td>实验室检疫 头部检疫 内脏检疫</td>
+                    </tr>
+                    <tr>
+                        <td>胴体检疫结果：</td>
+                        <td>合格</td>
                     </tr>
                 </table>
             </c:if>
