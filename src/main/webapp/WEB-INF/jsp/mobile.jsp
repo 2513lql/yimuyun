@@ -52,6 +52,10 @@
             <div class="content">
                 <table border="0" cellspacing="0" cellpadding="0">
                     <tr>
+                        <td>耳标编号：</td>
+                        <td>${result.getJSONObject("livestock").get("equipmentNumber")}</td>
+                    </tr>
+                    <tr>
                         <td>身份证号：</td>
                         <td>${result.getJSONObject("livestock").get("idNumber")}</td>
                     </tr>
