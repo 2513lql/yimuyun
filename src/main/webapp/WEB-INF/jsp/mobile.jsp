@@ -13,13 +13,14 @@
 <div class="box">
     <div class="header">
         <img src="./img/index/5.png" alt="">
-        <div>中国伊牧 · 云牧场牛羊肉食品追溯平台</div>
+        <div>中国伊牧 · 云牧场公共溯源监管平台</div>
     </div>
     <div class="coa">
         <div class="xuliehao">
             <input type="text" id="traceNumber1" placeholder="请输入防伪序列号"><span id="queryBtn1">防伪验证</span>
         </div>
         <%--<div class="result">您的产品为<span>真</span></div>--%>
+
         <div id="queryResult" class="result"></div>
     </div>
     <div class="ba"></div>
@@ -50,6 +51,10 @@
             <h2>-履历信息-</h2>
             <div class="content">
                 <table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>耳标编号：</td>
+                        <td>${result.getJSONObject("livestock").get("equipmentNumber")}</td>
+                    </tr>
                     <tr>
                         <td>身份证号：</td>
                         <td>${result.getJSONObject("livestock").get("idNumber")}</td>
@@ -319,11 +324,20 @@
                     <%--</tr>--%>
                     <tr>
                         <td>检疫方法：</td>
-                        <td>${result['slaughter']['quarantineRecord']['quarantineMethod'] }</td>
+                            <%--<td>${result['slaughter']['quarantineRecord']['quarantineMethod'] }</td>--%>
+                        <td>全检</td>
                     </tr>
                     <tr>
                         <td>活体检疫结果：</td>
                         <td>${result['slaughter']['quarantineRecord'] ['result']}</td>
+                    </tr>
+                    <tr>
+                        <td>胴体检疫项目：</td>
+                        <td>实验室检疫 头部检疫 内脏检疫</td>
+                    </tr>
+                    <tr>
+                        <td>胴体检疫结果：</td>
+                        <td>合格</td>
                     </tr>
                 </table>
             </c:if>
