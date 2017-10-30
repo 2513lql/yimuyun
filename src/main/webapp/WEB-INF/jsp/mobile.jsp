@@ -569,7 +569,7 @@
         </div>
         <div class="join">
             <p>加入我们</p>
-            <div>0620-5820820</div>
+            <div>400-666-8858</div>
         </div>
     </div>
 </div>
