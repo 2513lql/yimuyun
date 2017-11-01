@@ -65,7 +65,6 @@
                 <%--</dd>--%>
             <%--</dl>--%>
         </div>
-        <div class="more"><a href="${pageContext.request.contextPath}/news/list">更多></a></div>
         <div class="I">
             <h2>行业快讯</h2>
         </div>
@@ -100,6 +99,7 @@
                 </ul>
             </div>
         </div>
+        <div class="more"><a href="${pageContext.request.contextPath}/news/list">更多></a></div>
     </div>
     <!--底部-->
     <div class="footer">

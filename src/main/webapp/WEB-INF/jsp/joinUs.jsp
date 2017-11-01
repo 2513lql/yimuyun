@@ -120,7 +120,7 @@
                     <div class="photos"></div>
                 </div>
                 <div class="lianxi">
-                    <input id="messageContact" name="contact" type="text" placeholder="您的联系方式">
+                    <input id="messageContact" name="contact" type="text" placeholder="您的联系方式" onkeypress="return event.keyCode>=48&&event.keyCode<=57">
                 </div>
                 <div class="tijiao">
                     <input type="button" id="submitMessage" value="提交问题">
