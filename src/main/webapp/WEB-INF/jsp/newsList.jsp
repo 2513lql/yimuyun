@@ -37,7 +37,7 @@
     <!--主体-->
     <div id="companyNewsContainer" class="main shadow">
         <div class="I">
-            <h2>公司新闻</h2>
+            <h2>新闻中心</h2>
         </div>
         <c:forEach items="${map['page']}" var="news" varStatus="status">
             <c:if test="${status.index % 3 == 0}"><div class="phone-text"></c:if>

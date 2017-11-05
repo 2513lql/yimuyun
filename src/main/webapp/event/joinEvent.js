@@ -113,6 +113,10 @@ $("#submitMessage").click(function(e){
         alert("联系方式不能为空");
         return;
     }
+    if(messageContact.length != 11){
+        alert("联系方式格式不对");
+        return;
+    }
     $("#messageForm").submit();
     alert("添加成功");
     $("#describe").val("");
