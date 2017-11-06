@@ -30,6 +30,10 @@ $("#submitSlaughter").click(function(e){
         alert("联系电话不能为空");
         return;
     }
+    if(telephoneNumber.length != 11){
+        alert("联系方式格式不对");
+        return;
+    }
     if(contact == null || contact == ""){
         alert("联系人不能为空");
         return;
@@ -80,6 +84,10 @@ $("#submitFarming").click(function(e){
     }
     if(telephoneNumber == null || telephoneNumber == ""){
         alert("联系电话不能为空");
+        return;
+    }
+    if(telephoneNumber.length != 11){
+        alert("联系方式格式不对");
         return;
     }
     $("#farmingForm").submit();

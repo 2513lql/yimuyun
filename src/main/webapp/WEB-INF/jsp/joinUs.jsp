@@ -45,19 +45,19 @@
             <div class="information-main">
                 <div class="left">
                     <p>(屠宰加工企业或终端销售单位申请)</p>
-                    <label for="enterpriseType"><span>企业类型：</span>
+                    <label for=""><span>企业类型：</span>
                         <input id="enterpriseType" name="enterpriseType" type="text">
                     </label>
-                    <label for="slaughterName"><span>企业名称：</span>
+                    <label for=""><span>企业名称：</span>
                         <input id="slaughterName" name="name"  type="text">
                     </label>
-                    <label for="address"><span>企业地址:</span>
+                    <label for=""><span>企业地址:</span>
                         <input id="address" name="address" type="text">
                     </label>
-                    <label for="telephoneNumber"><span>联系电话:</span>
-                        <input id="telephoneNumber" name="telephoneNumber" type="text">
+                    <label for=""><span>联系电话:</span>
+                        <input id="telephoneNumber" name="telephoneNumber" type="text" onkeypress="return event.keyCode>=48&&event.keyCode<=57">
                     </label>
-                    <label for="contact"><span>联系人:</span>
+                    <label for=""><span>联系人:</span>
                         <input id="contact" name="contact" type="text">
                     </label>
                     <input type="button" id="submitSlaughter" value="提交信息" class="btn">
@@ -65,15 +65,15 @@
                 <div class="right">
                     <form method="post" id="farmingForm" target="nm_iframe" enctype="multipart/form-data" action="${pageContext.request.contextPath}/apply/farming">
                         <p>(养殖单位申请)</p>
-                        <label for="farmingName"><span>养殖单位名称：</span>
+                        <label for=""><span>养殖单位名称：</span>
                             <input id="farmingName" name="name" type="text">
                         </label>
-                        <label for="scale"><span>养殖规模:</span>
+                        <label for=""><span>养殖规模:</span>
                             <input id="scale" name="scale" type="text">
                         </label>
                         <label for=""><span>养殖类别:</span>
                             <input id="type" name="type" type="text">
-                        </label> 
+                        </label>
                         <label for=""><span style="float:left;">养殖场照片:</span>
                             <div class="farm-photos">
                                 <div class="upload-photos">
@@ -83,7 +83,7 @@
                             </div>
                         </label>
                         <label for=""><span>联系电话:</span>
-                            <input id="farmingTelephoneNumber" name="telephoneNumber" type="text">
+                            <input id="farmingTelephoneNumber" name="telephoneNumber" type="text" onkeypress="return event.keyCode>=48&&event.keyCode<=57">
                         </label>
                         <input type="button" value="提交信息" id="submitFarming" class="btn">
                     </form>
