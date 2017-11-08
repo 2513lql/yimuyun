@@ -100,6 +100,7 @@
                 </ul>
             </div>
         </div>
+        <div class="more"><a href="${pageContext.request.contextPath}/news/more">更多></a></div>
     </div>
     <!--底部-->
     <div class="footer">

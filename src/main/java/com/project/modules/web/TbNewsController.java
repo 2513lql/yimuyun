@@ -150,6 +150,112 @@ public class TbNewsController extends BaseController {
 		return modelAndView;
 	}
 
+
+	/**
+	 * 行业资讯更多
+	 * @param modelAndView
+	 * @return
+	 */
+	@RequestMapping(value = "/more")
+	public ModelAndView newsMore(ModelAndView modelAndView){
+		String adminPictureHead = ConfigUtil.getAdminUrlHead();
+		int pageNo = 1;
+		int pageSize = ConfigUtil.getIndustryPageSize();
+		String newsType = ConfigUtil.getIndustryNewsLocation();
+		TbNews tbNews = new TbNews();
+		tbNews.setShowLocation(newsType);
+		Page<TbNews> params = new Page<TbNews>(pageNo, pageSize);
+		params.setOrderBy("createTime desc");
+		Page<TbNews> page = tbNewsService.findPage(params,tbNews);
+		String phoneNumber = tbHomePageService.getHomePage().getTelephoneNumber();
+		int totalCount = tbNewsService.getTotalCount(newsType);
+		int totalPage =(int) Math.ceil((totalCount * 1.0) / pageSize);
+		Map<String,Object> map = new HashedMap();
+		map.put("phoneNumber",phoneNumber);
+		map.put("totalCount",totalCount);
+		map.put("totalPage",totalPage);
+
+		List<TbNews> newsList1 = page.getList();
+		List<TbNews> newsList2 = new ArrayList<>();
+		if (newsList1 != null && newsList1.size() > 8){
+			for (int i = 8; i < newsList1.size();){
+				TbNews tmp = newsList1.remove(i);
+				newsList2.add(tmp);
+			}
+		}
+		for (TbNews news : newsList1){
+			if (news.getPicture() != null){
+				news.setPicture(adminPictureHead + news.getPicture());
+			}
+			news.setNewsTime(DateUtil.date2shortStr(news.getCreateTime()));
+		}
+		for (TbNews news : newsList2){
+			if (news.getPicture() != null){
+				news.setPicture(adminPictureHead + news.getPicture());
+			}
+			news.setNewsTime(DateUtil.date2shortStr(news.getCreateTime()));
+		}
+
+
+		map.put("zixuanList1",newsList1);
+		map.put("zixuanList2",newsList2);
+//		map.put("page",page.getList());
+		modelAndView.setViewName("newsMore");
+		modelAndView.addObject("map",map);
+		return modelAndView;
+	}
+
+
+	/**
+	 * 行业资讯分页
+	 * @param pageNo
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value = "/morePage")
+	public Map<String,Object> newsMorePage(Integer pageNo){
+		String adminPictureHead = ConfigUtil.getAdminUrlHead();
+		if (pageNo == null || pageNo.equals("")){
+			pageNo = 1;
+		}
+		int pageSize = ConfigUtil.getIndustryPageSize();
+		String newsType = ConfigUtil.getIndustryNewsLocation();
+		TbNews tbNews = new TbNews();
+		tbNews.setShowLocation(newsType);
+		Page<TbNews> params = new Page<TbNews>(pageNo, pageSize);
+		params.setOrderBy("createTime desc");
+		Page<TbNews> page = tbNewsService.findPage(params,tbNews);
+		int totalCount = tbNewsService.getTotalCount(newsType);
+		int totalPage =(int) Math.ceil((totalCount * 1.0) / pageSize);
+		Map<String,Object> map = new HashedMap();
+		map.put("totalCount",totalCount);
+		map.put("totalPage",totalPage);
+
+		List<TbNews> newsList1 = page.getList();
+		List<TbNews> newsList2 = new ArrayList<>();
+		if (newsList1 != null && newsList1.size() > 8){
+			for (int i = 8; i < newsList1.size();){
+				TbNews tmp = newsList1.remove(i);
+				newsList2.add(tmp);
+			}
+		}
+		for (TbNews news : newsList1){
+			if (news.getPicture() != null){
+				news.setPicture(adminPictureHead + news.getPicture());
+			}
+			news.setNewsTime(DateUtil.date2shortStr(news.getCreateTime()));
+		}
+		for (TbNews news : newsList2){
+			if (news.getPicture() != null){
+				news.setPicture(adminPictureHead + news.getPicture());
+			}
+			news.setNewsTime(DateUtil.date2shortStr(news.getCreateTime()));
+		}
+		map.put("zixuanList1",newsList1);
+		map.put("zixuanList2",newsList2);
+		return map;
+	}
+
     /**
      * 分页查询新闻
      * @return

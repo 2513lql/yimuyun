@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/more.css">
 
 </head>
-<head>
-    <title>Title</title>
-</head>
+
 <body>
 <input type="hidden" value="" id="currPage"/>
 <input type="hidden" value="<c:out value="${map['totalCount']}"></c:out>" id="totalCount"/>
@@ -58,8 +56,7 @@
 <div class="main" style="padding-bottom: 50px">
 <div class="page">
     <div style="display: inline-block" id="callBackPager"></div><i class="totalPage">共<c:out value="${map['totalPage']}"></c:out>页</i>
-    <!-- <a href="">
-         <</a><a class="current">1</a><a>2</a><a>3</a><span>下一页</span><i>共3页</i>-->
+
 </div>
 </div>
     <!--底部-->

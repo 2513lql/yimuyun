@@ -19,6 +19,15 @@ public class ConfigUtil {
 		return 20;
 	}
 
+	public static Integer getIndustryPageSize(){
+		String pageSize = PropertiesUtil.getInstance("traceback.properties").getText("page.industry.pageSize");
+		if (StringUtils.isNoneBlank(pageSize)) {
+			return Integer.parseInt(pageSize);
+		}
+		logger.error("默认pageSize为空");
+		return 20;
+	}
+
 	/**
 	 *新闻置顶
 	 * @return

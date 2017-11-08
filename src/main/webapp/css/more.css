@@ -161,3 +161,51 @@
     /*background: #009944;*/
     /*color: #FFFFFF;*/
 /*}*/
+
+.main .liebiao {
+    height: 224px;
+    padding-top: 18px;
+}
+
+.main .liebiao ul li b {
+    font-weight: normal;
+}
+
+.main .liebai {
+    float: left;
+    width: 50%;
+    border-right: 1px solid #277037;
+}
+
+.main .liebai1 {
+    float: right;
+}
+
+.main .liebai ul {
+    width: 499px
+}
+
+.main .liebai1 ul {
+    width: 499px
+}
+
+.main .liebai ul li {
+    line-height: 28px;
+    font-size: 16px;
+    clear: both
+}
+
+.main .liebai ul li span {
+    float: right;
+    opacity: 0.5;
+}
+
+.main .liebai1 ul li {
+    line-height: 28px;
+    font-size: 16px;
+}
+
+.main .liebai1 ul li span {
+    float: right;
+    opacity: 0.5;
+}
