@@ -50,36 +50,40 @@
         <div class="main1">
             <h2>-履历信息-</h2>
             <div class="content">
-                <table border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td>耳标编号：</td>
-                        <td>${result.getJSONObject("livestock").get("equipmentNumber")}</td>
-                    </tr>
-                    <tr>
-                        <td>身份证号：</td>
-                        <td>${result.getJSONObject("livestock").get("idNumber")}</td>
-                    </tr>
-                    <tr>
-                        <td>出生日期：</td>
-                        <td>${result.getJSONObject("livestock").get("birthday")}</td>
-                    </tr>
-                    <tr>
-                        <td>出生重量：</td>
-                        <td>${result.getJSONObject("livestock").get("birthWeight")}</td>
-                    </tr>
-                    <tr>
-                        <td>品种：</td>
-                        <td>${result.getJSONObject("livestock").get("variety")}</td>
-                    </tr>
-                    <tr>
-                        <td>性别：</td>
-                        <td>${result.getJSONObject("livestock").get("sex")}</td>
-                    </tr>
-                    <tr>
-                        <td>出生地：</td>
-                        <td>${result.getJSONObject("livestock").get("birthplace")}</td>
-                    </tr>
-                </table>
+                <ul>
+                    <li>
+                        <span>耳标编号：</span>
+                        <span>${result.getJSONObject("livestock").get("equipmentNumber")}</span>
+                    </li>
+                    <li>
+                        <span>身份证号：</span>
+                        <span>${result.getJSONObject("livestock").get("idNumber")}</span>
+                    </li>
+                    <c:if test="${result['livestock']['birthday'] != ''}">
+                    <li>
+                        <span>出生日期：</span>
+                        <span>${result.getJSONObject("livestock").get("birthday")}</span>
+                    </li>
+                    </c:if>
+                    <c:if test="${result['livestock']['birthWeight'] != ''}">
+                    <li>
+                        <span>出生重量：</span>
+                        <span>${result.getJSONObject("livestock").get("birthWeight")}</span>
+                    </li>
+                    </c:if>
+                    <li>
+                        <span>品种：</span>
+                        <span>${result.getJSONObject("livestock").get("variety")}</span>
+                    </li>
+                    <li>
+                        <span>性别：</span>
+                        <span>${result.getJSONObject("livestock").get("sex")}</span>
+                    </li>
+                    <li>
+                        <span>出生地：</span>
+                        <span>${result.getJSONObject("livestock").get("birthplace")}</span>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="ba"></div>
@@ -89,169 +93,169 @@
                 <c:if test="${result['farming']['farms'] != ''}">
                     <h3>牧场信息</h3>
                     <c:forEach var="item" items="${result['farming']['farms']}">
-                        <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px;>
-                            <tr>
-                                <td>牧场名称：</td>
-                                <td>${item.get("farmName")}</td>
-                            </tr>
-                            <tr>
-                                <td>养殖地点：</td>
-                                <td>${item.get("address")}</td>
-                            </tr>
-                            <tr>
-                                <td>执照编号：</td>
-                                <td>${item.get("number")}</td>
-                            </tr>
-                            <tr>
-                                <td>负责人：</td>
-                                <td>${item.get("master")}</td>
-                            </tr>
-                        </table>
+                        <ul style=margin-top:10px;>
+                            <li>
+                                <span>牧场名称：</span>
+                                <span>${item.get("farmName")}</span>
+                            </li>
+                            <li>
+                                <span>养殖地点：</span>
+                                <span>${item.get("address")}</span>
+                            </li>
+                            <li>
+                                <span>执照编号：</span>
+                                <span>${item.get("number")}</span>
+                            </li>
+                            <li>
+                                <span>负责人：</span>
+                                <span>${item.get("master")}</span>
+                            </li>
+                        </ul>
                     </c:forEach>
                 </c:if>
                 <c:if test="${result['farming']['quarantinePicture'] != ''}">
                     <h3 style=margin-top:10px>检疫记录：</h3>
-                    <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px >
-                        <tr>
-                            <td colspan="2"><img src="${result['farming']['quarantinePicture']}" alt=""></td>
-                        </tr>
-                    </table>
+                    <ul style=margin-top:10px >
+                        <li>
+                            <span colspan="2"><img src="${result['farming']['quarantinePicture']}" alt=""></span>
+                        </li>
+                    </ul>
                 </c:if>
 
                 <c:if test="${result['farming']['immuneRecord'] != ''}">
                     <h3 style=margin-top:10px >免疫记录：</h3>
                     <c:forEach var="item" items="${result['farming']['immuneRecord']}">
-                        <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px;>
-                            <tr>
-                                <td>免疫日期：</td>
-                                <td>${item.get("immuneTime")}</td>
-                            </tr>
-                            <tr>
-                                <td>疫苗品种：</td>
-                                <td>${item.get("vaccineType")}</td>
-                            </tr>
-                            <tr>
-                                <td>免疫方法：</td>
-                                <td>${item.get("immuneWay")}</td>
-                            </tr>
-                            <tr>
-                                <td>免疫人员：</td>
-                                <td>${item.get("immunePerson")}</td>
-                            </tr>
-                        </table>
+                        <ul style=margin-top:10px;>
+                            <li>
+                                <span>免疫日期：</span>
+                                <span>${item.get("immuneTime")}</span>
+                            </li>
+                            <li>
+                                <span>疫苗品种：</span>
+                                <span>${item.get("vaccineType")}</span>
+                            </li>
+                            <li>
+                                <span>免疫方法：</span>
+                                <span>${item.get("immuneWay")}</span>
+                            </li>
+                            <li>
+                                <span>免疫人员：</span>
+                                <span>${item.get("immunePerson")}</span>
+                            </li>
+                        </ul>
                     </c:forEach>
                 </c:if>
 
                 <c:if test="${result['farming']['diagnosis'] != ''}">
                     <h3 style=margin-top:10px>诊疗记录：</h3>
                     <c:forEach var="item" items="${result['farming']['diagnosis']}">
-                        <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
-                            <tr>
-                                <td>诊疗日期：</td>
-                                <td>${item.get("diagnosisTime")}</td>
-                            </tr>
-                            <tr>
-                                <td>诊疗结果：</td>
-                                <td>${item.get("diagnosisResult")}</td>
-                            </tr>
-                            <tr>
-                                <td>治疗方案：</td>
-                                <td>${item.get("treatmentPlan")}</td>
-                            </tr>
-                            <tr>
-                                <td>用药名称：</td>
-                                <td>${item.get("drug")}</td>
-                            </tr>
-                            <tr>
-                                <td>治疗人员：</td>
-                                <td>${item.get("person")}</td>
-                            </tr>
-                        </table>
+                        <ul style=margin-top:10px>
+                            <li>
+                                <span>诊疗日期：</span>
+                                <span>${item.get("diagnosisTime")}</span>
+                            </li>
+                            <li>
+                                <span>诊疗结果：</span>
+                                <span>${item.get("diagnosisResult")}</span>
+                            </li>
+                            <li>
+                                <span>治疗方案：</span>
+                                <span>${item.get("treatmentPlan")}</span>
+                            </li>
+                            <li>
+                                <span>用药名称：</span>
+                                <span>${item.get("drug")}</span>
+                            </li>
+                            <li>
+                                <span>治疗人员：</span>
+                                <span>${item.get("person")}</span>
+                            </li>
+                        </ul>
                     </c:forEach>
                 </c:if>
 
                 <c:if test="${result['farming']['feedingRecord'] != ''}">
                     <h3 style=margin-top:10px>喂养记录：</h3>
                     <c:forEach var="item" items="${result['farming']['feedingRecord']}">
-                        <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
-                            <tr>
-                                <td>喂养时间：</td>
-                                <td>${item.get("feedingTime") }</td>
-                            </tr>
-                            <tr>
-                                <td>喂养饲料：</td>
-                                <td>${item.get("feed")}</td>
-                            </tr>
-                            <tr>
-                                <td>喂养牧草：</td>
-                                <td>${item.get("grass")}</td>
-                            </tr>
-                        </table>
+                        <ul style=margin-top:10px>
+                            <li>
+                                <span>喂养时间：</span>
+                                <span>${item.get("feedingTime") }</span>
+                            </li>
+                            <li>
+                                <span>喂养饲料：</span>
+                                <span>${item.get("feed")}</span>
+                            </li>
+                            <li>
+                                <span>喂养牧草：</span>
+                                <span>${item.get("grass")}</span>
+                            </li>
+                        </ul>
                     </c:forEach>
                 </c:if>
 
                 <c:if test="${result['farming']['disinfectionRecord'] != ''}">
                 <h3 style=margin-top:10px>消毒记录：</h3>
-                <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
-                    <tr>
-                        <td>消毒日期：</td>
-                        <td>${result['farming']['disinfectionRecord']['disinfectionTime']}</td>
-                    </tr>
-                    <tr>
-                        <td>药品名称：</td>
-                        <td>${result['farming']['disinfectionRecord'] ['disinfectant']}</td>
-                    </tr>
-                    <tr>
-                        <td>消毒方法：</td>
-                        <td>${result['farming']['disinfectionRecord'] ['disinfectionWay']}</td>
-                    </tr>
-                    <tr>
-                        <td>消毒人员：</td>
-                        <td>${result['farming']['disinfectionRecord']['person'] }</td>
-                    </tr>
-                </table>
+                <ul style=margin-top:10px>
+                    <li>
+                        <span>消毒日期：</span>
+                        <span>${result['farming']['disinfectionRecord']['disinfectionTime']}</span>
+                    </li>
+                    <li>
+                        <span>药品名称：</span>
+                        <span>${result['farming']['disinfectionRecord'] ['disinfectant']}</span>
+                    </li>
+                    <li>
+                        <span>消毒方法：</span>
+                        <span>${result['farming']['disinfectionRecord'] ['disinfectionWay']}</span>
+                    </li>
+                    <li>
+                        <span>消毒人员：</span>
+                        <span>${result['farming']['disinfectionRecord']['person'] }</span>
+                    </li>
+                </ul>
                 </c:if>
 
                 <c:if test="${result['farming']['environment'] != ''}">
                     <h3 style=margin-top:10px>环境数据记录：</h3>
-                    <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
-                        <tr>
-                            <td>记录时间：</td>
-                            <td>${result['farming']['environment']['time']}</td>
-                        </tr>
-                        <tr>
-                            <td>温度：</td>
-                            <td>${result['farming']['environment'] ['temperature']}</td>
-                        </tr>
-                        <tr>
-                            <td>湿度：</td>
-                            <td>${result['farming']['environment'] ['humidity']}</td>
-                        </tr>
-                        <tr>
-                            <td>光照：</td>
-                            <td>${result['farming']['environment']['beam'] }</td>
-                        </tr>
-                        <tr>
-                            <td>二氧化碳浓度：</td>
-                            <td>${result['farming']['environment']['co2']}</td>
-                        </tr>
-                        <tr>
-                            <td>甲烷浓度：</td>
-                            <td>${result['farming']['environment']['ch4']}</td>
-                        </tr>
-                        <tr>
-                            <td>二氧化硫浓度：</td>
-                            <td>${result['farming']['environment']['so2']}</td>
-                        </tr>
-                        <tr>
-                            <td>硫化氢浓度：</td>
-                            <td>${result['farming']['environment']['h2s']}</td>
-                        </tr>
-                        <tr>
-                            <td>氮气浓度：</td>
-                            <td>${result['farming']['environment']['nh3']}</td>
-                        </tr>
-                    </table>
+                    <ul style=margin-top:10px>
+                        <li>
+                            <span>记录时间：</span>
+                            <span>${result['farming']['environment']['time']}</span>
+                        </li>
+                        <li>
+                            <span>温度：</span>
+                            <span>${result['farming']['environment'] ['temperature']}</span>
+                        </li>
+                        <li>
+                            <span>湿度：</span>
+                            <span>${result['farming']['environment'] ['humidity']}</span>
+                        </li>
+                        <li>
+                            <span>光照：</span>
+                            <span>${result['farming']['environment']['beam'] }</span>
+                        </li>
+                        <li>
+                            <span>二氧化碳浓度：</span>
+                            <span>${result['farming']['environment']['co2']}</span>
+                        </li>
+                        <li>
+                            <span>甲烷浓度：</span>
+                            <span>${result['farming']['environment']['ch4']}</span>
+                        </li>
+                        <li>
+                            <span>二氧化硫浓度：</span>
+                            <span>${result['farming']['environment']['so2']}</span>
+                        </li>
+                        <li>
+                            <span>硫化氢浓度：</span>
+                            <span>${result['farming']['environment']['h2s']}</span>
+                        </li>
+                        <li>
+                            <span>氮气浓度：</span>
+                            <span>${result['farming']['environment']['nh3']}</span>
+                        </li>
+                    </ul>
                 </c:if>
             </div>
         </div>
@@ -261,141 +265,141 @@
             <div class="content">
             <c:if test="${result['slaughter']['acquisition'] != ''}">
                 <h3>收购记录：</h3>
-                <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
-                    <tr>
-                        <td>休药期检验：</td>
-                        <td>${result['slaughter']['acquisition']['qualityCheck'] }</td>
-                    </tr>
-                    <tr>
-                        <td>收购日期：</td>
-                        <td>${result['slaughter']['acquisition'] ['acquisitionTime'] }</td>
-                    </tr>
-                    <tr>
-                        <td>收购单位：</td>
-                        <td>${result['slaughter']['acquisition'] ['enterprise']}</td>
-                    </tr>
-                    <tr>
-                        <td>收购人员：</td>
-                        <td>${result['slaughter']['acquisition'] ['person'] }</td>
-                    </tr>
-                </table>
+                <ul style=margin-top:10px>
+                    <li>
+                        <span>休药期检验：</span>
+                        <span>${result['slaughter']['acquisition']['qualityCheck'] }</span>
+                    </li>
+                    <li>
+                        <span>收购日期：</span>
+                        <span>${result['slaughter']['acquisition'] ['acquisitionTime'] }</span>
+                    </li>
+                    <li>
+                        <span>收购单位：</span>
+                        <span>${result['slaughter']['acquisition'] ['enterprise']}</span>
+                    </li>
+                    <li>
+                        <span>收购人员：</span>
+                        <span>${result['slaughter']['acquisition'] ['person'] }</span>
+                    </li>
+                </ul>
             </c:if>
 
             <c:if test="${result['slaughter']['slaughterRecord'] != ''}">
                 <h3 style=margin-top:10px>屠宰记录：</h3>
-                <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
-                    <tr>
-                        <td>屠宰日期：</td>
-                        <td>${result['slaughter']['slaughterRecord'] ['slaughterTime']}</td>
-                    </tr>
-                    <tr>
-                        <td>屠宰阿訇：</td>
-                        <td>${result['slaughter']['slaughterRecord'] ['imam']}</td>
-                    </tr>
-                    <tr>
-                        <td>阿訇证照片：</td>
-                    </tr>
+                <ul style=margin-top:10px>
+                    <li>
+                        <span>屠宰日期：</span>
+                        <span>${result['slaughter']['slaughterRecord'] ['slaughterTime']}</span>
+                    </li>
+                    <li>
+                        <span>屠宰阿訇：</span>
+                        <span>${result['slaughter']['slaughterRecord'] ['imam']}</span>
+                    </li>
+                    <li>
+                        <span>阿訇证照片：</span>
+                    </li>
                 <c:if test="${result['slaughter']['slaughterRecord']['imamPhoto'] != ''}">
-                    <tr>
-                        <td colspan="2"><img src="${result['slaughter']['slaughterRecord']['imamPhoto'] }" alt=""></td>
-                    </tr>
+                    <li>
+                        <span colspan="2"><img src="${result['slaughter']['slaughterRecord']['imamPhoto'] }" alt=""></span>
+                    </li>
                 </c:if>
-                </table>
+                </ul>
             </c:if>
 
             <c:if test="${result['slaughter']['quarantineRecord'] != ''}">
                 <h3 style=margin-top:10px>屠宰检疫记录：</h3>
-                <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
-                    <tr>
-                        <td>检疫日期：</td>
-                        <td>${result['slaughter']['quarantineRecord'] ['quarantineTime'] }</td>
-                    </tr>
-                    <tr>
-                        <td>检疫人员：</td>
-                        <td>${result['slaughter']['quarantineRecord']['person']}</td>
-                    </tr>
-                    <%--<tr>--%>
-                        <%--<td>检疫证号码：</td>--%>
-                        <%--<td>${result['slaughter']['quarantineRecord']['quarantineNumber']}</td>--%>
-                    <%--</tr>--%>
-                    <%--<tr>--%>
-                        <%--<td>出具检疫证单位：</td>--%>
-                        <%--<td>${result['slaughter']['quarantineRecord']['enterprise'] }</td>--%>
-                    <%--</tr>--%>
-                    <tr>
-                        <td>检疫方法：</td>
-                            <%--<td>${result['slaughter']['quarantineRecord']['quarantineMethod'] }</td>--%>
-                        <td>全检</td>
-                    </tr>
-                    <tr>
-                        <td>活体检疫结果：</td>
-                        <td>${result['slaughter']['quarantineRecord'] ['result']}</td>
-                    </tr>
-                    <tr>
-                        <td>胴体检疫项目：</td>
-                        <td>实验室检疫 头部检疫 内脏检疫</td>
-                    </tr>
-                    <tr>
-                        <td>胴体检疫结果：</td>
-                        <td>合格</td>
-                    </tr>
-                </table>
+                <ul style=margin-top:10px>
+                    <li>
+                        <span>检疫日期：</span>
+                        <span>${result['slaughter']['quarantineRecord'] ['quarantineTime'] }</span>
+                    </li>
+                    <li>
+                        <span>检疫人员：</span>
+                        <span>${result['slaughter']['quarantineRecord']['person']}</span>
+                    </li>
+                    <%--<li>--%>
+                        <%--<span>检疫证号码：</span>--%>
+                        <%--<span>${result['slaughter']['quarantineRecord']['quarantineNumber']}</span>--%>
+                    <%--</li>--%>
+                    <%--<li>--%>
+                        <%--<span>出具检疫证单位：</span>--%>
+                        <%--<span>${result['slaughter']['quarantineRecord']['enterprise'] }</span>--%>
+                    <%--</li>--%>
+                    <li>
+                        <span>检疫方法：</span>
+                            <%--<span>${result['slaughter']['quarantineRecord']['quarantineMethod'] }</span>--%>
+                        <span>全检</span>
+                    </li>
+                    <li>
+                        <span>活体检疫结果：</span>
+                        <span>${result['slaughter']['quarantineRecord'] ['result']}</span>
+                    </li>
+                    <li>
+                        <span>胴体检疫项目：</span>
+                        <span>实验室检疫 头部检疫 内脏检疫</span>
+                    </li>
+                    <li>
+                        <span>胴体检疫结果：</span>
+                        <span>合格</span>
+                    </li>
+                </ul>
             </c:if>
 
             <c:if test="${result['slaughter']['disinfection'] != ''}">
                 <h3 style=margin-top:10px>消毒记录：</h3>
-                <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
-                    <tr>
-                        <td>消毒日期：</td>
-                        <td>${result['slaughter']['disinfection']['disinfectionTime']}</td>
-                    </tr>
-                    <tr>
-                        <td>药品名称：</td>
-                        <td>${result['slaughter']['disinfection']['disinfectant']}</td>
-                    </tr>
-                    <tr>
-                        <td>消毒方法：</td>
-                        <td>${result['slaughter']['disinfection'] ['disinfectionWay']}</td>
-                    </tr>
-                    <tr>
-                        <td>消毒人员：</td>
-                        <td>${result['slaughter']['disinfection'] ['person']}</td>
-                    </tr>
-                </table>
+                <ul style=margin-top:10px>
+                    <li>
+                        <span>消毒日期：</span>
+                        <span>${result['slaughter']['disinfection']['disinfectionTime']}</span>
+                    </li>
+                    <li>
+                        <span>药品名称：</span>
+                        <span>${result['slaughter']['disinfection']['disinfectant']}</span>
+                    </li>
+                    <li>
+                        <span>消毒方法：</span>
+                        <span>${result['slaughter']['disinfection'] ['disinfectionWay']}</span>
+                    </li>
+                    <li>
+                        <span>消毒人员：</span>
+                        <span>${result['slaughter']['disinfection'] ['person']}</span>
+                    </li>
+                </ul>
             </c:if>
 
             <c:if test="${result['slaughter']['enterpriseInfo'] != ''}">
                 <h3 style=margin-top:10px>企业信息：</h3>
-                <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
-                    <tr>
-                        <td>单位名称：</td>
-                        <td>${result['slaughter']['enterpriseInfo'] ['enterpriseName']}</td>
-                    </tr>
-                    <tr>
-                        <td>单位地址：</td>
-                        <td>${result['slaughter']['enterpriseInfo']['enterpriseAddress']}</td>
-                    </tr>
-                    <tr>
-                        <td>负责人：</td>
-                        <td>${result['slaughter']['enterpriseInfo'] ['master']}</td>
-                    </tr>
-                    <tr>
-                        <td>屠宰证照：</td>
-                    </tr>
+                <ul style=margin-top:10px>
+                    <li>
+                        <span>单位名称：</span>
+                        <span>${result['slaughter']['enterpriseInfo'] ['enterpriseName']}</span>
+                    </li>
+                    <li>
+                        <span>单位地址：</span>
+                        <span>${result['slaughter']['enterpriseInfo']['enterpriseAddress']}</span>
+                    </li>
+                    <li>
+                        <span>负责人：</span>
+                        <span>${result['slaughter']['enterpriseInfo'] ['master']}</span>
+                    </li>
+                    <li>
+                        <span>屠宰证照：</span>
+                    </li>
                 <c:if test="${result['slaughter']['enterpriseInfo']['slaugherPhoto'] != ''}">
-                    <tr>
-                        <td colspan="2"><img src="${result['slaughter']['enterpriseInfo']['slaugherPhoto']}" alt=""></td>
-                    </tr>
+                    <li>
+                        <span colspan="2"><img src="${result['slaughter']['enterpriseInfo']['slaugherPhoto']}" alt=""></span>
+                    </li>
                 </c:if>
-                    <tr>
-                        <td>清真证照：</td>
-                    </tr>
+                    <li>
+                        <span>清真证照：</span>
+                    </li>
                 <c:if test="${result['slaughter']['enterpriseInfo']['muslimPhoto'] != ''}">
-                    <tr>
-                        <td colspan="2"><img src="${result['slaughter']['enterpriseInfo']['muslimPhoto'] }" alt=""></td>
-                    </tr>
+                    <li>
+                        <span colspan="2"><img src="${result['slaughter']['enterpriseInfo']['muslimPhoto'] }" alt=""></span>
+                    </li>
                 </c:if>
-                </table>
+                </ul>
             </c:if>
             </div>
         </div>
@@ -406,94 +410,94 @@
 
                 <c:if test="${result['process']['acidDischarge'] != ''}">
                     <h3>排酸记录：</h3>
-                    <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
-                        <tr>
-                            <td>排酸日期：</td>
-                            <td>${result['process']['acidDischarge'] ['date']}</td>
-                        </tr>
-                        <tr>
-                            <td>温度：</td>
-                            <td>${result['process']['acidDischarge']['temperature'] }</td>
-                        </tr>
-                        <tr>
-                            <td>湿度：</td>
-                            <td>${result['process']['acidDischarge'] ['humidity']}</td>
-                        </tr>
-                    </table>
+                    <ul style=margin-top:10px>
+                        <li>
+                            <span>排酸日期：</span>
+                            <span>${result['process']['acidDischarge'] ['date']}</span>
+                        </li>
+                        <li>
+                            <span>温度：</span>
+                            <span>${result['process']['acidDischarge']['temperature'] }</span>
+                        </li>
+                        <li>
+                            <span>湿度：</span>
+                            <span>${result['process']['acidDischarge'] ['humidity']}</span>
+                        </li>
+                    </ul>
                 </c:if>
 
                 <c:if test="${result['process']['processRecord'] != ''}">
                     <h3 style=margin-top:10px>加工记录：</h3>
-                    <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
-                        <tr>
-                            <td>加工日期：</td>
-                            <td>${result['process']['processRecord'] ['processTime']}</td>
-                        </tr>
-                        <tr>
-                            <td>产品部位：</td>
-                            <td>${result['process']['processRecord']['productPart'] }</td>
-                        </tr>
-                        <tr>
-                            <td>重量：</td>
-                            <td>${result['process']['processRecord']['weight']}kg</td>
-                        </tr>
-                        <tr>
-                            <td>加工人员：</td>
-                            <td>${result['process']['processRecord'] ['person'] }</td>
-                        </tr>
-                    </table>
+                    <ul style=margin-top:10px>
+                        <li>
+                            <span>加工日期：</span>
+                            <span>${result['process']['processRecord'] ['processTime']}</span>
+                        </li>
+                        <li>
+                            <span>产品部位：</span>
+                            <span>${result['process']['processRecord']['productPart'] }</span>
+                        </li>
+                        <li>
+                            <span>重量：</span>
+                            <span>${result['process']['processRecord']['weight']}kg</span>
+                        </li>
+                        <li>
+                            <span>加工人员：</span>
+                            <span>${result['process']['processRecord'] ['person'] }</span>
+                        </li>
+                    </ul>
                 </c:if>
 
                 <c:if test="${result['process']['disinfectionRecord'] != ''}">
                     <h3 style=margin-top:10px>消毒记录：</h3>
-                    <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
-                        <tr>
-                            <td>消毒时间：</td>
-                            <td>${result['process']['disinfectionRecord']['disinfectionTime']}</td>
-                        </tr>
-                        <tr>
-                            <td>消毒方法：</td>
-                            <td>${result['process']['disinfectionRecord']['disinfectionWay']}</td>
-                        </tr>
-                        <tr>
-                            <td>药品名称：</td>
-                            <td>${result['process']['disinfectionRecord']['disinfectant']}</td>
-                        </tr>
-                        <tr>
-                            <td>消毒人员：</td>
-                            <td>${result['process']['disinfectionRecord'] ['person']}</td>
-                        </tr>
-                    </table>
+                    <ul style=margin-top:10px>
+                        <li>
+                            <span>消毒时间：</span>
+                            <span>${result['process']['disinfectionRecord']['disinfectionTime']}</span>
+                        </li>
+                        <li>
+                            <span>消毒方法：</span>
+                            <span>${result['process']['disinfectionRecord']['disinfectionWay']}</span>
+                        </li>
+                        <li>
+                            <span>药品名称：</span>
+                            <span>${result['process']['disinfectionRecord']['disinfectant']}</span>
+                        </li>
+                        <li>
+                            <span>消毒人员：</span>
+                            <span>${result['process']['disinfectionRecord'] ['person']}</span>
+                        </li>
+                    </ul>
                 </c:if>
 
                 <c:if test="${result['process']['enterpriseInfo'] != ''}">
                     <h3 style=margin-top:10px>企业信息：</h3>
-                    <table border="0" cellspacing="0" cellpadding="0" style=margin-top:10px>
-                        <tr>
-                            <td>单位名称：</td>
-                            <td>${result['process']['enterpriseInfo'] ['enterpriseName'] }</td>
-                        </tr>
-                        <tr>
-                            <td>执照编号：</td>
-                            <td>${result['process']['enterpriseInfo'] ['licenseNumber']}</td>
-                        </tr>
-                        <tr>
-                            <td>负责人：</td>
-                            <td>${result['process']['enterpriseInfo'] ['master']}</td>
-                        </tr>
-                        <tr>
-                            <td>单位地址：</td>
-                            <td>${result['process']['enterpriseInfo']['enterpriseAddress']}</td>
-                        </tr>
-                        <tr>
-                            <td>清真证照：</td>
-                        </tr>
+                    <ul style=margin-top:10px>
+                        <li>
+                            <span>单位名称：</span>
+                            <span>${result['process']['enterpriseInfo'] ['enterpriseName'] }</span>
+                        </li>
+                        <li>
+                            <span>执照编号：</span>
+                            <span>${result['process']['enterpriseInfo'] ['licenseNumber']}</span>
+                        </li>
+                        <li>
+                            <span>负责人：</span>
+                            <span>${result['process']['enterpriseInfo'] ['master']}</span>
+                        </li>
+                        <li>
+                            <span>单位地址：</span>
+                            <span>${result['process']['enterpriseInfo']['enterpriseAddress']}</span>
+                        </li>
+                        <li>
+                            <span>清真证照：</span>
+                        </li>
                         <c:if test="${result['process']['enterpriseInfo']['muslimPhoto'] != ''}">
-                            <tr>
-                                <td colspan="2"><img src="${result['process']['enterpriseInfo']['muslimPhoto'] }" alt=""></td>
-                            </tr>
+                            <li>
+                                <span colspan="2"><img src="${result['process']['enterpriseInfo']['muslimPhoto'] }" alt=""></span>
+                            </li>
                         </c:if>
-                    </table>
+                    </ul>
                 </c:if>
 
             </div>
@@ -503,32 +507,32 @@
             <h2>-物流环节-</h2>
             <div class="content">
                 <c:if test="${result['logistics'] != ''}">
-                    <table border="0" cellspacing="0" cellpadding="0">
-                        <tr>
-                            <td>装车时间：</td>
-                            <td>${result['logistics']['loadingTime']}</td>
-                        </tr>
-                        <tr>
-                            <td>出发时间：</td>
-                            <td>${result['logistics'] ['startTime'] }</td>
-                        </tr>
-                        <tr>
-                            <td>出发地址：</td>
-                            <td>${result['logistics']['startAddress'] }</td>
-                        </tr>
-                        <tr>
-                            <td>到达地址：</td>
-                            <td>${result['logistics']['arrivalAddress'] }</td>
-                        </tr>
-                        <tr>
-                            <td>司机姓名：</td>
-                            <td>${result['logistics'] ['driver'] }</td>
-                        </tr>
-                        <tr>
-                            <td>车牌：</td>
-                            <td>${result['logistics'] ['carNumber']}</td>
-                        </tr>
-                    </table>
+                    <ul>
+                        <li>
+                            <span>装车时间：</span>
+                            <span>${result['logistics']['loadingTime']}</span>
+                        </li>
+                        <li>
+                            <span>出发时间：</span>
+                            <span>${result['logistics'] ['startTime'] }</span>
+                        </li>
+                        <li>
+                            <span>出发地址：</span>
+                            <span>${result['logistics']['startAddress'] }</span>
+                        </li>
+                        <li>
+                            <span>到达地址：</span>
+                            <span>${result['logistics']['arrivalAddress'] }</span>
+                        </li>
+                        <li>
+                            <span>司机姓名：</span>
+                            <span>${result['logistics'] ['driver'] }</span>
+                        </li>
+                        <li>
+                            <span>车牌：</span>
+                            <span>${result['logistics'] ['carNumber']}</span>
+                        </li>
+                    </ul>
                 </c:if>
 
             </div>
@@ -538,20 +542,20 @@
             <h2>-终端环节-</h2>
             <div class="content">
                 <c:if test="${result['merchant'] != ''}">
-                    <table border="0" cellspacing="0" cellpadding="0">
-                        <tr>
-                            <td>收货日期：</td>
-                            <td>${result['merchant'] ['receivalTime'] }</td>
-                        </tr>
-                        <tr>
-                            <td>收货单位：</td>
-                            <td>${result['merchant'] ['enterprise']}</td>
-                        </tr>
-                        <tr>
-                            <td>收货人员：</td>
-                            <td>${result['merchant'] ['receiver'] }</td>
-                        </tr>
-                    </table>
+                    <ul>
+                        <li>
+                            <span>收货日期：</span>
+                            <span>${result['merchant'] ['receivalTime'] }</span>
+                        </li>
+                        <li>
+                            <span>收货单位：</span>
+                            <span>${result['merchant'] ['enterprise']}</span>
+                        </li>
+                        <li>
+                            <span>收货人员：</span>
+                            <span>${result['merchant'] ['receiver'] }</span>
+                        </li>
+                    </ul>
                 </c:if>
 
             </div>

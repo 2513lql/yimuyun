@@ -42,9 +42,14 @@ function renderTrace(body) {
     $(".right .right7").html(product);
 
 
-    var lvli = "<tr><td>身份证号: " +  body['livestock']['idNumber'] +"</td></tr>";
-    lvli += "<tr><td>出生日期: " + body['livestock']['birthday'] + "</td></tr>";
-    lvli += "<tr><td>出生重量: " + body['livestock']['birthWeight']+"</td></tr>";
+    var lvli = "<tr><td>耳标编号: " +  body['livestock']['equipmentNumber'] +"</td></tr>";
+    lvli += "<tr><td>身份证号: " +  body['livestock']['idNumber'] +"</td></tr>";
+    if(body['livestock']['birthday']!=''){
+        lvli += "<tr><td>出生日期: " + body['livestock']['birthday'] + "</td></tr>";
+    }
+    if(body['livestock']['birthWeight']!=''){
+        lvli += "<tr><td>出生重量: " + body['livestock']['birthWeight']+"</td></tr>";
+    }
     lvli += "<tr><td>品种: " + body['livestock']['variety'] +"</td></tr>";
     lvli += "<tr><td>性别: " + body['livestock']['sex'] +"</td></tr>";
     lvli += "<tr><td>出生地: " + body['livestock']['birthplace'] +"</td></tr>";

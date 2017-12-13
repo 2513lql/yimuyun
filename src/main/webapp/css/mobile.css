@@ -40,24 +40,23 @@ body {
 .header {
     padding: 0.03rem 0;
     padding-left: 0.06rem;
-    height: 0.5rem;
-    line-height: 0.5rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
     background: #FFFFFF;
     box-shadow: 0 0.01rem 0.03rem 0 rgba(0, 0, 0, 0.18);
 }
 
 .header img {
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 0.4rem;
+    height: 0.4rem;
     float: left;
 }
 
 .header div {
     float: left;
-    line-height: 0.5rem;
+    line-height: 0.4rem;
     color: #009944;
-    /*text-indent: 0.1rem;*/
-    font-size: 0.18rem;
+    text-indent: 0.1rem;
 }
 
 .coa {
@@ -105,10 +104,6 @@ body {
     height: 2.67rem;
     padding-left: 0.16rem;
     padding-top: 0.2rem;
-    font-size: 0.16rem;
-}
-
-.xinxi td{
     font-size: 0.14rem;
 }
 
@@ -155,14 +150,6 @@ body {
     color: #212121;
     letter-spacing: 0;
     line-height: 0.2rem;
-}
-
-.main table tr {
-    clear: both;
-}
-
-.main table tr td {
-    float: left;
 }
 
 .main table img {
@@ -252,4 +239,17 @@ body {
 .join div {
     color: #277037;
     letter-spacing: 0;
+}
+
+.main ul img {
+    width: 3.426rem;
+    height: 1.844rem;
+}
+
+.main ul li {
+    list-style: none;
+}
+
+table{
+    font-size: 0.16rem;
 }
