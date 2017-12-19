@@ -568,7 +568,7 @@
             </div>
             <div class="bottom">
                 <div class="left">趣牧投</div>
-                <div class="right">留言</div>
+                <div class="right"><a href="${pageContext.request.contextPath}/leaveComments">留言</a></div>
             </div>
         </div>
         <div class="join">

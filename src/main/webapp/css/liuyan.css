@@ -1,0 +1,238 @@
+html,
+body,
+ul,
+p,
+dl,
+dt,
+dd,
+h2,
+h3,
+input,
+tr,
+td {
+    margin: 0;
+    padding: 0
+}
+
+input {
+    font-size: 0.16rem;
+}
+
+html,
+body {
+    /*font: 12px"宋体", "Arial Narrow", HELVETICA;*/
+    font-family: "Microsoft YaHei";
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+    font-weight: normal;
+    font-size: 0.16rem;
+    width: 100%;
+    height: 100%;
+    color: color: #212121;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.header {
+    padding: 0.03rem 0;
+    padding-left: 0.06rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    background: #FFFFFF;
+    box-shadow: 0 0.01rem 0.03rem 0 rgba(0, 0, 0, 0.18);
+}
+
+.header img {
+    width: 0.5rem;
+    height: 0.5rem;
+    float: left;
+}
+
+.header div {
+    float: left;
+    line-height: 0.5rem;
+    color: #009944;
+    text-indent: 0.1rem;
+    font-size: 0.18rem;
+}
+
+.ba {
+    height: 0.11rem;
+    background: #ccc;
+}
+
+.main {
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.main h2 {
+    width: 100%;
+    height: 0.53rem;
+    text-align: center;
+    line-height: 0.53rem;
+    font-size: 0.16rem;
+}
+
+.fenxiang {
+    width: 100%;
+    height: 1.44rem;
+}
+
+.fenxiang .top,
+.fenxiang .bottom {
+    width: 100%;
+    height: 0.71rem;
+}
+
+.fenxiang .top {
+    border-bottom: 0.01rem solid #E1E1E1;
+}
+
+.fenxiang .top .left,
+.fenxiang .bottom .left {
+    width: 1.35rem;
+}
+
+.fenxiang .top div,
+.fenxiang .bottom div {
+    padding-top: 0.26rem;
+    padding-bottom: 0.19rem;
+    padding: 0.26rem 0 0.19rem 0.52rem;
+    height: 0.26rem;
+    margin: 0 auto;
+    float: left;
+}
+
+.fenxiang .top .left {
+    background: url(../img/mobile/1.png) no-repeat;
+    background-size: 0.26rem 0.26rem;
+    background-position: 0.52rem center;
+    border-right: 0.01rem solid #E1E1E1;
+    text-indent: 0.35rem;
+}
+
+.fenxiang .top .right {
+    background: url(../img/mobile/2.png) no-repeat;
+    background-size: 0.26rem 0.26rem;
+    background-position: 0.52rem center;
+    text-indent: 0.35rem;
+}
+
+.fenxiang .bottom .left {
+    background: url(../img/mobile/3.png) no-repeat;
+    background-size: 0.26rem 0.26rem;
+    background-position: 0.52rem center;
+    border-right: 0.01rem solid #E1E1E1;
+    text-indent: 0.35rem;
+}
+
+.fenxiang .bottom .right {
+    background: url(../img/mobile/4.png) no-repeat;
+    background-size: 0.26rem 0.26rem;
+    background-position: 0.52rem center;
+    text-indent: 0.35rem;
+}
+
+.fenxiang a{
+    color: #000;
+    text-decoration: none;
+}
+
+.join {
+    background: #ccc;
+    width: 100%;
+    height: 0.69rem;
+    padding-top: 0.2rem;
+    text-align: center;
+    font-size: 0.14rem;
+}
+
+.join div {
+    color: #277037;
+    letter-spacing: 0;
+}
+
+
+
+
+.main .liuyan h2 {
+    font-size: 0.31rem;
+    line-height: 0.44rem;
+    color: #009944;
+}
+
+.main .liuyan {
+    padding: 0.11rem 0.1rem;
+    border-bottom: 0.01rem solid #E1E1E1;
+}
+
+.main .liuyan .fankui {
+    width: 100%;
+    padding: 0.1rem 0;
+}
+
+.main .liuyan .fankui textarea {
+    width: 100%;
+    height: 1.5rem;
+    font-size: 0.16rem;
+    border: 0.01rem solid #000;
+}
+
+.main .liuyan .lianxi{
+    padding-top: 0.1rem;
+    clear: both;
+}
+
+.main .liuyan .lianxi input {
+    width: 2.21rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    text-indent: 0.1rem;
+    font-size: 0.16rem;
+    color: #A1A1A1;
+    border: 0.01rem solid #000;
+}
+
+.feedback-photos .upload-photos {
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url(../img/join/3.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.feedback-photos .upload-photos input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.feedback-photos .photos div {
+    width: 1.92rem;
+    height: 1.2rem;
+    margin-top: 0.1rem;
+}
+
+.feedback-photos .photos img {
+    width: 1.92rem;
+    height: 1.2rem;
+    margin-top: 0.1rem;
+}
+
+.main .liuyan .tijiao {
+    padding-top: 33px;
+}
+
+.main .liuyan .tijiao input {
+    width: 1.6rem;
+    height: 0.4rem;
+    text-align: center;
+    line-height: 0.4rem;
+    color: #fff;
+    background: #277037;
+    border: none;
+}
