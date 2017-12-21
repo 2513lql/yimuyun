@@ -227,6 +227,11 @@ body {
     text-indent: 0.35rem;
 }
 
+.fenxiang a{
+    color: #000;
+    text-decoration: none;
+}
+
 .join {
     background: #ccc;
     width: 100%;
