@@ -65,7 +65,7 @@
                         <span>${result.getJSONObject("livestock").get("birthday")}</span>
                     </li>
                     </c:if>
-                    <c:if test="${result['livestock']['birthWeight'] != ''}">
+                    <c:if test="${result['livestock']['birthWeight'] !='0kg'}&&${result['livestock']['birthWeight'] != ''}">
                     <li>
                         <span>出生重量：</span>
                         <span>${result.getJSONObject("livestock").get("birthWeight")}</span>

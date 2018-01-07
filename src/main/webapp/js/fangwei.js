@@ -47,7 +47,7 @@ function renderTrace(body) {
     if(body['livestock']['birthday']!=''){
         lvli += "<tr><td>出生日期: " + body['livestock']['birthday'] + "</td></tr>";
     }
-    if(body['livestock']['birthWeight']!=''){
+    if(body['livestock']['birthWeight']!='0kg'&&body['livestock']['birthWeight']!=''){
         lvli += "<tr><td>出生重量: " + body['livestock']['birthWeight']+"</td></tr>";
     }
     lvli += "<tr><td>品种: " + body['livestock']['variety'] +"</td></tr>";
