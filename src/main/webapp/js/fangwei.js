@@ -33,8 +33,8 @@ $(".main .main2 .left-tab ul li").click(function () {
 function renderTrace(body) {
 
     var product = " <h4>产品说明</h4>";
-    product += "<table><tr><td>产品名称:</td><td>" + body['productName'] + "</td></tr>";
-    product += "<tr><td>产品品牌: 伊牧云</td></tr></table>";
+    product += "<table><tr><td>产品名称: </td><td>" + body['productName'] + "</td></tr>";
+    product += "<tr><td>产品品牌: </td><td>伊牧云</td></tr></table>";
     if (body['homePicture'] != '') {
         product += "<div>";
         product += "<img src='" + body['homePicture'] + "' alt=''></div>";
