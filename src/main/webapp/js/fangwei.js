@@ -45,7 +45,7 @@ function renderTrace(body) {
     var lvli = "<tr><td>耳标编号: </td><td>" + body['livestock']['equipmentNumber'] + "</td></tr>";
     lvli += "<tr><td>身份证号: </td><td>" + body['livestock']['idNumber'] + "</td></tr>";
     if (body['livestock']['birthday'] != '') {
-        lvli += "<tr><td>出生日期: " + body['livestock']['birthday'] + "</td><td></td></tr>";
+        lvli += "<tr><td>出生日期: </td><td>" + body['livestock']['birthday'] + "</td></tr>";
     }
     if (body['livestock']['birthWeight'] != '0kg' && body['livestock']['birthWeight'] != '') {
         lvli += "<tr><td>出生重量: </td><td>" + body['livestock']['birthWeight'] + "</td></tr>";
