@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>新闻详情</title>
-    <base href="http://139.129.233.104/yimuyun_web/">
+    <base href="http://116.196.88.227/yimuyun_web/">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/public.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/erjiye2.css">
 </head>
