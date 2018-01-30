@@ -21,9 +21,14 @@ $("#getCode").click(function (e) {
         e.stopPropagation();
         return;
     }
+    $.i18n.properties({
+        name: 'apiurl',
+        path: '/',
+        mode: 'map'
+    });
     $.ajax({
         async: false,
-        url: "http://115.28.109.174:8383/yimu/mobile/logisticsReceiver/v1.0.0/mobile/" + phone,
+        url: $.i18n.prop("api.url")+"mobile/logisticsReceiver/v1.0.0/mobile/" + phone,
         // url: "http://localhost:8081/mobile/logisticsReceiver/v1.0.0/mobile/" + phone,
         type: "GET",
         dataType : "jsonp",
@@ -71,9 +76,14 @@ $("#verify").click(function (e) {
     }
     // var url = window.location.href.split('#')[0];
     // window.location.href = "wxScan?url=" + url;
+    $.i18n.properties({
+        name: 'apiurl',
+        path: '/',
+        mode: 'map'
+    });
     $.ajax({
         async: false,
-        url: "http://115.28.109.174:8383/yimu/mobile/logisticsReceiver/v1.0.0/mobile/" + phone+"/code/"+code,
+        url: $.i18n.prop("api.url")+"mobile/logisticsReceiver/v1.0.0/mobile/" + phone+"/code/"+code,
         // url: "http://localhost:8081/mobile/logisticsReceiver/v1.0.0/mobile/" + phone+"/code/"+code,
         type: "GET",
         dataType : "jsonp",

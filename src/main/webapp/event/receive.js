@@ -3,9 +3,14 @@ $("#receive").click(function () {
     var token = sessionStorage.getItem("token");
     var logId = $("#logId").val();
     var packingId = $("#packingId").val();
+    $.i18n.properties({
+        name: 'apiurl',
+        path: '/',
+        mode: 'map'
+    });
     $.ajax({
         async: false,
-        url: "http://115.28.109.174:8383/yimu/mobile/logisticsReceiver/v1.0.0/receiveSuccess?mobile="
+        url: $.i18n.prop("api.url")+"mobile/logisticsReceiver/v1.0.0/receiveSuccess?mobile="
         + phone+"&token="+token+"&packingId="+packingId,
         type: "POST",
         dataType : "jsonp",

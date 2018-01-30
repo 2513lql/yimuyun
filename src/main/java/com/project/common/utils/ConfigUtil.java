@@ -1,6 +1,5 @@
 package com.project.common.utils;
 
-import com.project.common.service.ServiceException;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -119,6 +118,15 @@ public class ConfigUtil {
 			return urlHead;
 		}
 		logger.error("请求路径头部不能为空");
+		return null;
+	}
+
+	public static String getApiUrl() {
+		String urlHead = PropertiesUtil.getInstance("traceback.properties").getText("api.url");
+		if (StringUtils.isNoneBlank(urlHead)) {
+			return urlHead;
+		}
+		logger.error("请求路径不能为空");
 		return null;
 	}
 

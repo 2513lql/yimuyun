@@ -4,9 +4,14 @@ $(".trace .xuliehao span").click(function () {
         alert("请输入追溯序列号");
         return;
     }
+    $.i18n.properties({
+        name: 'apiurl',
+        path: '/',
+        mode: 'map'
+    });
     $.ajax({
         async: false,
-        url: "http://115.28.109.174:8383/yimu/trace/v1.0.0/traceCode/" + traceNumber2,
+        url: $.i18n.prop("api.url")+"trace/v1.0.0/traceCode/" + traceNumber2,
         type: "GET",
         dataType: "jsonp",
         jsonp: "_callback",

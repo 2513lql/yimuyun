@@ -8,9 +8,15 @@ $("#queryBtn1").click(function () {
         $("#queryResult").html("请输入防伪码");
         return;
     }
+    $.i18n.properties({
+        name: 'apiurl',
+        path: '/',
+        mode: 'map'
+    });
+    // console.log($.i18n.prop("api.url"));
         $.ajax({
             async: false,
-            url: "http://115.28.109.174:8383/yimu/trace/v1.0.0/securityCode/" + traceNumber1,
+            url: $.i18n.prop("api.url")+"trace/v1.0.0/securityCode/" + traceNumber1,
             type: "GET",
             dataType : "jsonp",
             jsonp:"_callback",

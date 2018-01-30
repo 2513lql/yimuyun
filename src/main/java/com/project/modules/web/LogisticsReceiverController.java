@@ -2,6 +2,7 @@ package com.project.modules.web;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.project.common.utils.ConfigUtil;
 import com.project.common.utils.HttpClientUtil;
 import com.project.common.utils.WXUtil;
 import com.project.common.web.BaseController;
@@ -90,11 +91,11 @@ public class LogisticsReceiverController extends BaseController {
 
     @RequestMapping(value = "getPackingInfo")
     public ModelAndView getPackingInfo(String qrCode) {
-//        String url="http://localhost:8081/mobile/logisticsReceiver/v1.0.0/qrCode/" + qrCode;
         if (qrCode.contains("?")) {
             qrCode = qrCode.split("=")[1];
         }
-        String url="http://115.28.109.174:8383/yimu/mobile/logisticsReceiver/v1.0.0/qrCode/" + qrCode;
+        String apiUrl = ConfigUtil.getApiUrl();
+        String url = apiUrl + "mobile/logisticsReceiver/v1.0.0/qrCode/" + qrCode;
         JSONObject result = new JSONObject();
         try {
             result = JSON.parseObject(HttpClientUtil.httpGet(url)).getJSONObject("body");

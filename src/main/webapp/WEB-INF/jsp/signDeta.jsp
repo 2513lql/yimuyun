@@ -33,6 +33,7 @@
 </section>
 
 <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.i18n.properties-min-1.0.9.js"></script>
 <script src="${pageContext.request.contextPath}/js/setfontsize_log.js"></script>
 
 </body>

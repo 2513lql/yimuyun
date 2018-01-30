@@ -39,7 +39,8 @@ public class TbMobileController {
      */
     @RequestMapping("mobileTrace")
     public ModelAndView mobileTrace(String traceCode) {
-        String url = "http://115.28.109.174:8383/yimu/trace/v1.0.0/traceCode/" + traceCode;
+        String apiUrl = ConfigUtil.getApiUrl();
+        String url = apiUrl+"trace/v1.0.0/traceCode/" + traceCode;
         JSONObject result = new JSONObject();
         try {
             result = JSON.parseObject(HttpClientUtil.httpGet(url)).getJSONObject("body");
