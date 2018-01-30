@@ -60,16 +60,16 @@
                         <span>${result.getJSONObject("livestock").get("idNumber")}</span>
                     </li>
                     <c:if test="${result['livestock']['birthday'] != ''}">
-                    <li>
-                        <span>出生日期：</span>
-                        <span>${result.getJSONObject("livestock").get("birthday")}</span>
-                    </li>
+                        <li>
+                            <span>出生日期：</span>
+                            <span>${result.getJSONObject("livestock").get("birthday")}</span>
+                        </li>
                     </c:if>
                     <c:if test="${result['livestock']['birthWeight'] !='0kg'}&&${result['livestock']['birthWeight'] != ''}">
-                    <li>
-                        <span>出生重量：</span>
-                        <span>${result.getJSONObject("livestock").get("birthWeight")}</span>
-                    </li>
+                        <li>
+                            <span>出生重量：</span>
+                            <span>${result.getJSONObject("livestock").get("birthWeight")}</span>
+                        </li>
                     </c:if>
                     <li>
                         <span>品种：</span>
@@ -115,7 +115,7 @@
                 </c:if>
                 <c:if test="${result['farming']['quarantinePicture'] != ''}">
                     <h3 style=margin-top:10px>检疫记录：</h3>
-                    <ul style=margin-top:10px >
+                    <ul style=margin-top:10px>
                         <li>
                             <span colspan="2"><img src="${result['farming']['quarantinePicture']}" alt=""></span>
                         </li>
@@ -123,7 +123,7 @@
                 </c:if>
 
                 <c:if test="${result['farming']['immuneRecord'] != ''}">
-                    <h3 style=margin-top:10px >免疫记录：</h3>
+                    <h3 style=margin-top:10px>免疫记录：</h3>
                     <c:forEach var="item" items="${result['farming']['immuneRecord']}">
                         <ul style=margin-top:10px;>
                             <li>
@@ -195,25 +195,25 @@
                 </c:if>
 
                 <c:if test="${result['farming']['disinfectionRecord'] != ''}">
-                <h3 style=margin-top:10px>消毒记录：</h3>
-                <ul style=margin-top:10px>
-                    <li>
-                        <span>消毒日期：</span>
-                        <span>${result['farming']['disinfectionRecord']['disinfectionTime']}</span>
-                    </li>
-                    <li>
-                        <span>药品名称：</span>
-                        <span>${result['farming']['disinfectionRecord'] ['disinfectant']}</span>
-                    </li>
-                    <li>
-                        <span>消毒方法：</span>
-                        <span>${result['farming']['disinfectionRecord'] ['disinfectionWay']}</span>
-                    </li>
-                    <li>
-                        <span>消毒人员：</span>
-                        <span>${result['farming']['disinfectionRecord']['person'] }</span>
-                    </li>
-                </ul>
+                    <h3 style=margin-top:10px>消毒记录：</h3>
+                    <ul style=margin-top:10px>
+                        <li>
+                            <span>消毒日期：</span>
+                            <span>${result['farming']['disinfectionRecord']['disinfectionTime']}</span>
+                        </li>
+                        <li>
+                            <span>药品名称：</span>
+                            <span>${result['farming']['disinfectionRecord'] ['disinfectant']}</span>
+                        </li>
+                        <li>
+                            <span>消毒方法：</span>
+                            <span>${result['farming']['disinfectionRecord'] ['disinfectionWay']}</span>
+                        </li>
+                        <li>
+                            <span>消毒人员：</span>
+                            <span>${result['farming']['disinfectionRecord']['person'] }</span>
+                        </li>
+                    </ul>
                 </c:if>
 
                 <c:if test="${result['farming']['environment'] != ''}">
@@ -263,144 +263,147 @@
         <div class="main1">
             <h2>-屠宰环节-</h2>
             <div class="content">
-            <c:if test="${result['slaughter']['acquisition'] != ''}">
-                <h3>收购记录：</h3>
-                <ul style=margin-top:10px>
-                    <li>
-                        <span>休药期检验：</span>
-                        <span>${result['slaughter']['acquisition']['qualityCheck'] }</span>
-                    </li>
-                    <li>
-                        <span>收购日期：</span>
-                        <span>${result['slaughter']['acquisition'] ['acquisitionTime'] }</span>
-                    </li>
-                    <li>
-                        <span>收购单位：</span>
-                        <span>${result['slaughter']['acquisition'] ['enterprise']}</span>
-                    </li>
-                    <li>
-                        <span>收购人员：</span>
-                        <span>${result['slaughter']['acquisition'] ['person'] }</span>
-                    </li>
-                </ul>
-            </c:if>
-
-            <c:if test="${result['slaughter']['slaughterRecord'] != ''}">
-                <h3 style=margin-top:10px>屠宰记录：</h3>
-                <ul style=margin-top:10px>
-                    <li>
-                        <span>屠宰日期：</span>
-                        <span>${result['slaughter']['slaughterRecord'] ['slaughterTime']}</span>
-                    </li>
-                    <li>
-                        <span>屠宰阿訇：</span>
-                        <span>${result['slaughter']['slaughterRecord'] ['imam']}</span>
-                    </li>
-                    <li>
-                        <span>阿訇证照片：</span>
-                    </li>
-                <c:if test="${result['slaughter']['slaughterRecord']['imamPhoto'] != ''}">
-                    <li>
-                        <span colspan="2"><img src="${result['slaughter']['slaughterRecord']['imamPhoto'] }" alt=""></span>
-                    </li>
+                <c:if test="${result['slaughter']['acquisition'] != ''}">
+                    <h3>收购记录：</h3>
+                    <ul style=margin-top:10px>
+                        <li>
+                            <span>休药期检验：</span>
+                            <span>${result['slaughter']['acquisition']['qualityCheck'] }</span>
+                        </li>
+                        <li>
+                            <span>收购日期：</span>
+                            <span>${result['slaughter']['acquisition'] ['acquisitionTime'] }</span>
+                        </li>
+                        <li>
+                            <span>收购单位：</span>
+                            <span>${result['slaughter']['acquisition'] ['enterprise']}</span>
+                        </li>
+                        <li>
+                            <span>收购人员：</span>
+                            <span>${result['slaughter']['acquisition'] ['person'] }</span>
+                        </li>
+                    </ul>
                 </c:if>
-                </ul>
-            </c:if>
 
-            <c:if test="${result['slaughter']['quarantineRecord'] != ''}">
-                <h3 style=margin-top:10px>屠宰检疫记录：</h3>
-                <ul style=margin-top:10px>
-                    <li>
-                        <span>检疫日期：</span>
-                        <span>${result['slaughter']['quarantineRecord'] ['quarantineTime'] }</span>
-                    </li>
-                    <li>
-                        <span>检疫人员：</span>
-                        <span>${result['slaughter']['quarantineRecord']['person']}</span>
-                    </li>
-                    <%--<li>--%>
-                        <%--<span>检疫证号码：</span>--%>
-                        <%--<span>${result['slaughter']['quarantineRecord']['quarantineNumber']}</span>--%>
-                    <%--</li>--%>
-                    <%--<li>--%>
-                        <%--<span>出具检疫证单位：</span>--%>
-                        <%--<span>${result['slaughter']['quarantineRecord']['enterprise'] }</span>--%>
-                    <%--</li>--%>
-                    <li>
-                        <span>检疫方法：</span>
-                            <%--<span>${result['slaughter']['quarantineRecord']['quarantineMethod'] }</span>--%>
-                        <span>全检</span>
-                    </li>
-                    <li>
-                        <span>活体检疫结果：</span>
-                        <span>${result['slaughter']['quarantineRecord'] ['result']}</span>
-                    </li>
-                    <li>
-                        <span>胴体检疫项目：</span>
-                        <span>实验室检疫 头部检疫 内脏检疫</span>
-                    </li>
-                    <li>
-                        <span>胴体检疫结果：</span>
-                        <span>合格</span>
-                    </li>
-                </ul>
-            </c:if>
-
-            <c:if test="${result['slaughter']['disinfection'] != ''}">
-                <h3 style=margin-top:10px>消毒记录：</h3>
-                <ul style=margin-top:10px>
-                    <li>
-                        <span>消毒日期：</span>
-                        <span>${result['slaughter']['disinfection']['disinfectionTime']}</span>
-                    </li>
-                    <li>
-                        <span>药品名称：</span>
-                        <span>${result['slaughter']['disinfection']['disinfectant']}</span>
-                    </li>
-                    <li>
-                        <span>消毒方法：</span>
-                        <span>${result['slaughter']['disinfection'] ['disinfectionWay']}</span>
-                    </li>
-                    <li>
-                        <span>消毒人员：</span>
-                        <span>${result['slaughter']['disinfection'] ['person']}</span>
-                    </li>
-                </ul>
-            </c:if>
-
-            <c:if test="${result['slaughter']['enterpriseInfo'] != ''}">
-                <h3 style=margin-top:10px>企业信息：</h3>
-                <ul style=margin-top:10px>
-                    <li>
-                        <span>单位名称：</span>
-                        <span>${result['slaughter']['enterpriseInfo'] ['enterpriseName']}</span>
-                    </li>
-                    <li>
-                        <span>单位地址：</span>
-                        <span>${result['slaughter']['enterpriseInfo']['enterpriseAddress']}</span>
-                    </li>
-                    <li>
-                        <span>负责人：</span>
-                        <span>${result['slaughter']['enterpriseInfo'] ['master']}</span>
-                    </li>
-                    <li>
-                        <span>屠宰证照：</span>
-                    </li>
-                <c:if test="${result['slaughter']['enterpriseInfo']['slaugherPhoto'] != ''}">
-                    <li>
-                        <span colspan="2"><img src="${result['slaughter']['enterpriseInfo']['slaugherPhoto']}" alt=""></span>
-                    </li>
+                <c:if test="${result['slaughter']['slaughterRecord'] != ''}">
+                    <h3 style=margin-top:10px>屠宰记录：</h3>
+                    <ul style=margin-top:10px>
+                        <li>
+                            <span>屠宰日期：</span>
+                            <span>${result['slaughter']['slaughterRecord'] ['slaughterTime']}</span>
+                        </li>
+                        <li>
+                            <span>屠宰阿訇：</span>
+                            <span>${result['slaughter']['slaughterRecord'] ['imam']}</span>
+                        </li>
+                        <c:if test="${result['slaughter']['slaughterRecord']['imamPhoto'] != ''}">
+                            <li>
+                                <span>阿訇证照片：</span>
+                            </li>
+                            <li>
+                                <span colspan="2"><img src="${result['slaughter']['slaughterRecord']['imamPhoto'] }"
+                                                       alt=""></span>
+                            </li>
+                        </c:if>
+                    </ul>
                 </c:if>
-                    <li>
-                        <span>清真证照：</span>
-                    </li>
-                <c:if test="${result['slaughter']['enterpriseInfo']['muslimPhoto'] != ''}">
-                    <li>
-                        <span colspan="2"><img src="${result['slaughter']['enterpriseInfo']['muslimPhoto'] }" alt=""></span>
-                    </li>
+
+                <c:if test="${result['slaughter']['quarantineRecord'] != ''}">
+                    <h3 style=margin-top:10px>屠宰检疫记录：</h3>
+                    <ul style=margin-top:10px>
+                        <li>
+                            <span>检疫日期：</span>
+                            <span>${result['slaughter']['quarantineRecord'] ['quarantineTime'] }</span>
+                        </li>
+                        <li>
+                            <span>检疫人员：</span>
+                            <span>${result['slaughter']['quarantineRecord']['person']}</span>
+                        </li>
+                            <%--<li>--%>
+                            <%--<span>检疫证号码：</span>--%>
+                            <%--<span>${result['slaughter']['quarantineRecord']['quarantineNumber']}</span>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                            <%--<span>出具检疫证单位：</span>--%>
+                            <%--<span>${result['slaughter']['quarantineRecord']['enterprise'] }</span>--%>
+                            <%--</li>--%>
+                        <li>
+                            <span>检疫方法：</span>
+                                <%--<span>${result['slaughter']['quarantineRecord']['quarantineMethod'] }</span>--%>
+                            <span>全检</span>
+                        </li>
+                        <li>
+                            <span>活体检疫结果：</span>
+                            <span>${result['slaughter']['quarantineRecord'] ['result']}</span>
+                        </li>
+                        <li>
+                            <span>胴体检疫项目：</span>
+                            <span>实验室检疫 头部检疫 内脏检疫</span>
+                        </li>
+                        <li>
+                            <span>胴体检疫结果：</span>
+                            <span>合格</span>
+                        </li>
+                    </ul>
                 </c:if>
-                </ul>
-            </c:if>
+
+                <c:if test="${result['slaughter']['disinfection'] != ''}">
+                    <h3 style=margin-top:10px>消毒记录：</h3>
+                    <ul style=margin-top:10px>
+                        <li>
+                            <span>消毒日期：</span>
+                            <span>${result['slaughter']['disinfection']['disinfectionTime']}</span>
+                        </li>
+                        <li>
+                            <span>药品名称：</span>
+                            <span>${result['slaughter']['disinfection']['disinfectant']}</span>
+                        </li>
+                        <li>
+                            <span>消毒方法：</span>
+                            <span>${result['slaughter']['disinfection'] ['disinfectionWay']}</span>
+                        </li>
+                        <li>
+                            <span>消毒人员：</span>
+                            <span>${result['slaughter']['disinfection'] ['person']}</span>
+                        </li>
+                    </ul>
+                </c:if>
+
+                <c:if test="${result['slaughter']['enterpriseInfo'] != ''}">
+                    <h3 style=margin-top:10px>企业信息：</h3>
+                    <ul style=margin-top:10px>
+                        <li>
+                            <span>单位名称：</span>
+                            <span>${result['slaughter']['enterpriseInfo'] ['enterpriseName']}</span>
+                        </li>
+                        <li>
+                            <span>单位地址：</span>
+                            <span>${result['slaughter']['enterpriseInfo']['enterpriseAddress']}</span>
+                        </li>
+                        <li>
+                            <span>负责人：</span>
+                            <span>${result['slaughter']['enterpriseInfo'] ['master']}</span>
+                        </li>
+                        <c:if test="${result['slaughter']['enterpriseInfo']['slaugherPhoto'] != ''}">
+                            <li>
+                                <span>屠宰证照：</span>
+                            </li>
+                            <li>
+                                <span colspan="2"><img src="${result['slaughter']['enterpriseInfo']['slaugherPhoto']}"
+                                                       alt=""></span>
+                            </li>
+                        </c:if>
+                        <c:if test="${result['slaughter']['enterpriseInfo']['muslimPhoto'] != ''}">
+                            <li>
+                                <span>清真证照：</span>
+                            </li>
+                            <li>
+                                <span colspan="2"><img src="${result['slaughter']['enterpriseInfo']['muslimPhoto'] }"
+                                                       alt=""></span>
+                            </li>
+                        </c:if>
+                    </ul>
+                </c:if>
             </div>
         </div>
         <div class="ba"></div>
@@ -489,12 +492,13 @@
                             <span>单位地址：</span>
                             <span>${result['process']['enterpriseInfo']['enterpriseAddress']}</span>
                         </li>
-                        <li>
-                            <span>清真证照：</span>
-                        </li>
                         <c:if test="${result['process']['enterpriseInfo']['muslimPhoto'] != ''}">
                             <li>
-                                <span colspan="2"><img src="${result['process']['enterpriseInfo']['muslimPhoto'] }" alt=""></span>
+                                <span>清真证照：</span>
+                            </li>
+                            <li>
+                                <span colspan="2"><img src="${result['process']['enterpriseInfo']['muslimPhoto'] }"
+                                                       alt=""></span>
                             </li>
                         </c:if>
                     </ul>
