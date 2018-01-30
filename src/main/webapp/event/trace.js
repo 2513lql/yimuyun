@@ -10,7 +10,7 @@ $("#queryBtn1").click(function () {
     }
     $.i18n.properties({
         name: 'apiurl',
-        path: '/',
+        path: '/yimuyun/',
         mode: 'map'
     });
     // console.log($.i18n.prop("api.url"));

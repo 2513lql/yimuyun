@@ -5,7 +5,7 @@ $("#receive").click(function () {
     var packingId = $("#packingId").val();
     $.i18n.properties({
         name: 'apiurl',
-        path: '/',
+        path: '/yimuyun/',
         mode: 'map'
     });
     $.ajax({

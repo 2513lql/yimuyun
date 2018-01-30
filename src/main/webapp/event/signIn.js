@@ -23,7 +23,7 @@ $("#getCode").click(function (e) {
     }
     $.i18n.properties({
         name: 'apiurl',
-        path: '/',
+        path: '/yimuyun/',
         mode: 'map'
     });
     $.ajax({
@@ -78,7 +78,7 @@ $("#verify").click(function (e) {
     // window.location.href = "wxScan?url=" + url;
     $.i18n.properties({
         name: 'apiurl',
-        path: '/',
+        path: '/yimuyun/',
         mode: 'map'
     });
     $.ajax({

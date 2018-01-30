@@ -6,7 +6,7 @@ $(".trace .xuliehao span").click(function () {
     }
     $.i18n.properties({
         name: 'apiurl',
-        path: '/',
+        path: "/yimuyun/",
         mode: 'map'
     });
     $.ajax({
