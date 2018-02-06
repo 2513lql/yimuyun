@@ -5,6 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>伊牧云</title>
+    <meta name="Keywords" content="追溯,牛羊追溯,防伪查询,伊牧云,云牧场追溯" />
+    <meta itemprop="description" name="description" content="追溯、牛羊追溯、防伪查询、伊牧云、云牧场追溯" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/index.css">
 </head>
 <body>
