@@ -65,10 +65,10 @@
         </div>
         <div class="phone">
             <div class="phone-left">
-                <a href="http://www.baidu.com"><img src="${pageContext.request.contextPath}/img/index/1.png" /></a>
+                <a><img src="${pageContext.request.contextPath}/img/index/1.png" /></a>
             </div>
             <div class="phone-right">
-                <a href="http://www.baidu.com"><img src="${pageContext.request.contextPath}/img/index/2.png" /></a>
+                <a><img src="${pageContext.request.contextPath}/img/index/2.png" /></a>
             </div>
         </div>
         <div class="main1">
@@ -81,10 +81,10 @@
         </div>
         <div class="phone">
             <div class="phone-left">
-                <a href="http://www.baidu.com"><img src="${pageContext.request.contextPath}/img/index/12.png" /></a>
+                <a href="http://www.yimuyhc.com/"><img src="${pageContext.request.contextPath}/img/index/12.png" /></a>
             </div>
             <div class="phone-right">
-                <a href="http://www.baidu.com"><img src="${pageContext.request.contextPath}/img/index/13.png" /></a>
+                <a href="http://www.yimuyhc.com/"><img src="${pageContext.request.contextPath}/img/index/13.png" /></a>
             </div>
         </div>
         <div class="main1">
@@ -97,10 +97,10 @@
         </div>
         <div class="phone">
             <div class="phone-left">
-                <a href="http://www.baidu.com"><img src="${pageContext.request.contextPath}/img/index/9.png" /></a>
+                <a href="http://www.yimuyrl.com"><img src="${pageContext.request.contextPath}/img/index/9.png" /></a>
             </div>
             <div class="phone-right">
-                <a href="http://www.baidu.com"><img src="${pageContext.request.contextPath}/img/index/10.png" /></a>
+                <a href="http://www.yimuyrl.com"><img src="${pageContext.request.contextPath}/img/index/10.png" /></a>
             </div>
         </div>
         <div class="main-bottom">
@@ -145,7 +145,7 @@
     <div class="footer">
         <div class="top">
             <div class="left">
-                <div class="left-top"><a href="http://cn.unionpay.com/">中国银联</a> | <a href="http://www.bankofnx.com.cn/portal/zh_CN/home/index.html">宁夏银行</a> | <a href="http://www.xn--nyqp2g2pza885ck6ds6gq7tl68h.com/">杨哈吉健康食品有限公司</a></div>
+                <div class="left-top"><a href="http://www.yimuyhc.com/">活畜交易平台</a> | <a href="http://www.yimuyrl.com/">趣牧投平台</a> | <a href="http://www.xn--nyqp2g2pza885ck6ds6gq7tl68h.com/">杨哈吉健康食品有限公司</a> | <a href="http://www.nxyhj.com/">杨哈吉农牧产业控股有限公司</a></div>
                 <div class="left-bottom">
                     <p>Copyright@2010,All Rights Reserved　宁夏伊牧云农林牧科技开发有限公司</p>
                     <p>版权所有 京ICP备11007834号 公安备案号:11011502002638</p>
