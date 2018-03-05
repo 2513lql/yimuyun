@@ -482,10 +482,12 @@
                             <span>单位名称：</span>
                             <span>${result['process']['enterpriseInfo'] ['enterpriseName'] }</span>
                         </li>
-                        <li>
-                            <span>执照编号：</span>
-                            <span>${result['process']['enterpriseInfo'] ['licenseNumber']}</span>
-                        </li>
+                        <c:if test="${result['process']['enterpriseInfo'] ['licenseNumber']!=''}">
+                            <li>
+                                <span>执照编号：</span>
+                                <span>${result['process']['enterpriseInfo'] ['licenseNumber']}</span>
+                            </li>
+                        </c:if>
                         <li>
                             <span>负责人：</span>
                             <span>${result['process']['enterpriseInfo'] ['master']}</span>
@@ -569,11 +571,11 @@
         <div class="ba"></div>
         <div class="fenxiang">
             <div class="top">
-                <div class="left">购活畜</div>
+                <div class="left"><a href="http://www.yimuyhc.com">购活畜</a></div>
                 <div class="right">伊牧鲜</div>
             </div>
             <div class="bottom">
-                <div class="left">趣牧投</div>
+                <div class="left"><a href="http://www.yimuyrl.com/">趣牧投</a></div>
                 <div class="right"><a href="${pageContext.request.contextPath}/leaveComments">留言</a></div>
             </div>
         </div>

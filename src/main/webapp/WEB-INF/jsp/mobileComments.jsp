@@ -33,11 +33,11 @@
         </div>
         <div class="fenxiang">
             <div class="top">
-                <div class="left">购活畜</div>
+                <div class="left"><a href="http://www.yimuyhc.com">购活畜</a></div>
                 <div class="right">伊牧鲜</div>
             </div>
             <div class="bottom">
-                <div class="left">趣牧投</div>
+                <div class="left"><a href="http://www.yimuyrl.com/">趣牧投</a></div>
                 <div class="right"><a href="${pageContext.request.contextPath}/leaveComments">留言</a></div>
             </div>
         </div>
