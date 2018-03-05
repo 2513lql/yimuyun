@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>留言</title>
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/liuyan.css">
 </head>
 <body>
@@ -33,17 +34,17 @@
         </div>
         <div class="fenxiang">
             <div class="top">
-                <div class="left"><a href="http://www.yimuyhc.com">购活畜</a></div>
+                <div class="left">购活畜</div>
                 <div class="right">伊牧鲜</div>
             </div>
             <div class="bottom">
-                <div class="left"><a href="http://www.yimuyrl.com/">趣牧投</a></div>
+                <div class="left">趣牧投</div>
                 <div class="right"><a href="${pageContext.request.contextPath}/leaveComments">留言</a></div>
             </div>
         </div>
         <div class="join">
             <p>加入我们</p>
-            <div>400-666-8858</div>
+            <div>0620-5820820</div>
         </div>
     </div>
 </div>

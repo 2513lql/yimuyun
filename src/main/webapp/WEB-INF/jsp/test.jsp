@@ -9,7 +9,8 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>文件上传测试</title>
+    <title>文件上传测试</title>>
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/favicon.png" type="image/x-icon">
 </head>
 <body>
 <%--<p><input type="file" name="viewUrls" value="浏览文件" /></p>--%>

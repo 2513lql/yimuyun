@@ -6,7 +6,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 	<meta name="format-detection" content="telephone=no"/>
     <meta name="format-detection" content="email=no"/>
-	<title>物流签收详情</title>
+	<title>物流签收详情</title>>
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/favicon.png" type="image/x-icon">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/signDetail.css">
 </head>

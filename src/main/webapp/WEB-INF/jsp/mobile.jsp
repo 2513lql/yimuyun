@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>追溯查询</title>
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/mobile.css">
 
 </head>
@@ -102,12 +103,10 @@
                                 <span>养殖地点：</span>
                                 <span>${item.get("address")}</span>
                             </li>
-                            <c:if test="${item.get('number')!=''}">
-                                <li>
-                                    <span>执照编号：</span>
-                                    <span>${item.get("number")}</span>
-                                </li>
-                            </c:if>
+                            <li>
+                                <span>执照编号：</span>
+                                <span>${item.get("number")}</span>
+                            </li>
                             <li>
                                 <span>负责人：</span>
                                 <span>${item.get("master")}</span>
@@ -116,7 +115,7 @@
                     </c:forEach>
                 </c:if>
                 <c:if test="${result['farming']['quarantinePicture'] != ''}">
-                    <h3 style=margin-top:10px>检疫记录</h3>
+                    <h3 style=margin-top:10px>检疫记录：</h3>
                     <ul style=margin-top:10px>
                         <li>
                             <span colspan="2"><img src="${result['farming']['quarantinePicture']}" alt=""></span>
@@ -125,7 +124,7 @@
                 </c:if>
 
                 <c:if test="${result['farming']['immuneRecord'] != ''}">
-                    <h3 style=margin-top:10px>免疫记录</h3>
+                    <h3 style=margin-top:10px>免疫记录：</h3>
                     <c:forEach var="item" items="${result['farming']['immuneRecord']}">
                         <ul style=margin-top:10px;>
                             <li>
@@ -149,7 +148,7 @@
                 </c:if>
 
                 <c:if test="${result['farming']['diagnosis'] != ''}">
-                    <h3 style=margin-top:10px>诊疗记录</h3>
+                    <h3 style=margin-top:10px>诊疗记录：</h3>
                     <c:forEach var="item" items="${result['farming']['diagnosis']}">
                         <ul style=margin-top:10px>
                             <li>
@@ -177,7 +176,7 @@
                 </c:if>
 
                 <c:if test="${result['farming']['feedingRecord'] != ''}">
-                    <h3 style=margin-top:10px>喂养记录</h3>
+                    <h3 style=margin-top:10px>喂养记录：</h3>
                     <c:forEach var="item" items="${result['farming']['feedingRecord']}">
                         <ul style=margin-top:10px>
                             <li>
@@ -197,7 +196,7 @@
                 </c:if>
 
                 <c:if test="${result['farming']['disinfectionRecord'] != ''}">
-                    <h3 style=margin-top:10px>消毒记录</h3>
+                    <h3 style=margin-top:10px>消毒记录：</h3>
                     <ul style=margin-top:10px>
                         <li>
                             <span>消毒日期：</span>
@@ -219,7 +218,7 @@
                 </c:if>
 
                 <c:if test="${result['farming']['environment'] != ''}">
-                    <h3 style=margin-top:10px>环境数据记录</h3>
+                    <h3 style=margin-top:10px>环境数据记录：</h3>
                     <ul style=margin-top:10px>
                         <li>
                             <span>记录时间：</span>
@@ -266,7 +265,7 @@
             <h2>-屠宰环节-</h2>
             <div class="content">
                 <c:if test="${result['slaughter']['acquisition'] != ''}">
-                    <h3>收购记录</h3>
+                    <h3>收购记录：</h3>
                     <ul style=margin-top:10px>
                         <li>
                             <span>休药期检验：</span>
@@ -288,7 +287,7 @@
                 </c:if>
 
                 <c:if test="${result['slaughter']['slaughterRecord'] != ''}">
-                    <h3 style=margin-top:10px>屠宰记录</h3>
+                    <h3 style=margin-top:10px>屠宰记录：</h3>
                     <ul style=margin-top:10px>
                         <li>
                             <span>屠宰日期：</span>
@@ -311,7 +310,7 @@
                 </c:if>
 
                 <c:if test="${result['slaughter']['quarantineRecord'] != ''}">
-                    <h3 style=margin-top:10px>屠宰检疫记录</h3>
+                    <h3 style=margin-top:10px>屠宰检疫记录：</h3>
                     <ul style=margin-top:10px>
                         <li>
                             <span>检疫日期：</span>
@@ -350,7 +349,7 @@
                 </c:if>
 
                 <c:if test="${result['slaughter']['disinfection'] != ''}">
-                    <h3 style=margin-top:10px>消毒记录</h3>
+                    <h3 style=margin-top:10px>消毒记录：</h3>
                     <ul style=margin-top:10px>
                         <li>
                             <span>消毒日期：</span>
@@ -372,7 +371,7 @@
                 </c:if>
 
                 <c:if test="${result['slaughter']['enterpriseInfo'] != ''}">
-                    <h3 style=margin-top:10px>企业信息</h3>
+                    <h3 style=margin-top:10px>企业信息：</h3>
                     <ul style=margin-top:10px>
                         <li>
                             <span>单位名称：</span>
@@ -414,7 +413,7 @@
             <div class="content">
 
                 <c:if test="${result['process']['acidDischarge'] != ''}">
-                    <h3>排酸记录</h3>
+                    <h3>排酸记录：</h3>
                     <ul style=margin-top:10px>
                         <li>
                             <span>排酸日期：</span>
@@ -432,7 +431,7 @@
                 </c:if>
 
                 <c:if test="${result['process']['processRecord'] != ''}">
-                    <h3 style=margin-top:10px>加工记录</h3>
+                    <h3 style=margin-top:10px>加工记录：</h3>
                     <ul style=margin-top:10px>
                         <li>
                             <span>加工日期：</span>
@@ -454,7 +453,7 @@
                 </c:if>
 
                 <c:if test="${result['process']['disinfectionRecord'] != ''}">
-                    <h3 style=margin-top:10px>消毒记录</h3>
+                    <h3 style=margin-top:10px>消毒记录：</h3>
                     <ul style=margin-top:10px>
                         <li>
                             <span>消毒时间：</span>
@@ -476,18 +475,16 @@
                 </c:if>
 
                 <c:if test="${result['process']['enterpriseInfo'] != ''}">
-                    <h3 style=margin-top:10px>企业信息</h3>
+                    <h3 style=margin-top:10px>企业信息：</h3>
                     <ul style=margin-top:10px>
                         <li>
                             <span>单位名称：</span>
                             <span>${result['process']['enterpriseInfo'] ['enterpriseName'] }</span>
                         </li>
-                        <c:if test="${result['process']['enterpriseInfo'] ['licenseNumber']!=''}">
-                            <li>
-                                <span>执照编号：</span>
-                                <span>${result['process']['enterpriseInfo'] ['licenseNumber']}</span>
-                            </li>
-                        </c:if>
+                        <li>
+                            <span>执照编号：</span>
+                            <span>${result['process']['enterpriseInfo'] ['licenseNumber']}</span>
+                        </li>
                         <li>
                             <span>负责人：</span>
                             <span>${result['process']['enterpriseInfo'] ['master']}</span>
@@ -571,11 +568,11 @@
         <div class="ba"></div>
         <div class="fenxiang">
             <div class="top">
-                <div class="left"><a href="http://www.yimuyhc.com">购活畜</a></div>
+                <div class="left">购活畜</div>
                 <div class="right">伊牧鲜</div>
             </div>
             <div class="bottom">
-                <div class="left"><a href="http://www.yimuyrl.com/">趣牧投</a></div>
+                <div class="left">趣牧投</div>
                 <div class="right"><a href="${pageContext.request.contextPath}/leaveComments">留言</a></div>
             </div>
         </div>
