@@ -121,6 +121,10 @@
     font-size: 16px;
 }
 
+.main .liuyan .fankui{
+    padding: 10px 0;
+}
+
 .main .liuyan .fankui textarea {
     width: 1103px;
     height: 113px;
@@ -169,6 +173,7 @@
 
 .main .liuyan .lianxi {
     clear: both;
+    padding-top: 10px;
 }
 
 .main .liuyan .lianxi input {

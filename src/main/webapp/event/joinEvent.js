@@ -31,7 +31,7 @@ $("#submitSlaughter").click(function(e){
         return;
     }
     if(telephoneNumber.length != 11){
-        alert("联系方式格式不对");
+        alert("联系方式格式不正确");
         return;
     }
     if(contact == null || contact == ""){
@@ -87,7 +87,7 @@ $("#submitFarming").click(function(e){
         return;
     }
     if(telephoneNumber.length != 11){
-        alert("联系方式格式不对");
+        alert("联系方式格式不正确");
         return;
     }
     $("#farmingForm").submit();
@@ -122,7 +122,7 @@ $("#submitMessage").click(function(e){
         return;
     }
     if(messageContact.length != 11){
-        alert("联系方式格式不对");
+        alert("联系方式格式不正确");
         return;
     }
     $("#messageForm").submit();
