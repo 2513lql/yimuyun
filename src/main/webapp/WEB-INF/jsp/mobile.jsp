@@ -56,6 +56,12 @@
                         <span>耳标编号：</span>
                         <span>${result.getJSONObject("livestock").get("equipmentNumber")}</span>
                     </li>
+                    <c:if test="${result['livestock']['parentNumber'] != ''}">
+                        <li>
+                            <span>母体编号：</span>
+                            <span>${result.getJSONObject("livestock").get("parentNumber")}</span>
+                        </li>
+                    </c:if>
                     <li>
                         <span>身份证号：</span>
                         <span>${result.getJSONObject("livestock").get("idNumber")}</span>
