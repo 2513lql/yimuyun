@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>追溯查询</title>
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/public.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fangwei.css">
 </head>

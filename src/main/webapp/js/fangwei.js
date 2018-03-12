@@ -200,7 +200,7 @@ function renderTrace(body) {
             slaughter += "<h3>企业信息</h3>";
             slaughter += "<table>";
             slaughter += "<tr><td>单位名称: </td><td>" + item['enterpriseName'] + "</td></tr>";
-            slaughter += "<tr><td>单位地址: </td><<td>" + item['enterpriseAddress'] + "</td></tr>";
+            slaughter += "<tr><td>单位地址: </td><td>" + item['enterpriseAddress'] + "</td></tr>";
             slaughter += "<tr><td>负责人: </td><td>" + item['master'] + "</td></tr>";
             if (item['slaugherPhoto'] != '') {
                 slaughter += "<tr><td>屠宰证照: </td>";

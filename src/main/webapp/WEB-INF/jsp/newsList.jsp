@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>新闻中心</title>
-    <base href="http://www.yimuyzs.com/yimuyun_web/">
+    <base href="http://www.yimuyzs.com/yimuyun_web/">>
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/public.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/more.css">

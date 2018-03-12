@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>加入我们</title>
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/public.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/join.css">
 </head>
