@@ -48,7 +48,7 @@ public class TbHomePageController extends BaseController {
 	@Autowired
 	private TbHonorService tbHonorService;
 
-	@RequestMapping(value={"","home"})
+	@RequestMapping(value={""})
 	public ModelAndView homePage(HttpServletResponse response){
 		TbHomePage homePage = tbHomePageService.getHomePage();
 		String adminPictureHead = ConfigUtil.getAdminUrlHead();
