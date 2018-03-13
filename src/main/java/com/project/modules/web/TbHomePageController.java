@@ -73,7 +73,7 @@ public class TbHomePageController extends BaseController {
 		Map<String,Object> map = new HashMap<>();
 		map.put("homeNews",homeNews);
 		map.put("homePage",homePage);
-		ModelAndView modelAndView = new ModelAndView("index");
+		ModelAndView modelAndView = new ModelAndView("home");
 		modelAndView.addObject("map",map);
 		return modelAndView;
 	}
