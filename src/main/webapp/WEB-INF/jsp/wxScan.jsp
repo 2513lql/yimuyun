@@ -3,7 +3,7 @@
 
 <html>
 <head>
-    <title>微信扫码</title>>
+    <title>微信扫码</title>
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/favicon.png" type="image/x-icon">
 </head>
 <body>
