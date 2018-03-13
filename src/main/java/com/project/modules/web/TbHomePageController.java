@@ -197,13 +197,13 @@ public class TbHomePageController extends BaseController {
 		return entity;
 	}
 	
-	@RequiresPermissions("modules:tbHomePage:view")
-	@RequestMapping(value = {"list", ""})
-	public String list(TbHomePage tbHomePage, HttpServletRequest request, HttpServletResponse response, Model model) {
-		Page<TbHomePage> page = tbHomePageService.findPage(new Page<TbHomePage>(request, response), tbHomePage);
-		model.addAttribute("page", page);
-		return "modules/modules/tbHomePageList";
-	}
+//	@RequiresPermissions("modules:tbHomePage:view")
+//	@RequestMapping(value = {"list", ""})
+//	public String list(TbHomePage tbHomePage, HttpServletRequest request, HttpServletResponse response, Model model) {
+//		Page<TbHomePage> page = tbHomePageService.findPage(new Page<TbHomePage>(request, response), tbHomePage);
+//		model.addAttribute("page", page);
+//		return "modules/modules/tbHomePageList";
+//	}
 
 	@RequiresPermissions("modules:tbHomePage:view")
 	@RequestMapping(value = "form")
