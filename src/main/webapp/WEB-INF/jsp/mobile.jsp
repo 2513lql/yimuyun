@@ -579,7 +579,7 @@
         <div class="fenxiang">
             <div class="top">
                 <div class="left"><a href="http://www.yimuyhc.com">购活畜</a></div>
-                <div class="right">伊牧鲜</div>
+                <div class="right"><a href="https://shop493448224.taobao.com/?spm=a230r.7195193.1997079397.2.EK1XyJ">伊牧鲜</a></div>
             </div>
             <div class="bottom">
                 <div class="left"><a href="http://www.yimuyrl.com/">趣牧投</a></div>
