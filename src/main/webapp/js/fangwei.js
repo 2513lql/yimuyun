@@ -48,6 +48,9 @@ function renderTrace(body) {
 
 
     var lvli = "<tr><td>耳标编号: </td><td>" + body['livestock']['equipmentNumber'] + "</td></tr>";
+    if (body['livestock']['parentNumber'] != '') {
+        lvli += "<tr><td>母体编号: </td><td>" + body['livestock']['parentNumber'] + "</td></tr>";
+    }
     lvli += "<tr><td>身份证号: </td><td>" + body['livestock']['idNumber'] + "</td></tr>";
     if (body['livestock']['birthday'] != '') {
         lvli += "<tr><td>出生日期: </td><td>" + body['livestock']['birthday'] + "</td></tr>";
@@ -69,7 +72,9 @@ function renderTrace(body) {
             var item = body['farming']['farms'][i];
             farming += "<table>";
             farming += "<tr><td>养殖单位名称: </td><td>" + item['farmName'] + "</td></tr>";
-            farming += "<tr><td>执照编号: </td><td>" + item['number'] + "</td></tr>";
+            if (item['number'] != '') {
+                farming += "<tr><td>执照编号: </td><td>" + item['number'] + "</td></tr>";
+            }
             farming += "<tr><td>养殖地点: </td><td>" + item['address'] + "</td></tr>";
             farming += "<tr><td>负责人: </td><td>" + item['master'] + "</td></tr>";
             farming += "</table>";

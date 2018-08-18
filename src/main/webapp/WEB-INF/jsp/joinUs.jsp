@@ -137,7 +137,7 @@
                     <div class="left-top"><a href="http://www.yimuyhc.com/">活畜交易平台</a> | <a href="http://www.yimuyrl.com/">趣牧投平台</a> | <a href="http://www.xn--nyqp2g2pza885ck6ds6gq7tl68h.com/">杨哈吉健康食品有限公司</a> | <a href="http://www.nxyhj.com/">杨哈吉农牧产业控股有限公司</a></div>
                     <div class="left-bottom">
                         <p>Copyright@2010,All Rights Reserved　宁夏伊牧云农林牧科技开发有限公司</p>
-                        <p>版权所有 京ICP备11007834号 公安备案号:11011502002638</p>
+                        <p>版权所有 ICP备案号：宁ICP备16001687号-1 <span class="security">公安备案号：</span>64032402000018</p>
                     </div>
                 </div>
                 <div class="right">
