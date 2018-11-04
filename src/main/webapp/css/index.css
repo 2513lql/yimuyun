@@ -210,11 +210,14 @@ p {
     padding-top: 60px;
     background: #277037;
     height: 310px;
+    width: 1170px;
+    margin: 0 auto;
 }
 
 .main .phone .phone-left {
     float: left;
-    width: 49%;
+    /*width: 49%;*/
+    width: 575px;
 }
 
 .main .phone .phone-left img {
@@ -224,7 +227,8 @@ p {
 
 .main .phone .phone-right {
     float: right;
-    width: 49%;
+    /*width: 49%;*/
+    width: 575px;
 }
 
 .main .phone .phone-right img {
@@ -236,17 +240,21 @@ p {
     font-size: 31px;
     text-align: left;
     color: #FFFFFF;
-    padding-top: 61px;
+    padding-top: 61px;    
+    width: 1170px;
+    margin: 0 auto;
 }
 
 .main .phone-text {
     padding-top: 20px;
     background: #277037;
-    height: 260px;
+    height: 260px;   
+    width: 1170px;
+    margin: 0 auto;
 }
 
 .main .phone-text dl {
-    width: 32%;
+    /*width: 32%;*/
     float: left;
     margin-right: 2%;
     _margin-right: 1%;
@@ -258,7 +266,9 @@ p {
 }
 
 .main .phone-text dl dt img {
-    width: 100%;
+    /*width: 100%;*/
+    width: 374px;
+    height: 201px;
 }
 
 .main .phone-text dl dd {
@@ -289,14 +299,17 @@ p {
     width: 100%;
     height: 203px;
     clear: both;
+    background: #F4F6F2;
 }
 
 .footer .top {
     height: 133px;
-    padding-left: 6.5%;
-    padding-right: 7%;
+    /*padding-left: 6.5%;
+    padding-right: 7%;*/
     padding-top: 32px;
-    background: #F4F6F2;
+    /*background: #F4F6F2;*/
+    width: 1170px;
+    margin: 0 auto;
 }
 
 .footer .top .left {
