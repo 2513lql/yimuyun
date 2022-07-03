@@ -28,6 +28,7 @@ public class TbHomePageService extends CrudService<TbHomePageDao, TbHomePage> {
 
 	public TbHomePage getHomePage(){
 		List<TbHomePage> homePages = tbHomePageDao.getHomePage();
+//		homePages.add(new TbHomePage());
 		return homePages.get(0);
 	}
 
