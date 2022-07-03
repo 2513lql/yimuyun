@@ -93,11 +93,11 @@
     </profiles>
     <dependencies>
         <!--api-->
-        <dependency>
-            <groupId>com.xinda</groupId>
-            <artifactId>xinda-service-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.xinda</groupId>-->
+            <!--<artifactId>xinda-service-api</artifactId>-->
+            <!--<version>1.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
         <!--dubbo-->
         <dependency>
             <groupId>com.alibaba</groupId>
