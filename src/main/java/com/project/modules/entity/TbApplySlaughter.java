@@ -4,7 +4,7 @@
 package com.project.modules.entity;
 
 import com.project.common.persistence.DataEntity;
-import org.hibernate.validator.constraints.Length;
+//import org.hibernate.validator.constraints.Length;
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -33,7 +33,6 @@ public class TbApplySlaughter extends DataEntity<TbApplySlaughter> {
 		super(id);
 	}
 
-	@Length(min=0, max=64, message="企业类型长度必须介于 0 和 64 之间")
 	public String getEnterpriseType() {
 		return enterpriseType;
 	}
@@ -42,7 +41,6 @@ public class TbApplySlaughter extends DataEntity<TbApplySlaughter> {
 		this.enterpriseType = enterpriseType;
 	}
 	
-	@Length(min=0, max=64, message="企业名称长度必须介于 0 和 64 之间")
 	public String getName() {
 		return name;
 	}
@@ -51,7 +49,6 @@ public class TbApplySlaughter extends DataEntity<TbApplySlaughter> {
 		this.name = name;
 	}
 	
-	@Length(min=0, max=64, message="地址长度必须介于 0 和 64 之间")
 	public String getAddress() {
 		return address;
 	}
@@ -60,7 +57,6 @@ public class TbApplySlaughter extends DataEntity<TbApplySlaughter> {
 		this.address = address;
 	}
 	
-	@Length(min=0, max=64, message="电话长度必须介于 0 和 64 之间")
 	public String getTelephoneNumber() {
 		return telephoneNumber;
 	}
@@ -69,7 +65,6 @@ public class TbApplySlaughter extends DataEntity<TbApplySlaughter> {
 		this.telephoneNumber = telephoneNumber;
 	}
 	
-	@Length(min=0, max=64, message="联系人长度必须介于 0 和 64 之间")
 	public String getContact() {
 		return contact;
 	}

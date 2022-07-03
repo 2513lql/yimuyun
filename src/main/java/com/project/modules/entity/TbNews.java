@@ -4,7 +4,7 @@
 package com.project.modules.entity;
 
 import com.project.common.persistence.DataEntity;
-import org.hibernate.validator.constraints.Length;
+//import org.hibernate.validator.constraints.Length;
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -44,7 +44,7 @@ public class TbNews extends DataEntity<TbNews> {
 		this.newsTime = newsTime;
 	}
 
-	@Length(min=0, max=64, message="是否置顶长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="是否置顶长度必须介于 0 和 64 之间")
 	public String getIstop() {
 		return istop;
 	}
@@ -53,7 +53,7 @@ public class TbNews extends DataEntity<TbNews> {
 		this.istop = istop;
 	}
 	
-	@Length(min=0, max=64, message="展示位置长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="展示位置长度必须介于 0 和 64 之间")
 	public String getShowLocation() {
 		return showLocation;
 	}
@@ -62,7 +62,7 @@ public class TbNews extends DataEntity<TbNews> {
 		this.showLocation = showLocation;
 	}
 	
-	@Length(min=0, max=64, message="展示图片长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="展示图片长度必须介于 0 和 64 之间")
 	public String getPicture() {
 		return picture;
 	}
@@ -71,7 +71,7 @@ public class TbNews extends DataEntity<TbNews> {
 		this.picture = picture;
 	}
 	
-	@Length(min=0, max=64, message="标题长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="标题长度必须介于 0 和 64 之间")
 	public String getTitle() {
 		return title;
 	}
@@ -88,7 +88,7 @@ public class TbNews extends DataEntity<TbNews> {
 		this.body = body;
 	}
 	
-	@Length(min=0, max=255, message="摘要长度必须介于 0 和 255 之间")
+//	@Length(min=0, max=255, message="摘要长度必须介于 0 和 255 之间")
 	public String getDigest() {
 		return digest;
 	}
@@ -97,7 +97,7 @@ public class TbNews extends DataEntity<TbNews> {
 		this.digest = digest;
 	}
 	
-	@Length(min=0, max=64, message="作者长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="作者长度必须介于 0 和 64 之间")
 	public String getAuthor() {
 		return author;
 	}

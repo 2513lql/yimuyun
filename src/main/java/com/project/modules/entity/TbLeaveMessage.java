@@ -4,7 +4,7 @@
 package com.project.modules.entity;
 
 import com.project.common.persistence.DataEntity;
-import org.hibernate.validator.constraints.Length;
+//import org.hibernate.validator.constraints.Length;
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -34,7 +34,7 @@ public class TbLeaveMessage extends DataEntity<TbLeaveMessage> {
 		super(id);
 	}
 
-	@Length(min=0, max=64, message="问题类型长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="问题类型长度必须介于 0 和 64 之间")
 	public String getProblemType() {
 		return problemType;
 	}
@@ -43,7 +43,7 @@ public class TbLeaveMessage extends DataEntity<TbLeaveMessage> {
 		this.problemType = problemType;
 	}
 	
-	@Length(min=0, max=64, message="描述长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="描述长度必须介于 0 和 64 之间")
 	public String getDescribe() {
 		return describe;
 	}
@@ -52,7 +52,7 @@ public class TbLeaveMessage extends DataEntity<TbLeaveMessage> {
 		this.describe = describe;
 	}
 	
-	@Length(min=0, max=64, message="图片长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="图片长度必须介于 0 和 64 之间")
 	public String getPicture1() {
 		return picture1;
 	}
@@ -61,7 +61,7 @@ public class TbLeaveMessage extends DataEntity<TbLeaveMessage> {
 		this.picture1 = picture1;
 	}
 	
-	@Length(min=0, max=64, message="图片长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="图片长度必须介于 0 和 64 之间")
 	public String getPicture2() {
 		return picture2;
 	}
@@ -70,7 +70,7 @@ public class TbLeaveMessage extends DataEntity<TbLeaveMessage> {
 		this.picture2 = picture2;
 	}
 	
-	@Length(min=0, max=64, message="图片长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="图片长度必须介于 0 和 64 之间")
 	public String getPicture3() {
 		return picture3;
 	}
@@ -79,7 +79,7 @@ public class TbLeaveMessage extends DataEntity<TbLeaveMessage> {
 		this.picture3 = picture3;
 	}
 	
-	@Length(min=0, max=255, message="联系方式长度必须介于 0 和 255 之间")
+//	@Length(min=0, max=255, message="联系方式长度必须介于 0 和 255 之间")
 	public String getContact() {
 		return contact;
 	}

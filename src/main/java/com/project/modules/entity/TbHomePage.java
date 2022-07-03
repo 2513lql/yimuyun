@@ -32,7 +32,7 @@ public class TbHomePage extends DataEntity<TbHomePage> {
 		super(id);
 	}
 
-	@Length(min=0, max=64, message="轮播图1长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="轮播图1长度必须介于 0 和 64 之间")
 	public String getPicture1() {
 		return picture1;
 	}
@@ -41,7 +41,7 @@ public class TbHomePage extends DataEntity<TbHomePage> {
 		this.picture1 = picture1;
 	}
 	
-	@Length(min=0, max=64, message="轮播图2长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="轮播图2长度必须介于 0 和 64 之间")
 	public String getPicture2() {
 		return picture2;
 	}
@@ -50,7 +50,7 @@ public class TbHomePage extends DataEntity<TbHomePage> {
 		this.picture2 = picture2;
 	}
 	
-	@Length(min=0, max=64, message="轮播图3长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="轮播图3长度必须介于 0 和 64 之间")
 	public String getPicture3() {
 		return picture3;
 	}
@@ -59,7 +59,7 @@ public class TbHomePage extends DataEntity<TbHomePage> {
 		this.picture3 = picture3;
 	}
 	
-	@Length(min=0, max=64, message="电话号长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="电话号长度必须介于 0 和 64 之间")
 	public String getTelephoneNumber() {
 		return telephoneNumber;
 	}

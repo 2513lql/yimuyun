@@ -3,7 +3,6 @@
  */
 package com.project.common.web;
 
-import com.project.common.beanvalidator.BeanValidators;
 import com.project.common.mapper.JsonMapper;
 import com.project.common.utils.DateUtils;
 import org.apache.commons.lang3.StringEscapeUtils;
@@ -71,15 +70,16 @@ public abstract class BaseController {
 	 * @return 验证成功：返回true；严重失败：将错误信息添加到 message 中
 	 */
 	protected boolean beanValidator(Model model, Object object, Class<?>... groups) {
-		try{
-			BeanValidators.validateWithException(validator, object, groups);
-		}catch(ConstraintViolationException ex){
-			List<String> list = BeanValidators.extractPropertyAndMessageAsList(ex, ": ");
-			list.add(0, "数据验证失败：");
-			addMessage(model, list.toArray(new String[]{}));
-			return false;
-		}
 		return true;
+//		try{
+////			BeanValidators.validateWithException(validator, object, groups);
+//		}catch(ConstraintViolationException ex){
+//			List<String> list = BeanValidators.extractPropertyAndMessageAsList(ex, ": ");
+//			list.add(0, "数据验证失败：");
+//			addMessage(model, list.toArray(new String[]{}));
+//			return false;
+//		}
+//		return true;
 	}
 	
 	/**
@@ -89,14 +89,14 @@ public abstract class BaseController {
 	 * @return 验证成功：返回true；严重失败：将错误信息添加到 flash message 中
 	 */
 	protected boolean beanValidator(RedirectAttributes redirectAttributes, Object object, Class<?>... groups) {
-		try{
-			BeanValidators.validateWithException(validator, object, groups);
-		}catch(ConstraintViolationException ex){
-			List<String> list = BeanValidators.extractPropertyAndMessageAsList(ex, ": ");
-			list.add(0, "数据验证失败：");
-			addMessage(redirectAttributes, list.toArray(new String[]{}));
-			return false;
-		}
+//		try{
+////			BeanValidators.validateWithException(validator, object, groups);
+//		}catch(ConstraintViolationException ex){
+//			List<String> list = BeanValidators.extractPropertyAndMessageAsList(ex, ": ");
+//			list.add(0, "数据验证失败：");
+//			addMessage(redirectAttributes, list.toArray(new String[]{}));
+//			return false;
+//		}
 		return true;
 	}
 	
@@ -107,12 +107,11 @@ public abstract class BaseController {
 	 * @return 验证成功：继续执行；验证失败：抛出异常跳转400页面。
 	 */
 	protected void beanValidator(Object object, Class<?>... groups) {
-		BeanValidators.validateWithException(validator, object, groups);
+//		BeanValidators.validateWithException(validator, object, groups);
 	}
 	
 	/**
 	 * 添加Model消息
-	 * @param message
 	 */
 	protected void addMessage(Model model, String... messages) {
 		StringBuilder sb = new StringBuilder();

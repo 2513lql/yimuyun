@@ -4,7 +4,7 @@
 package com.project.modules.entity;
 
 import com.project.common.persistence.DataEntity;
-import org.hibernate.validator.constraints.Length;
+//import org.hibernate.validator.constraints.Length;
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -31,7 +31,7 @@ public class TbHonor extends DataEntity<TbHonor> {
 		super(id);
 	}
 
-	@Length(min=0, max=255, message="名称长度必须介于 0 和 255 之间")
+//	@Length(min=0, max=255, message="名称长度必须介于 0 和 255 之间")
 	public String getName() {
 		return name;
 	}
@@ -40,7 +40,7 @@ public class TbHonor extends DataEntity<TbHonor> {
 		this.name = name;
 	}
 	
-	@Length(min=0, max=255, message="图片长度必须介于 0 和 255 之间")
+//	@Length(min=0, max=255, message="图片长度必须介于 0 和 255 之间")
 	public String getPicture() {
 		return picture;
 	}
@@ -49,7 +49,7 @@ public class TbHonor extends DataEntity<TbHonor> {
 		this.picture = picture;
 	}
 	
-	@Length(min=0, max=255, message="是否置顶长度必须介于 0 和 255 之间")
+//	@Length(min=0, max=255, message="是否置顶长度必须介于 0 和 255 之间")
 	public String getIstop() {
 		return istop;
 	}

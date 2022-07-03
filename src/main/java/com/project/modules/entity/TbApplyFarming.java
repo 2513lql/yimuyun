@@ -4,7 +4,7 @@
 package com.project.modules.entity;
 
 import com.project.common.persistence.DataEntity;
-import org.hibernate.validator.constraints.Length;
+//import org.hibernate.validator.constraints.Length;
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -35,7 +35,7 @@ public class TbApplyFarming extends DataEntity<TbApplyFarming> {
 		super(id);
 	}
 
-	@Length(min=0, max=64, message="养殖单位名称长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="养殖单位名称长度必须介于 0 和 64 之间")
 	public String getName() {
 		return name;
 	}
@@ -44,7 +44,7 @@ public class TbApplyFarming extends DataEntity<TbApplyFarming> {
 		this.name = name;
 	}
 	
-	@Length(min=0, max=64, message="规模长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="规模长度必须介于 0 和 64 之间")
 	public String getScale() {
 		return scale;
 	}
@@ -53,7 +53,7 @@ public class TbApplyFarming extends DataEntity<TbApplyFarming> {
 		this.scale = scale;
 	}
 	
-	@Length(min=0, max=64, message="类别长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="类别长度必须介于 0 和 64 之间")
 	public String getType() {
 		return type;
 	}
@@ -62,7 +62,7 @@ public class TbApplyFarming extends DataEntity<TbApplyFarming> {
 		this.type = type;
 	}
 	
-	@Length(min=0, max=64, message="照片长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="照片长度必须介于 0 和 64 之间")
 	public String getPicture1() {
 		return picture1;
 	}
@@ -71,7 +71,7 @@ public class TbApplyFarming extends DataEntity<TbApplyFarming> {
 		this.picture1 = picture1;
 	}
 	
-	@Length(min=0, max=64, message="picture2长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="picture2长度必须介于 0 和 64 之间")
 	public String getPicture2() {
 		return picture2;
 	}
@@ -80,7 +80,7 @@ public class TbApplyFarming extends DataEntity<TbApplyFarming> {
 		this.picture2 = picture2;
 	}
 	
-	@Length(min=0, max=64, message="picture3长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="picture3长度必须介于 0 和 64 之间")
 	public String getPicture3() {
 		return picture3;
 	}
@@ -89,7 +89,7 @@ public class TbApplyFarming extends DataEntity<TbApplyFarming> {
 		this.picture3 = picture3;
 	}
 	
-	@Length(min=0, max=64, message="电话长度必须介于 0 和 64 之间")
+//	@Length(min=0, max=64, message="电话长度必须介于 0 和 64 之间")
 	public String getTelephoneNumber() {
 		return telephoneNumber;
 	}
